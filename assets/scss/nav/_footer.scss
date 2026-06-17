@@ -1,0 +1,318 @@
+﻿@use "../base/base";
+
+footer {
+  padding: 10rem 0;
+  background: $dark-blue;
+
+  @media only screen and (max-width: $desktop) {
+    padding: 10rem 4rem;
+  }
+
+  @media only screen and (max-width: $tablet-h) {
+    padding: 6rem 2rem;
+  }
+
+  .container {
+    padding: 0;
+    display: flex;
+
+    @media only screen and (max-width: $tablet-h) {
+      flex-direction: column;
+      gap: 6rem;
+    }
+  }
+
+  .left {
+    @media only screen and (max-width: $tablet-h) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      width: 20rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        width: 8rem;
+      }
+    }
+  }
+
+  .scroll-top {
+    margin-top: 100%;
+
+    a {
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      margin-left: auto;
+      border: solid rgba($white, 0.2) 0.1rem;
+      @include fade-transition;
+
+      &:hover {
+        background: $white;
+
+        svg {
+          stroke: $blue;
+        }
+      }
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      display: none;
+    }
+
+    svg {
+      width: 1.6rem;
+      stroke-width: 0.2rem;
+      stroke: $white;
+    }
+
+    &.mobile {
+      display: none;
+      margin-top: 0;
+
+      @media only screen and (max-width: $tablet-h) {
+        display: block;
+      }
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      margin-top: 4rem;
+      margin-left: 0;
+    }
+  }
+
+  .right {
+    max-width: 80rem;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: $tablet-h) {
+      margin-left: 0;
+    }
+
+    .head {
+      font-size: 1.8rem;
+      color: $light-blue;
+      margin-bottom: 2rem;
+    }
+
+    .items {
+      display: flex;
+      justify-content: space-between;
+
+      .menu-items {
+        @media only screen and (max-width: $tablet-h) {
+          display: none;
+        }
+      }
+
+      .item {
+        .menu {
+          li {
+            a {
+              font-size: 1.6rem;
+              color: $light-blue-2;
+              font-weight: $font-regular;
+              line-height: 1.8;
+              @include fade-transition;
+
+              &:hover {
+                opacity: 0.5;
+              }
+
+              @media only screen and (max-width: $desktop) {
+                font-size: 1.8rem;
+                line-height: 2;
+              }
+            }
+          }
+        }
+
+        .social {
+          display: flex;
+          gap: 2rem;
+
+          @media only screen and (max-width: $tablet-h) {
+            // flex-direction: column;
+            align-items: flex-end;
+            gap: 1rem;
+          }
+
+          li {
+            a {
+              @include fade-transition;
+
+              &:hover {
+                @include fade-transition;
+                opacity: 0.5;
+              }
+
+              @media only screen and (max-width: $tablet-h) {
+                width: 4rem;
+                height: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media only screen and (max-width: $tablet-h) {
+                  justify-content: flex-start;
+                }
+              }
+
+              svg {
+                fill: $white;
+
+                @media only screen and (max-width: $tablet-h) {
+                  width: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .newsletter-content {
+      text-align: left;
+      margin-top: 6rem;
+      margin-right: 0;
+
+      form {
+        .item {
+          input {
+            width: 100%;
+            background: rgba($dark, 0.4);
+            padding: 0 2rem;
+            font-size: 1.6rem;
+            color: rgba($white, 0.8);
+
+            &:focus {
+              color: $white;
+              background: rgba($dark, 0.8);
+            }
+
+            &::-webkit-input-placeholder {
+              color: rgba($white, 0.8);
+            }
+
+            &:-ms-input-placeholder {
+              color: rgba($white, 0.8);
+            }
+
+            &::placeholder {
+              color: rgba($white, 0.8);
+            }
+          }
+        }
+      }
+
+      .form-wrapper {
+        form {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          gap: 2rem;
+        }
+
+        .checkbox-item {
+          flex: 1;
+
+          input {
+            width: 2.2rem !important;
+            height: 2.2rem !important;
+          }
+
+          input[type="checkbox"]:checked {
+            background: $dark-blue;
+
+            &:after {
+              width: 13px;
+              height: 11px;
+            }
+          }
+
+          label {
+            padding: 0;
+            color: $white;
+            font-size: 1.2rem;
+
+            a {
+              color: $white;
+              @include fade-transition;
+
+              &:hover {
+                color: rgba($white, 0.7);
+                @include fade-transition;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    font-size: 1.4rem;
+    font-weight: $font-regular;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    border-top: solid rgba($white, 0.2) 0.1rem;
+    padding-top: 4rem;
+
+    ul {
+      display: flex;
+      gap: 2rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        flex-direction: column;
+      }
+
+      li {
+        a {
+          font-size: 1.4rem;
+          color: $light-blue-2;
+
+          @include fade-transition;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    span {
+      color: $light-blue-2;
+      opacity: 0.5;
+    }
+  }
+
+  .super-agency {
+    font-size: 1.4rem;
+    color: rgba($white, 0.5);
+    margin-top: 4rem;
+    margin-left: auto;
+    font-weight: $font-regular;
+
+    @media only screen and (max-width: $tablet-h) {
+      margin-left: 0;
+    }
+
+    a {
+      color: $white;
+      @include fade-transition;
+      opacity: 0.6;
+
+      &:hover {
+        @include fade-transition;
+      }
+    }
+  }
+}

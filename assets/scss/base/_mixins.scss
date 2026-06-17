@@ -1,0 +1,27 @@
+﻿// Position Center
+@mixin pos-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin overlay {
+  background: rgba($black, 0.4);
+}
+
+@mixin fade-transition {
+  transition: all 0.4s;
+}
+
+@mixin fade-transition-1 {
+  transition: all 0.2s;
+}
+
+@mixin trim-both {
+  text-box: trim-both cap alphabetic;
+}
+
+@mixin transition {
+  transition: width 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}

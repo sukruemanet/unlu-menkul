@@ -1,0 +1,262 @@
+﻿@use "../base/base";
+
+.headline {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 4rem;
+
+  &.type-1 {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      max-width: 50%;
+      width: 50%;
+      margin: 0;
+      padding: 0;
+
+      @media only screen and (max-width: $tablet-v) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .right {
+    max-width: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-top: -11rem;
+    padding: 4rem 2rem 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media only screen and (max-width: $tablet-v) {
+      padding: 0 2rem 4rem 0;
+      margin: 0;
+    }
+
+    p {
+      margin-top: 0;
+      padding: 0;
+      margin-left: 0;
+
+      @media only screen and (max-width: $tablet-v) {
+        margin: 0;
+      }
+    }
+
+    .link {
+      font-size: 2rem;
+      color: $blue;
+      @include fade-transition;
+
+      @media only screen and (max-width: $desktop) {
+        font-size: 1.8rem;
+      }
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: 1.6rem;
+      }
+
+      &:hover {
+        color: $dark-blue;
+        @include fade-transition;
+
+        svg {
+          width: 2rem;
+          stroke: $dark-blue;
+        }
+      }
+
+      svg {
+        width: 2rem;
+        stroke: $blue;
+        stroke-width: 0.1rem;
+      }
+    }
+
+    @media only screen and (max-width: $tablet-v) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .button {
+      margin: 0;
+    }
+  }
+
+  &.type-2 {
+    &:after {
+      background: $light-blue-2;
+    }
+  }
+
+  h4 {
+    font-size: 3rem;
+    font-weight: $font-bold;
+    color: $dark-blue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include trim-both;
+    margin-bottom: 6rem;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      width: 50%;
+      height: 0.2rem;
+      background: $dark-blue;
+      margin-top: 2rem;
+      display: flex;
+
+      @media only screen and (max-width: $desktop) {
+        width: 40%;
+      }
+
+      @media only screen and (max-width: $tablet-h) {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      max-width: 100%;
+    }
+
+    @media only screen and (max-width: $desktop-sm) {
+      font-size: 2.8rem;
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  p {
+    max-width: 70rem;
+    width: 100%;
+    font-size: 2rem;
+    font-family: $font-ibm;
+    font-weight: $font-regular;
+    color: $black;
+    margin-left: auto;
+    margin-top: -11rem;
+    padding: 4rem 2rem;
+    position: relative;
+
+    @media only screen and (max-width: $desktop) {
+      max-width: 45rem;
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      margin-left: 0;
+      margin-top: 0;
+      padding: 0;
+      font-size: 1.6rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .button {
+    margin-left: auto;
+    margin-top: -5rem;
+
+    @media only screen and (max-width: $desktop-sm) {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    @media only screen and (max-width: $desktop) {
+      margin-right: 0;
+    }
+  }
+}
+
+.page-head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+
+  @media only screen and (max-width: $tablet-h) {
+    margin-top: 2rem;
+  }
+
+  p {
+    max-width: 70rem;
+    width: 100%;
+    font-size: 2.4rem;
+    font-family: "IBM Plex Serif";
+    font-weight: normal;
+    color: #000;
+    margin-left: auto;
+    background: #fff;
+    margin-top: -5rem;
+    padding: 4rem 2rem;
+    position: relative;
+
+    @media only screen and (max-width: $desktop) {
+      max-width: 60rem;
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      padding: 0;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+
+  a {
+    font-size: 2.4rem;
+    color: $blue;
+  }
+}
+
+.content-headline {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6rem;
+
+  @media only screen and (max-width: $tablet-v) {
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  span {
+    max-width: 60rem;
+    font-size: 4rem;
+    line-height: 1.2;
+    font-family: $font-ibm;
+    color: $dark-blue;
+
+    @media only screen and (max-width: $desktop) {
+      font-size: 2.4rem;
+    }
+
+    @media only screen and (max-width: $tablet-v) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    max-width: 60rem;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: $font-regular;
+    color: $dark;
+
+    @media only screen and (max-width: $desktop) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $tablet-v) {
+      font-size: 1.6rem;
+    }
+  }
+}
