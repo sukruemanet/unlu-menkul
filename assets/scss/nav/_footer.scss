@@ -2,7 +2,7 @@
 
 footer {
   padding: 10rem 0;
-  background: $dark-blue;
+  background: #04142d;
 
   @media only screen and (max-width: $desktop) {
     padding: 10rem 4rem;
@@ -22,6 +22,12 @@ footer {
     }
   }
 
+  .form-wrapper {
+    input {
+      background: $white;
+    }
+  }
+
   .left {
     @media only screen and (max-width: $tablet-h) {
       display: flex;
@@ -29,7 +35,7 @@ footer {
       align-items: center;
     }
     .logo {
-      width: 20rem;
+      width: 30rem;
 
       @media only screen and (max-width: $tablet-h) {
         width: 8rem;
@@ -187,7 +193,7 @@ footer {
         .item {
           input {
             width: 100%;
-            background: rgba($dark, 0.4);
+            background: $white;
             padding: 0 2rem;
             font-size: 1.6rem;
             color: rgba($white, 0.8);

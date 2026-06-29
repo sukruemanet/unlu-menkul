@@ -29,6 +29,46 @@ var swiper = new Swiper(".widget-swiper", {
   },
 });
 
+//Blog Slider
+var swiper = new Swiper(".blog-swiper", {
+  slidesPerView: 1.2,
+  spaceBetween: 20,
+  pagination: {
+    el: ".research-pagination",
+    type: "progressbar",
+  },
+  navigation: {
+    nextEl: ".research-next",
+    prevEl: ".research-prev",
+  },
+  breakpoints: {
+    648: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 3.2,
+      spaceBetween: 30,
+    },
+    1368: {
+      slidesPerView: 3.2,
+      spaceBetween: 30,
+    },
+    1536: {
+      slidesPerView: 4.2,
+      spaceBetween: 30,
+    },
+    1920: {
+      slidesPerView: 4.2,
+      spaceBetween: 30,
+    },
+  },
+});
+
 //Research Slider
 var swiper = new Swiper(".research-swiper", {
   slidesPerView: 1.2,
