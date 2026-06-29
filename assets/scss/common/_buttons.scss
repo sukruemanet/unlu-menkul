@@ -148,3 +148,27 @@ button,
     }
   }
 }
+
+.content-breadcrumb {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  border-bottom: solid rgba($black, 0.1) 0.1rem;
+
+  svg {
+    width: 0.8rem;
+    margin: 0 1rem;
+  }
+
+  li {
+    font-size: 1.6rem;
+    font-weight: $font-regular;
+    color: rgba($black, 0.5);
+    display: flex;
+    align-items: center;
+
+    a {
+      color: $blue;
+    }
+  }
+}

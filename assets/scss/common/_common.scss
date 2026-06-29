@@ -328,8 +328,8 @@
       }
 
       figure {
-        max-width: 90rem;
-        flex-shrink: 0;
+        max-width: 70rem;
+        width: 100%;
       }
     }
 
@@ -356,6 +356,10 @@
       position: relative;
       overflow: hidden;
 
+      .caption {
+        width: 100%;
+      }
+
       @media only screen and (max-width: $tablet-h) {
         width: 100%;
       }
@@ -375,11 +379,12 @@
     }
 
     .caption {
-      width: 35%;
+      width: 60rem;
       display: flex;
       flex-direction: column;
       gap: 6rem;
       padding-bottom: 6rem;
+      flex-shrink: 0;
 
       @media only screen and (max-width: $desktop-sm) {
         gap: 3rem;
@@ -388,6 +393,17 @@
       @media only screen and (max-width: $tablet-h) {
         width: 100%;
         padding-bottom: 0;
+      }
+
+      h2 {
+        font-size: 3.6rem;
+        font-weight: $font-regular;
+        color: rgba($black, 0.5);
+
+        strong {
+          font-weight: $font-regular;
+          color: $black;
+        }
       }
 
       &.type-2 {
@@ -513,6 +529,27 @@
     }
 
     .card-image {
+    }
+
+    .numbers-items {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      .item {
+        small {
+          font-size: 1.6rem;
+          color: #04142d;
+        }
+
+        .number {
+          font-size: 12rem;
+          font-weight: $font-regular;
+          color: $blue;
+          letter-spacing: -0.02em;
+        }
+      }
     }
   }
 }
@@ -1710,7 +1747,7 @@
         &.active {
           .office-button {
             @include fade-transition;
-            background: $blue;
+            background: $dark;
           }
         }
 
@@ -6641,6 +6678,36 @@
           @include fade-transition;
         }
       }
+    }
+  }
+}
+
+.our-values-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+
+  @media only screen and (max-width: $tablet-h) {
+  }
+
+  .item {
+    background: #eef9ff;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    color: $dark;
+
+    span {
+      font-size: 2.8rem;
+      font-weight: $font-medium;
+    }
+
+    p {
+      font-size: 1.6rem;
+      padding-top: 2rem;
+      margin-top: 8rem;
+      border-top: solid rgba($dark, 0.1) 0.1rem;
+      font-weight: $font-regular;
     }
   }
 }
