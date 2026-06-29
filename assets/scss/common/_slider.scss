@@ -593,14 +593,40 @@
 }
 
 .highlights-slider {
-  background: $dark;
+  background: #142f58;
 
   .headline {
     h4 {
-      color: $light-blue-2;
+      color: $white;
 
       &:after {
-        background: $light-blue-2;
+        background: $white;
+      }
+    }
+
+    p {
+      color: $white;
+    }
+  }
+
+  .tab-menu-content {
+    .tabs {
+      margin-bottom: 4rem;
+
+      li {
+        color: $white;
+
+        &:after {
+          background: rgba($white, 0.2);
+        }
+
+        &.current {
+          color: $white;
+
+          &:after {
+            background: $white;
+          }
+        }
       }
     }
   }
@@ -611,7 +637,6 @@
       box-shadow: inset 0 0 0 0.1rem $light-blue;
       padding: 4rem 4rem 4rem;
       margin: 2rem 0 4rem;
-      @include fade-transition;
 
       @media only screen and (max-width: $tablet-h) {
         padding: 2rem;
@@ -619,7 +644,6 @@
       }
 
       &:hover {
-        @include fade-transition;
         box-shadow: inset 0 0 0 0.5rem $light-blue;
 
         .caption {
