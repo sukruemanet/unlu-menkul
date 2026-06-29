@@ -163,8 +163,6 @@ header {
         height: 100%;
 
         li {
-          border-left: solid rgba($white, 0.1) 0.1rem;
-
           &:first-child {
             border: none;
           }
@@ -180,6 +178,10 @@ header {
             align-items: center;
             padding-left: 2rem;
 
+            &.underline {
+              text-decoration: underline;
+            }
+
             @media only screen and (max-width: $tablet-h) {
               padding: 0 2rem;
             }
@@ -191,6 +193,11 @@ header {
 
             @media only screen and (max-width: $desktop) {
               font-size: 1.5rem;
+            }
+
+            &.button {
+              background: $blue;
+              margin: 0 1rem 0 3rem;
             }
           }
         }
@@ -229,7 +236,9 @@ header {
             background: $white;
             position: absolute;
             transform: rotate(0deg);
-            transition: transform 0.35s ease-in-out, background-color 0.25s ease;
+            transition:
+              transform 0.35s ease-in-out,
+              background-color 0.25s ease;
 
             &:nth-child(1) {
               top: 0;

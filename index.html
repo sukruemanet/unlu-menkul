@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-  <title>ÜNLÜ & Co | Anasayfa</title>
+  <title>ÜNLÜ Menkul | Anasayfa</title>
   <meta name="theme-color" content="#061d8b">
 
   <link rel="preload" href="/assets/fonts/fk-grotesk/FKGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
@@ -49,73 +49,6 @@
 </head>
 
 <body id="top">
-
-  <div class="cookies-box">
-    <div class="head">
-      Çerez Politikası
-      <i class="close-cookies-box">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z">
-          </path>
-        </svg>
-      </i>
-    </div>
-    <div class="text">
-      Kullanıcı deneyiminizi iyileştirmek, kişiselleştirmek ve size uygun teklifleri sunmak için çerezler kullanıyoruz.
-      Tercihlerinizi panelden yönetebilir, detaylara <a href="cerezler.html">Kişisel Verilerin Korunması ve İşlenmesi ve
-        Gizlilik
-        Politikası</a> üzerinden
-      ulaşabilirsiniz.
-    </div>
-    <div class="permissions">
-      <div class="item" id="permissions-01">
-        <div class="text">
-          Gerekli
-        </div>
-        <label class="switch">
-          <input type="checkbox" checked>
-          <span class="switch-slider round"></span>
-        </label>
-      </div>
-      <div class="item" id="permissions-02">
-        <div class="text">
-          Tercihler
-        </div>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="switch-slider round"></span>
-        </label>
-      </div>
-      <div class="item" id="permissions-03">
-        <div class="text">
-          İstatistikler
-        </div>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="switch-slider round"></span>
-        </label>
-      </div>
-      <div class="item" id="permissions-04">
-        <div class="text">
-          Pazarlama
-        </div>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="switch-slider round"></span>
-        </label>
-      </div>
-    </div>
-
-    <div class="buttons">
-      <a class="button primary small">
-        Tümüne İzin Ver
-      </a>
-      <a class="button border small">
-        Reddet
-      </a>
-    </div>
-  </div>
 
   <div class="category-menu" id="hamburger-menu" data-lenis-prevent-wheel data-lenis-prevent-touch>
     <div class="category-menu-content">
@@ -511,6 +444,16 @@
       <div class="right">
         <ul class="top-menu">
           <li>
+            <a href="#" class="underline">
+              Sanal Şube
+            </a>
+          </li>
+          <li>
+            <a href="#" class="button">
+              Hesap Aç
+            </a>
+          </li>
+          <li>
             <i class="search search-now nav-item has-mega" data-menu="search-now">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -556,7 +499,6 @@
             </ul>
           </nav>
         </div>
-
         <div class="hamburger-button" data-menu-trigger="hamburger-menu">
           <div class="hamburger-menu">
             <span></span>
@@ -1022,16 +964,19 @@
       </div>
     </div>
 
+    <div class="market-slider" id="slider">
+      <div class="ticker-track" id="track"></div>
+    </div>
+
     <div class="content-wrapper" id="start">
       <div class="container">
         <div class="headline">
           <h4>
-            Ne Yapıyoruz?
+            Hizmetlerimiz
           </h4>
           <p>
-            Türkiye’nin öncü yatırım hizmetleri ve varlık yönetimi grubu ÜNLÜ & Co olarak 30 yıla ulaşan deneyimimiz,
-            profesyonel kadromuz ve güçlü teknolojik altyapımızla kurumsal ve bireysel yatırımcılar için değer yaratan
-            finansal hizmetler sunuyoruz.
+            Müşterilerimizin karmaşık piyasalarda yol almalarını ve bilinçli yatırım kararları vermelerini sağlamak için
+            stratejik finansal danışmanlık hizmetleri sunuyoruz.
           </p>
         </div>
         <div class="what-we-are-items">
@@ -2317,35 +2262,87 @@
   <script src="assets/js/common/mobile-menu.js"></script>
   <script src="assets/js/common/accordion-menu.js"></script>
 
-  <!-- Gallery -->
-  <script src="assets/gallery/lightgallery.min.js"></script>
-  <script src="assets/gallery/lg-video.min.js"></script>
-  <script src="assets/gallery/lg-thumbnail.min.js"></script>
+  <!-- Narket Slider -->
+  <script>
+    const data = [
+      { label: "USD/TRY", value: "32,85", change: "-0,18%", direction: "down" },
+      { label: "BTS/USD", value: "67,240", change: "+2,14%", direction: "up" },
+      { label: "EUR/TRY", value: "35,42", change: "+0,32%", direction: "up" },
+      { label: "XAU/USD", value: "2.345", change: "-0,07%", direction: "down" },
+      { label: "BTC/USD", value: "67,240", change: "+2,14%", direction: "up" },
+      { label: "GBP/TRY", value: "41,18", change: "+0,55%", direction: "up" },
+    ];
 
-  <script type="text/javascript">
-    lightGallery(document.getElementById('gallery-videos'), {
-      plugins: [lgVideo, lgThumbnail],
-      thumbnail: true,
-      animateThumb: true,
-      exThumbImage: 'data-external-thumb-image',
-      thumbWidth: 100,
-      thumbHeight: '80px',
-      thumbMargin: 5,
+    const slider = document.getElementById("slider");
+    const track = document.getElementById("track");
 
-      videojs: true,
-      videojsOptions: {
-        muted: true,
-      },
+    const SPEED = 35; // px / saniye (artır = hızlı, azalt = yavaş)
 
-      closable: true,
-      showCloseIcon: true,
+    function buildItemHTML(d) {
+      const arrow = d.direction === "up" ? "▲" : "▼";
+      return `
+      <span class="item">
+        <span class="label">${d.label}</span>
+        <span class="value">${d.value}</span>
+        <span class="change ${d.direction}">${arrow} ${d.change}</span>
+      </span>
+      <span class="divider"></span>`;
+    }
 
-      mobileSettings: {
-        controls: true,
-        showCloseIcon: true,
-        download: false,
-        rotate: false,
-      },
+    // Tek bir set'in HTML'i
+    const oneSetHTML = data.map(buildItemHTML).join("");
+
+    // Ekranı dolduracak kadar set çoğalt (en az 2x ekran genişliği) + emniyet payı
+    function buildTrack() {
+      track.innerHTML = oneSetHTML; // önce bir set koy, genişliğini ölç
+      const oneSetWidth = track.scrollWidth;
+      const needed = Math.ceil((slider.offsetWidth * 2) / oneSetWidth) + 1;
+
+      let html = "";
+      for (let i = 0; i < needed; i++) html += oneSetHTML;
+      track.innerHTML = html;
+
+      return oneSetWidth;
+    }
+
+    let oneSetWidth = buildTrack();
+    let offset = 0;
+    let lastTime = null;
+    let paused = false;
+
+    function animate(time) {
+      if (lastTime == null) lastTime = time;
+      const dt = (time - lastTime) / 1000;
+      lastTime = time;
+
+      if (!paused) {
+        offset -= SPEED * dt;
+
+        // Bir set tamamen geçince başa al — kusursuz döngü, boşluk yok
+        if (offset <= -oneSetWidth) {
+          offset += oneSetWidth;
+        }
+
+        track.style.transform = `translateX(${offset}px)`;
+      }
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+
+    // Hover'da durdur
+    slider.addEventListener("mouseenter", () => { paused = true; });
+    slider.addEventListener("mouseleave", () => { paused = false; });
+
+    // Ekran yeniden boyutlanınca track'i yeniden kur
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        oneSetWidth = buildTrack();
+        offset = 0;
+        lastTime = null;
+      }, 200);
     });
   </script>
 
