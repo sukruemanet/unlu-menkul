@@ -40,6 +40,7 @@
   <script src="assets/js/common/jquery.min.js"></script>
   <script src="assets/js/common/common.js"></script>
   <script src="assets/js/common/components.js"></script>
+  <script src="assets/js/common/tabmenu.js"></script>
 
   <!-- Gallery -->
   <link href="assets/gallery/css/lightgallery-bundle.min.css" rel="stylesheet" />
@@ -970,7 +971,7 @@
 
     <div class="content-wrapper" id="start">
       <div class="container">
-        <div class="headline">
+        <div class="headline type-2">
           <h4>
             Hizmetlerimiz
           </h4>
@@ -979,159 +980,214 @@
             stratejik finansal danışmanlık hizmetleri sunuyoruz.
           </p>
         </div>
-        <div class="what-we-are-items">
-          <div class="item" style="background: #000B3E;">
-            <div class="caption">
-              <span>
-                Kurumsal Finansman<br>
-                Danışmanlığı
-              </span>
-              <ul>
-                <li>
-                  <a href="birlesme-ve-satin-alma-danismanligi.html">
-                    Birleşme ve Satın Alma Danışmanlığı
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="kurumsal-kredi-danismanligi.html">
-                    Kurumsal Kredi Danışmanlığı
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+
+        <div class="tab-menu-content container">
+          <ul class="tabs left">
+            <li class="tab-link current" data-tab="tab-1">
+              Bireysel Hizmetlerimiz
+            </li>
+            <li class="tab-link" data-tab="tab-2">
+              Kurumsal Hizmetlerimiz
+            </li>
+          </ul>
+
+          <div id="tab-1" class="tab-content current">
+            <div class="item-cards">
+              <a href="#" class="item-card" style="background: #90754A;">
+                <figure>
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/01.jpg">
+                </figure>
+                <div class="caption">
+                  <div class="top">
+                    <h4>
+                      DAHA Yatırım
+                      Danışmanlığı
+                    </h4>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/daha-icon.svg">
+                  </div>
+                  <div class="bottom">
+                    <p>
+                      Nitelikli yatırımcılara özel,
+                      kişiselleştirilmiş portföy yönetimi ve
+                      stratejik danışmanlık hizmeti.
+                    </p>
+                    <i>
+                      <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10.4285H23" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 19.857L23.0001 10.4285" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 1L23.0001 10.4286" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="item-card" style="background: #001727;">
+                <figure>
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/02.jpg">
+                </figure>
+                <div class="caption">
+                  <div class="top">
+                    <h4>
+                      Piapiri Yatırım
+                      Uygulaması
+                    </h4>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/piapiri-logo.png">
+                  </div>
+                  <div class="bottom">
+                    <p>
+                      Anlık piyasa verileri, kolay işlem
+                      yapma ve akıllı yatırım araçlarıyla
+                      cebinizde tam bir borsa deneyimi.
+                    </p>
+                    <i>
+                      <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10.4285H23" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 19.857L23.0001 10.4285" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 1L23.0001 10.4286" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="item-card" style="background: #0015FF;">
+                <figure>
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/02.jpg">
+                </figure>
+                <div class="caption">
+                  <div class="top">
+                    <h4>
+                      Araştırma
+                      Hizmetleri
+                    </h4>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/arastirma-icon.svg">
+                  </div>
+                  <div class="bottom">
+                    <p>
+                      Uzman analistlerimizin hazırladığı
+                      derinlemesine sektör raporları,
+                      hisse ve ekonomi analizleri.
+                    </p>
+                    <i>
+                      <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10.4285H23" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 19.857L23.0001 10.4285" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 1L23.0001 10.4286" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+              </a>
             </div>
-            <figure>
-              <img src="/assets/images/icons/kurumsal.svg">
-            </figure>
           </div>
-          <div class="item" style="background: #00136A;">
-            <div class="caption">
-              <span>
-                Sermaya<br>
-                Piyasaları
-              </span>
-              <ul>
-                <li>
-                  <a href="halka-arz-ve-blok-satis.html">
-                    Halka Arz ve Blok Satış
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="kurumsal-satis.html">
-                    Kurumsal Satış
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="arastirma.html">
-                    Arastırma
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="borclanma-araclari-sermaye-piyasalari.html">
-                    Borç Sermaye Piyasaları
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+
+          <div id="tab-2" class="tab-content">
+            <div class="item-cards">
+              <a href="#" class="item-card" style="background: #001727;">
+                <figure>
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/02.jpg">
+                </figure>
+                <div class="caption">
+                  <div class="top">
+                    <h4>
+                      Piapiri Yatırım
+                      Uygulaması
+                    </h4>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/piapiri-logo.png">
+                  </div>
+                  <div class="bottom">
+                    <p>
+                      Anlık piyasa verileri, kolay işlem
+                      yapma ve akıllı yatırım araçlarıyla
+                      cebinizde tam bir borsa deneyimi.
+                    </p>
+                    <i>
+                      <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10.4285H23" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 19.857L23.0001 10.4285" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 1L23.0001 10.4286" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="item-card" style="background: #0015FF;">
+                <figure>
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/02.jpg">
+                </figure>
+                <div class="caption">
+                  <div class="top">
+                    <h4>
+                      Araştırma
+                      Hizmetleri
+                    </h4>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/arastirma-icon.svg">
+                  </div>
+                  <div class="bottom">
+                    <p>
+                      Uzman analistlerimizin hazırladığı
+                      derinlemesine sektör raporları,
+                      hisse ve ekonomi analizleri.
+                    </p>
+                    <i>
+                      <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10.4285H23" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 19.857L23.0001 10.4285" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 1L23.0001 10.4286" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="item-card" style="background: #90754A;">
+                <figure>
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/01.jpg">
+                </figure>
+                <div class="caption">
+                  <div class="top">
+                    <h4>
+                      DAHA Yatırım
+                      Danışmanlığı
+                    </h4>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/daha-icon.svg">
+                  </div>
+                  <div class="bottom">
+                    <p>
+                      Nitelikli yatırımcılara özel,
+                      kişiselleştirilmiş portföy yönetimi ve
+                      stratejik danışmanlık hizmeti.
+                    </p>
+                    <i>
+                      <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10.4285H23" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 19.857L23.0001 10.4285" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M13.5715 1L23.0001 10.4286" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+              </a>
             </div>
-            <figure>
-              <img src="/assets/images/icons/sermaye.svg">
-            </figure>
-          </div>
-          <div class="item" style="background: #001B98;">
-            <div class="caption">
-              <span>
-                Yatırım<br>
-                Faaliyetlerimiz
-              </span>
-              <ul>
-                <li>
-                  <a href="daha-aracilik-ve-yatirim-danismanligi.html">
-                    DAHA Aracılık ve Yatırım Danışmanlığı
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="portfoy-yonetimi.html">
-                    Portföy Yönetimi
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="hazine-ve-nakit-yonetimi.html">
-                    Hazine ve Nakit Yönetimi
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="risk-sermayesi-ve-girisim-sermayesi-yatirimlari.html">
-                    Risk Sermayesi ve Girişim Sermayesi Yatırımları
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <figure>
-              <img src="/assets/images/icons/yatirim.svg">
-            </figure>
-          </div>
-          <div class="item" style="background: #0025D0;">
-            <div class="caption">
-              <span>
-                Varlık Yönetim
-                Faaliyetlerimiz
-              </span>
-              <ul>
-                <li>
-                  <a href="tahsili-gecikmiş-alacak-yonetimi.html">
-                    Tahsili Gecikmiş Alacak Yönetimi
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <figure>
-              <img src="/assets/images/icons/faaliyetlerimiz.svg">
-            </figure>
           </div>
         </div>
+
       </div>
     </div>
 
