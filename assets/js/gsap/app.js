@@ -57,7 +57,7 @@ if (!isMobileDevice()) {
       body.offsetHeight,
       doc.offsetHeight,
       body.clientHeight,
-      doc.clientHeight
+      doc.clientHeight,
     );
     const viewport = window.innerHeight;
     return { scrollHeight, viewport };
@@ -69,7 +69,7 @@ if (!isMobileDevice()) {
     const trackHeight = trackRect.height;
     const thumbH = Math.max(
       40,
-      Math.round(trackHeight * (viewport / scrollHeight))
+      Math.round(trackHeight * (viewport / scrollHeight)),
     );
     thumb.style.height = thumbH + "px";
     const maxScroll = scrollHeight - viewport;
@@ -128,7 +128,7 @@ if (!isMobileDevice()) {
           });
         },
         overwrite: true,
-      }
+      },
     );
   });
 
@@ -188,7 +188,7 @@ mm.add("(min-width: 1024px)", () => {
       onRepeat: () => {
         gsap.set("start-content .scroll-down i svg", { y: -100 });
       },
-    }
+    },
   );
 
   //Image Parallax
@@ -264,7 +264,7 @@ mm.add("(min-width: 1024px)", () => {
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           duration: 1,
         },
-        0
+        0,
       )
       .to(maskEl, { scale: 1, duration: 1 }, "<");
 
@@ -331,7 +331,7 @@ mm.add("(min-width: 1024px)", () => {
           from: 2,
         },
       },
-      "-=1.5"
+      "-=1.5",
     );
 
     ScrollTrigger.create({
@@ -427,7 +427,7 @@ mm.add("(min-width: 1024px)", () => {
             toggleActions: "play none none none",
             once: true,
           },
-        }
+        },
       );
     });
   });
@@ -439,7 +439,7 @@ mm.add("(min-width: 1024px)", () => {
     const anim = gsap.fromTo(
       box,
       { autoAlpha: 0, x: 150 },
-      { duration: 1, autoAlpha: 1, x: 0, ease: "power2.out" }
+      { duration: 1, autoAlpha: 1, x: 0, ease: "power2.out" },
     );
 
     ScrollTrigger.create({
@@ -497,7 +497,7 @@ if (tlLine && dots.length > 0) {
           });
         },
       },
-    }
+    },
   );
 }
 
