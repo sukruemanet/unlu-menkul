@@ -661,9 +661,11 @@
         gap: 2rem;
 
         i {
-          svg {
+          img {
+            width: 7rem;
+
             @media only screen and (max-width: $tablet-h) {
-              width: 6rem;
+              width: 4rem;
             }
           }
         }
