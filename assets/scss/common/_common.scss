@@ -6931,3 +6931,18 @@
     }
   }
 }
+
+.free-consultation {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(/assets/images/ucretsiz-danismanlik/cover.jpg) no-repeat top
+      center;
+    background-size: cover;
+  }
+}
