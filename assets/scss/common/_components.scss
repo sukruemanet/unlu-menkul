@@ -966,8 +966,7 @@ form {
     }
 
     .accordion-item {
-      // background: rgba($light-blue-2, 0.2);
-      border: solid rgba($dark-blue, 0.4) 0.1rem;
+      border-bottom: solid rgba($dark, 0.1) 0.1rem;
 
       @media only screen and (max-width: $tablet-v) {
         padding: 2rem 0;
@@ -982,9 +981,6 @@ form {
       }
 
       &.active {
-        background: rgba($light-blue-2, 0.5);
-        border: solid rgba($light-blue-2, 0.4) 0.1rem;
-
         i {
           svg {
             stroke: $blue;
@@ -1014,7 +1010,6 @@ form {
       font-size: 2rem;
       color: $dark;
       font-weight: $font-medium;
-      margin: 0 4rem;
 
       @media only screen and (max-width: $tablet-v) {
         padding: 0 2rem;
@@ -1047,7 +1042,6 @@ form {
         max-height 0.35s ease,
         padding 0.25s ease;
       padding-block: 0;
-      padding: 0 4rem;
 
       @media only screen and (max-width: $tablet-v) {
         padding: 0 2rem;

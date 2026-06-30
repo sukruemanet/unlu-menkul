@@ -40,6 +40,20 @@
     }
   }
 
+  &.blue {
+    h4 {
+      color: $blue;
+
+      &:after {
+        background: $blue;
+      }
+    }
+
+    p {
+      color: $dark;
+    }
+  }
+
   .right {
     max-width: 50%;
     width: 50%;
