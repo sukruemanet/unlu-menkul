@@ -93,10 +93,10 @@
 
 .content-wrapper {
   position: relative;
-  padding: 6rem 2rem;
+  padding: 6rem 0;
 
   @media only screen and (max-width: $tablet-h) {
-    padding: 3rem 2rem;
+    padding: 3rem 0;
   }
 
   &.type-1 {
@@ -391,14 +391,20 @@
         padding-bottom: 0;
       }
 
+      h4 {
+        font-size: 2rem;
+        font-weight: $font-regular;
+        color: $dark;
+      }
+
       h2 {
         font-size: 3.6rem;
         font-weight: $font-regular;
-        color: rgba($black, 0.5);
+        color: rgba($dark, 0.5);
 
         strong {
           font-weight: $font-regular;
-          color: $black;
+          color: $dark;
         }
       }
 
@@ -691,15 +697,12 @@
 .container {
   max-width: 150rem;
   width: 100%;
+  padding: 0 2rem;
   display: block;
   margin: auto;
 
   .content-wrapper {
     padding: 6rem 0;
-
-    @media only screen and (max-width: $desktop) {
-      padding: 6rem 2rem;
-    }
 
     &.type-1 {
       padding: 6rem 0 0;
@@ -762,6 +765,11 @@
       object-fit: cover;
       object-position: center center;
     }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 2rem;
   }
 
   .content-caption {
@@ -829,11 +837,11 @@
     z-index: 3;
 
     @media only screen and (max-width: $desktop-l) {
-      inset: auto 4rem 0 10rem;
+      inset: auto 4rem 10rem 10rem;
     }
 
     @media only screen and (max-width: $desktop-sm) {
-      inset: auto 2rem 0 8rem;
+      inset: auto 2rem 10rem 8rem;
     }
 
     @media only screen and (max-width: $tablet-h) {
@@ -1392,10 +1400,6 @@
   position: relative;
   overflow: hidden;
 
-  .container {
-    margin: 0 auto;
-  }
-
   &.type-2 {
     height: 70vh;
     position: relative;
@@ -1441,10 +1445,6 @@
 
   @media only screen and (max-width: $tablet-h) {
     height: auto;
-  }
-
-  .container {
-    padding: 0;
   }
 
   figure {
