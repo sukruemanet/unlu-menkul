@@ -198,6 +198,10 @@ header {
             &.button {
               background: $blue;
               margin: 0 1rem 0 3rem;
+
+              &:hover {
+                opacity: 1;
+              }
             }
           }
         }
