@@ -6806,3 +6806,128 @@
     }
   }
 }
+
+.blog-detail {
+  padding: 8rem 0;
+  display: flex;
+  gap: 2rem;
+
+  .left {
+    width: 100%;
+
+    .headline {
+      display: flex;
+      justify-content: space-between;
+      gap: 4rem;
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 3.6rem;
+        font-family: $font-ibm;
+        font-weight: $font-light;
+      }
+
+      .read-time {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+        white-space: nowrap;
+        font-size: 1.4rem;
+        color: #061d8b;
+      }
+    }
+
+    .blog-text-content {
+      padding: 4rem 0 4rem 8rem;
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: #363d60;
+
+        strong {
+          margin-top: 1rem;
+          display: block;
+        }
+      }
+
+      a {
+        color: $blue;
+        text-decoration: underline;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: $blue;
+        margin: 2rem 0 1rem;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        color: $blue;
+        margin: 2rem 0 1rem;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+
+        li {
+          font-size: 1.6rem;
+          line-height: 1.6;
+          display: list-item;
+          list-style: disc;
+          margin-left: 4rem;
+        }
+      }
+    }
+  }
+
+  .right-sticky {
+    width: 50rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 10rem;
+
+    span {
+      font-size: 2rem;
+      color: $blue;
+      position: relative;
+      display: block;
+
+      &:after {
+        content: "";
+        width: 15rem;
+        height: 0.2rem;
+        background: $blue;
+        display: block;
+        margin-bottom: 2rem;
+        position: relative;
+        margin-top: 1rem;
+      }
+    }
+
+    .related-headings {
+      background: #fcfeff;
+      padding: 3rem 6rem;
+      position: sticky;
+      top: 16rem;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        li {
+          font-size: 1.6rem;
+          color: $blue;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

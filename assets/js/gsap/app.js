@@ -411,46 +411,6 @@ mm.add("(min-width: 1024px)", () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  document.addEventListener("DOMContentLoaded", () => {
-    gsap.utils.toArray(".fade-up").forEach((el) => {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 0, y: 150 },
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            toggleActions: "play none none none",
-            once: true,
-          },
-        },
-      );
-    });
-  });
-
-  //Fade Right
-  const fadeRightAnimated = gsap.utils.toArray(".fade-right");
-
-  fadeRightAnimated.forEach((box) => {
-    const anim = gsap.fromTo(
-      box,
-      { autoAlpha: 0, x: 150 },
-      { duration: 1, autoAlpha: 1, x: 0, ease: "power2.out" },
-    );
-
-    ScrollTrigger.create({
-      trigger: box,
-      animation: anim,
-      start: "top 85%", // kutunun üstü, viewport’un %85 yüksekliğine geldiğinde
-      toggleActions: "play none none none",
-      once: true,
-    });
-  });
-
   //Image Scale
   const imageScale = gsap.utils.toArray(".image-scale img");
   imageScale.forEach((box, i) => {
@@ -464,41 +424,3 @@ mm.add("(min-width: 1024px)", () => {
     });
   });
 });
-
-//Timeline
-const tlLine = document.querySelector(".timeline-line");
-const dots = document.querySelectorAll(".dot");
-
-if (tlLine && dots.length > 0) {
-  gsap.fromTo(
-    tlLine,
-    { height: 0, transformOrigin: "top center" },
-    {
-      height: "100%",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".history-timeline",
-        start: "-400px top",
-        end: "bottom bottom",
-        scrub: true,
-        onUpdate: () => {
-          const lineHeight = tlLine.offsetHeight;
-          const lineTop = tlLine.getBoundingClientRect().top + window.scrollY;
-
-          dots.forEach((dot) => {
-            const dotTop = dot.getBoundingClientRect().top + window.scrollY;
-            const item = dot.closest(".history-item");
-
-            if (dotTop <= lineTop + lineHeight) {
-              item.classList.add("active");
-            } else {
-              item.classList.remove("active");
-            }
-          });
-        },
-      },
-    },
-  );
-}
-
-ScrollTrigger.refresh();
