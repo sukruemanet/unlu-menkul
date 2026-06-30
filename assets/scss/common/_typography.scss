@@ -264,3 +264,19 @@
     }
   }
 }
+
+.content-head {
+  margin-bottom: 6rem;
+  h3 {
+    max-width: 90rem;
+    font-size: 3.6rem;
+    font-weight: $font-regular;
+    color: rgba($black, 0.5);
+    margin-left: auto;
+
+    strong {
+      font-weight: $font-regular;
+      color: $black;
+    }
+  }
+}
