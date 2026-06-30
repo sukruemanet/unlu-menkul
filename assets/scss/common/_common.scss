@@ -122,6 +122,18 @@
   &.type-6 {
     margin: 6rem 0;
   }
+
+  .video {
+    width: 100%;
+
+    video {
+      width: 100%;
+    }
+  }
+
+  .headline {
+    margin: 6rem 0;
+  }
 }
 
 .content-button {
@@ -222,6 +234,7 @@
   .card {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 8rem;
     position: relative;
     overflow: hidden;
@@ -379,7 +392,6 @@
       display: flex;
       flex-direction: column;
       gap: 6rem;
-      padding-bottom: 6rem;
       flex-shrink: 0;
 
       @media only screen and (max-width: $desktop-sm) {
@@ -6678,12 +6690,19 @@
   }
 }
 
-.our-values-items {
+.content-special-card-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 
   @media only screen and (max-width: $tablet-h) {
+  }
+
+  &.border {
+    .item {
+      background: none;
+      border: solid rgba($dark, 0.2) 0.1rem;
+    }
   }
 
   .item {
@@ -6705,5 +6724,31 @@
       border-top: solid rgba($dark, 0.1) 0.1rem;
       font-weight: $font-regular;
     }
+  }
+}
+
+.tab-list-items {
+  max-width: 100rem;
+  width: 100%;
+  padding-top: 2rem;
+
+  li {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    border-bottom: solid rgba($dark, 0.2) 0.1rem;
+
+    &.bn {
+      border: none;
+    }
+
+    span,
+    .item {
+      width: 50%;
+    }
+  }
+
+  .item {
   }
 }

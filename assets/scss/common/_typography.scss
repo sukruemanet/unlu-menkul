@@ -26,6 +26,20 @@
     margin-bottom: 0;
   }
 
+  &.dark {
+    h4 {
+      color: $dark;
+
+      &:after {
+        background: $dark;
+      }
+    }
+
+    p {
+      color: $dark;
+    }
+  }
+
   .right {
     max-width: 50%;
     width: 50%;
