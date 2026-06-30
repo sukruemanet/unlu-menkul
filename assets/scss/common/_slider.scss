@@ -731,39 +731,7 @@
 
   .swiper-slide {
     display: flex;
-    flex-direction: column;
-    padding: 4rem;
     height: auto;
-
-    .caption {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      small {
-        font-size: 1.4rem;
-        color: $white;
-      }
-
-      h4 {
-        font-size: 2rem;
-        color: $white;
-        font-family: $font-ibm;
-      }
-
-      p {
-        font-size: 1.6rem;
-        color: $white;
-        margin-bottom: 10rem;
-      }
-    }
-
-    a {
-      font-size: 1.6rem;
-      color: #80d4ff;
-      text-decoration: underline;
-      margin-top: auto;
-    }
   }
 
   .slider-control {
