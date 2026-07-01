@@ -938,7 +938,7 @@
     </div>
 
     <div class="content-wrapper type-7">
-      <div class="container">
+      <div class="container stocks-items-content">
         <div class="headline blue">
           <h4>
             BİST 30 & BİST 100 Hisse Senetleri
@@ -948,108 +948,150 @@
             takibi ve emir girişi yapabilirsiniz.
           </p>
         </div>
-        <div class="content-table-list">
-          <ul>
-            <li class="nb">
-              <div class="item">
-                <span>
-                  <strong>Fon Türü</strong>
-                </span>
-              </div>
-              <div class="item">
-                <span>
-                  <strong>Yatırımcı Türü</strong>
-                </span>
-              </div>
-              <div class="item">
-                <span>
-                  <strong>Stopaj Oranı</strong>
-                </span>
-              </div>
-              <div class="item">
-                <span>
-                  <strong>Açıklama</strong>
-                </span>
-              </div>
+        <div class="tab-menu-content">
+          <ul class="tabs left">
+            <li class="tab-link current" data-tab="tab-1">
+              BİST 30
             </li>
-            <li>
-              <div class="item">
-                <span>Hisse Senedi Yoğun Fon (≥%80 hisse)</span>
-              </div>
-              <div class="item">
-                <span>Gerçek Kişi (Türkiye)</span>
-              </div>
-              <div class="item">
-                <span>%0</span>
-              </div>
-              <div class="item">
-                <span>Fon içinde işlem vergisi de alınmaz</span>
-              </div>
+            <li class="tab-link" data-tab="tab-2">
+              BİST 50
             </li>
-            <li>
-              <div class="item">
-                <span>Diğer Hisse senetleri</span>
-              </div>
-              <div class="item">
-                <span>Gerçek Kişi (Türkiye)</span>
-              </div>
-              <div class="item">
-                <span>%15</span>
-              </div>
-              <div class="item">
-                <span>Kazanç üzerinden uygulanır</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Tüm Fon Türleri</span>
-              </div>
-              <div class="item">
-                <span>Kurumlar Vergisi Mükellefi</span>
-              </div>
-              <div class="item">
-                <span>%0</span>
-              </div>
-              <div class="item">
-                <span>Kurumsal yatırımcılar stopajdan muaf</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Emeklilik Yatırım Fonu</span>
-              </div>
-              <div class="item">
-                <span>Gerçek Kişi (Türkiye)</span>
-              </div>
-              <div class="item">
-                <span>%0</span>
-              </div>
-              <div class="item">
-                <span>BES kapsamında özel düzenleme</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Tüm Fon Türleri</span>
-              </div>
-              <div class="item">
-                <span>Dar Mükellef (Yurt Dışı)</span>
-              </div>
-              <div class="item">
-                <span>%0</span>
-              </div>
-              <div class="item">
-                <span>Çifte vergilendirme anlaşmaları geçerli</span>
-              </div>
+            <li class="tab-link" data-tab="tab-3">
+              BİST 100
             </li>
           </ul>
-          <div class="info">
-            ⚠️ Stopaj oranları, yasal düzenlemeler çerçevesinde değiştirilmiş olabilir. Güncel oran ve istisnalar için
-            vergi uzmanınıza veya ÜNLÜ Menkul danışmanınıza danışınız.
+
+          <div id="tab-1" class="tab-content current">
+            <!-- <div class="stocks-items">
+              <div class="item">
+                <span id="stocks-name">
+                  VESTL
+                </span>
+                <small id="stocks-brand">
+                  Vestel
+                </small>
+                <div class="values" id="stocks-values">
+                  %1,35
+                </div>
+              </div>
+            </div> -->
+            <div class="stocks-items" id="stocks-container-1"></div>
+          </div>
+
+          <div id="tab-2" class="tab-content">
+            <div class="stocks-items" id="stocks-container-2"></div>
+          </div>
+
+          <div id="tab-3" class="tab-content">
+            <div class="stocks-items" id="stocks-container-3"></div>
           </div>
         </div>
+        <div class="info">
+          * Tüm BİST 100 hisselerine ulaşmak için hesap açarak Piapiri uygulamasını kullanabilirsiniz.
+        </div>
       </div>
+    </div>
 
+    <div class="content-wrapper type-7">
+      <div class="container stocks-items-content">
+        <div class="headline blue">
+          <h4>
+            Alım & Satım Sinyali Veren Hisseler
+          </h4>
+          <p>
+            Arz-talep dengesi ve teknik analiz göstergeleri tarafından üretilen sinyal listesini takip edin. Piapiri
+            uygulamasında anlık bildirimler açık olduğunda hiçbir fırsatı kaçırmayın.
+          </p>
+        </div>
+
+        <div class="stocks-boxes">
+          <div class="box green">
+            <div class="head">
+              <span>
+                Güçlü Al Sinyali Veren Hisseler
+              </span>
+            </div>
+            <ul>
+              <li>
+                THYAO
+                <div class="reaction">
+                  GÜÇLÜ AL
+                </div>
+              </li>
+              <li>
+                SISE
+                <div class="reaction">
+                  GÜÇLÜ AL
+                </div>
+              </li>
+              <li>
+                FROTO
+                <div class="reaction">
+                  AL
+                </div>
+              </li>
+              </li>
+              <li>
+                ASELS
+                <div class="reaction">
+                  GÜÇLÜ AL
+                </div>
+              </li>
+              <li>
+                TUPRS
+                <div class="reaction">
+                  AL
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="box red">
+            <div class="head">
+              -<span>
+                Güçlü Al Sinyali Veren Hisseler
+              </span>
+            </div>
+            <ul>
+              <li>
+                THYAO
+                <div class="reaction">
+                  GÜÇLÜ AL
+                </div>
+              </li>
+              <li>
+                SISE
+                <div class="reaction">
+                  GÜÇLÜ AL
+                </div>
+              </li>
+              <li>
+                FROTO
+                <div class="reaction">
+                  AL
+                </div>
+              </li>
+              </li>
+              <li>
+                ASELS
+                <div class="reaction">
+                  GÜÇLÜ AL
+                </div>
+              </li>
+              <li>
+                TUPRS
+                <div class="reaction">
+                  AL
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info">
+          * Sinyaller TradingView teknik analiz verileri esas alınarak güncellenebilir. Yatırım tavsiyesi niteliği
+          taşımaz.
+        </div>
+      </div>
     </div>
 
     <div class="image-card-content type-2">
@@ -1585,6 +1627,68 @@
   <script src="assets/js/common/mega-menu.js"></script>
   <script src="assets/js/common/mobile-menu.js"></script>
   <script src="assets/js/common/accordion-menu.js"></script>
+
+  <div class="stocks-container" id="stocks-container"></div>
+
+  <script>
+    function renderStocks(containerId, data) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      container.innerHTML = data
+        .map((stock) => {
+          const isUp = stock.value >= 0;
+          const cssClass = isUp ? "up" : "down";
+          return `
+          <div class="item">
+            <span class="stocks-name">${stock.name}</span>
+            <small class="stocks-brand">${stock.brand}</small>
+            <div class="values ${cssClass}">
+              <i></i> %${formatStockValue(stock.value)}
+            </div>
+          </div>
+        `;
+        })
+        .join("");
+    }
+
+    function formatStockValue(v) {
+      return Math.abs(v).toFixed(2).replace(".", ",");
+    }
+
+    const stocksData1 = [
+      { name: "VESTL", brand: "Vestel", value: 1.35 },
+      { name: "PETKM", brand: "Petkim", value: -0.18 },
+      { name: "DOAS", brand: "Doğuş Otomotiv", value: 0.50 },
+      { name: "CIMSA", brand: "Çimsa", value: 1.77 },
+      { name: "KRDMD", brand: "Kardemir", value: -1.11 },
+      { name: "SASA", brand: "SASA Polyester", value: 3.21 },
+      { name: "ENJSA", brand: "Enerjisa", value: 0.85 },
+      { name: "SOKM", brand: "Şok Marketler", value: -0.44 },
+      { name: "AKSEN", brand: "Aksa Enerji", value: 1.40 },
+      { name: "GUBRF", brand: "Gübre Fabrikaları", value: -2.05 },
+    ];
+
+    const stocksData2 = [
+      { name: "THYAO", brand: "Türk Hava Yolları", value: 2.10 },
+      { name: "BIMAS", brand: "BİM", value: -0.75 },
+      { name: "EREGL", brand: "Ereğli Demir Çelik", value: 0.32 },
+      { name: "SASA", brand: "SASA Polyester", value: 3.21 },
+      { name: "ENJSA", brand: "Enerjisa", value: 0.85 },
+      { name: "SOKM", brand: "Şok Marketler", value: -0.44 },
+      { name: "AKSEN", brand: "Aksa Enerji", value: 1.40 },
+    ];
+
+    const stocksData3 = [
+      { name: "THYAO", brand: "Türk Hava Yolları", value: 2.10 },
+      { name: "BIMAS", brand: "BİM", value: -0.75 },
+      { name: "EREGL", brand: "Ereğli Demir Çelik", value: 0.32 },
+    ];
+
+    renderStocks("stocks-container-1", stocksData1);
+    renderStocks("stocks-container-2", stocksData2);
+    renderStocks("stocks-container-3", stocksData3);
+  </script>
 
 </body>
 

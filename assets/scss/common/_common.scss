@@ -7111,3 +7111,141 @@
     }
   }
 }
+
+.stocks-items-content {
+  .stocks-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+
+    .item {
+      border: solid rgba($dark, 0.1) 0.1rem;
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      span {
+        font-size: 2.6rem;
+        color: $dark;
+        font-weight: $font-medium;
+      }
+
+      small {
+        font-size: 1.6rem;
+        color: $dark;
+        margin: 2rem 0;
+      }
+
+      .values {
+        min-width: 12rem;
+        font-size: 1.8rem;
+        font-weight: $font-medium;
+        background: #eff7ff;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .values.up {
+        background: #e8f5ee;
+        color: #0a8a3f;
+      }
+      .values.down {
+        background: #fdeceb;
+        color: #e02b1d;
+      }
+
+      .values i {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        font-style: normal;
+      }
+      .values.up i {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 8px solid #0a8a3f;
+      }
+      .values.down i {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 8px solid #e02b1d;
+      }
+    }
+  }
+
+  .stocks-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+
+      &.green {
+        background: #f5fcf6;
+
+        .head {
+          border-bottom: solid #00ba1c 0.1rem;
+        }
+
+        .reaction {
+          color: #00ba1c;
+        }
+      }
+
+      &.red {
+        background: #fff5f5;
+
+        .head {
+          border-bottom: solid #ff0000 0.1rem;
+        }
+
+        .reaction {
+          color: #ff0000;
+        }
+      }
+    }
+
+    .head {
+      padding: 2rem;
+
+      span {
+        font-size: 2rem;
+        font-weight: $font-medium;
+        color: $dark;
+      }
+    }
+
+    ul {
+      padding: 2rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 5rem;
+        font-size: 1.4rem;
+        border-bottom: solid rgba($dark, 0.1) 0.1rem;
+
+        &:last-child {
+          border: none;
+        }
+
+        .reaction {
+          font-weight: $font-medium;
+        }
+      }
+    }
+  }
+
+  .info {
+    font-size: 1.6rem;
+    margin-top: 4rem;
+  }
+}
