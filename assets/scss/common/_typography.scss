@@ -40,6 +40,20 @@
     }
   }
 
+  &.light {
+    h4 {
+      color: $white;
+
+      &:after {
+        background: $white;
+      }
+    }
+
+    p {
+      color: $white;
+    }
+  }
+
   &.blue {
     h4 {
       color: $blue;
