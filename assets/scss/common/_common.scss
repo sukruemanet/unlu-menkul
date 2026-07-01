@@ -6783,9 +6783,6 @@
       width: 50%;
     }
   }
-
-  .item {
-  }
 }
 
 .blog-guide-cards {
@@ -7049,6 +7046,68 @@
           font-weight: $font-medium;
         }
       }
+    }
+  }
+}
+
+.content-table-list {
+  width: 100%;
+  padding-top: 2rem;
+
+  ul {
+    li {
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      border-bottom: solid rgba($dark, 0.2) 0.1rem;
+
+      &.nb {
+        border: none;
+      }
+
+      &.bn {
+        border: none;
+      }
+
+      span,
+      .item {
+        width: 50%;
+      }
+    }
+  }
+
+  .info {
+    font-size: 1.4rem;
+    margin-top: 4rem;
+  }
+}
+
+.why-unlu-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  .item {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    color: $white;
+
+    span {
+      font-size: 3.8rem;
+      font-weight: $font-medium;
+
+      small {
+        font-size: 2.4rem;
+      }
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-top: 4rem;
+      padding-top: 4rem;
+      border-top: solid rgba($white, 0.2) 0.1rem;
     }
   }
 }
