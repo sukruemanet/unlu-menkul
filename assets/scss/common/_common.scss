@@ -244,6 +244,10 @@
     overflow: hidden;
     z-index: 1;
 
+    &.center {
+      align-items: center;
+    }
+
     &.reverse {
       flex-direction: row-reverse;
 
@@ -544,9 +548,6 @@
           }
         }
       }
-    }
-
-    .card-image {
     }
 
     .numbers-items {
@@ -4820,6 +4821,10 @@
         }
       }
     }
+  }
+
+  .date {
+    font-size: 1.6rem;
   }
 }
 
