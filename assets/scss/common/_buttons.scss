@@ -68,10 +68,49 @@ button,
     }
   }
 
+  &.brown {
+    background: $brown;
+    color: $white;
+    box-shadow: inset 0 0 0 0 #594e3b;
+
+    svg {
+      stroke: $white;
+    }
+
+    &:hover {
+      color: $white;
+      box-shadow: inset 0 -100px 0 0 #594e3b;
+
+      svg {
+        stroke: $white;
+        transition: ease-out 0.5s;
+      }
+    }
+  }
+
   &.light {
     background: $white;
     color: $blue;
     box-shadow: inset 0 0 0 0 $blue;
+
+    &.type-2 {
+      color: $brown;
+      box-shadow: inset 0 0 0 0 $brown;
+
+      svg {
+        stroke: $brown;
+      }
+
+      &:hover {
+        color: $white;
+        box-shadow: inset 0 -100px 0 0 $brown;
+
+        svg {
+          stroke: $white;
+          transition: ease-out 0.5s;
+        }
+      }
+    }
 
     svg {
       stroke: $blue;
