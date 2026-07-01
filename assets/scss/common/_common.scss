@@ -5996,9 +5996,10 @@
   .item {
     display: flex;
     gap: 2rem;
+    justify-content: space-between;
     align-items: center;
-    border: solid #90754a 0.1rem;
-    padding: 3rem 2rem;
+    border: solid rgba($black, 0.1) 0.1rem;
+    padding: 4rem;
     @include fade-transition;
 
     @media only screen and (max-width: $tablet-h) {
@@ -6007,24 +6008,9 @@
       text-align: center;
     }
 
-    &:hover {
-      @include fade-transition;
-      background: $brown;
-
-      span {
-        color: $white;
-        @include fade-transition;
-      }
-
-      svg {
-        fill: $white;
-        @include fade-transition;
-      }
-    }
-
     svg {
       width: 7rem;
-      fill: $brown-2;
+      fill: #90754a;
       @include fade-transition;
 
       @media only screen and (max-width: $tablet-h) {
@@ -6033,9 +6019,9 @@
     }
 
     span {
-      font-size: 1.6rem;
-      color: $brown-2;
-      font-weight: $font-regular;
+      font-size: 2.2rem;
+      color: $black;
+      font-weight: $font-medium;
       @include fade-transition;
     }
   }
@@ -6719,7 +6705,7 @@
     color: $dark;
 
     span {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       height: 6rem;
       font-weight: $font-medium;
     }

@@ -24,6 +24,10 @@
 
   &.type-2 {
     margin-bottom: 0;
+
+    &:after {
+      background: $light-blue-2;
+    }
   }
 
   &.dark {
@@ -140,12 +144,6 @@
 
     .button {
       margin: 0;
-    }
-  }
-
-  &.type-2 {
-    &:after {
-      background: $light-blue-2;
     }
   }
 
