@@ -2572,106 +2572,7 @@
 }
 
 .our-values {
-  background: $dark;
-
-  &.dark {
-    background: $dark;
-  }
-
-  .headline {
-    h4 {
-      color: $light-blue-2;
-
-      &:after {
-        background: $light-blue-2;
-      }
-    }
-
-    p {
-      color: $light-blue-2;
-      background: none;
-    }
-  }
-
-  .our-values-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    margin-top: 4rem;
-
-    @media only screen and (max-width: $desktop) {
-      gap: 2rem;
-    }
-
-    @media only screen and (max-width: $tablet-h) {
-      width: calc(100% + 2rem);
-      display: flex;
-      overflow-x: auto;
-      padding-right: 2rem;
-    }
-
-    .item {
-      padding: 3rem;
-      min-height: 30rem;
-      display: flex;
-      align-items: flex-end;
-      position: relative;
-      overflow: hidden;
-
-      figure {
-        img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          object-fit: cover;
-          opacity: 0.5;
-        }
-      }
-
-      @media only screen and (max-width: $tablet-h) {
-        width: 35rem;
-        flex-shrink: 0;
-        min-height: 35rem;
-        padding: 2rem;
-      }
-
-      .caption {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        gap: 2rem;
-        min-height: 15rem;
-        position: relative;
-
-        span {
-          width: 100%;
-          font-size: 2.6rem;
-          color: $light-blue-2;
-          padding-bottom: 2rem;
-
-          @media only screen and (max-width: $tablet-h) {
-            font-size: 2rem;
-          }
-        }
-
-        p {
-          height: 6.5rem;
-          border-top: solid rgba($light-blue-2, 0.1) 0.1rem;
-          font-size: 1.8rem;
-          color: $light-blue-2;
-          font-weight: $font-regular;
-          padding-top: 2rem;
-
-          @media only screen and (max-width: $tablet-h) {
-            font-size: 1.6rem;
-          }
-        }
-      }
-    }
-  }
+  background: #142f58;
 }
 
 .unlu-co {
@@ -6716,6 +6617,7 @@
 
     &.blue {
       gap: 2rem;
+
       .item {
         border: solid #80d4ff 0.1rem;
 
@@ -6727,6 +6629,21 @@
           border-top: solid #80d4ff 0.1rem;
           color: $white;
         }
+      }
+    }
+  }
+
+  &.light {
+    .item {
+      background: #20416a;
+
+      span {
+        color: $white;
+      }
+
+      p {
+        border-top: solid #4d6788 0.1rem;
+        color: $white;
       }
     }
   }
