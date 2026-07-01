@@ -598,7 +598,7 @@
     padding: 16rem 6rem 14rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     @media only screen and (max-width: $desktop) {
       padding: 14rem 2rem 6rem;
@@ -3827,7 +3827,7 @@
     }
 
     .item {
-      background: #00136a;
+      background: #f1faff;
       padding: 5rem;
       min-height: 35rem;
       display: flex;
@@ -3861,8 +3861,8 @@
         span {
           width: 100%;
           font-size: 2.6rem;
-          color: $light-blue-2;
-
+          color: $dark;
+          font-weight: $font-medium;
           padding-bottom: 2rem;
 
           @media only screen and (max-width: $tablet-h) {
@@ -3871,9 +3871,9 @@
         }
 
         p {
-          border-top: solid rgba($light-blue-2, 0.1) 0.1rem;
+          border-top: solid rgba($dark, 0.1) 0.1rem;
           font-size: 1.8rem;
-          color: $light-blue-2;
+          color: $dark;
           font-weight: $font-regular;
           padding-top: 2rem;
           min-height: 13.2rem;
@@ -3882,14 +3882,6 @@
             font-size: 1.6rem;
           }
         }
-      }
-
-      &:nth-child(2) {
-        background: #001b98;
-      }
-
-      &:nth-child(3) {
-        background: #0025d0;
       }
     }
   }
