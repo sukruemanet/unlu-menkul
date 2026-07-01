@@ -740,6 +740,12 @@
     height: 90dvh;
   }
 
+  &.nb {
+    &:before {
+      display: none;
+    }
+  }
+
   &:before {
     content: "";
     position: absolute;
