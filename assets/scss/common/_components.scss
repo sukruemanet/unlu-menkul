@@ -833,7 +833,7 @@ form {
 .newsletter {
   width: 100%;
   padding: 6rem 0;
-  background: $blue;
+  background: $dark;
 
   @media only screen and (max-width: $tablet-h) {
     padding: 4rem 2rem;
@@ -848,7 +848,6 @@ form {
   span {
     font-size: 3rem;
     color: $white;
-
     text-align: center;
     display: block;
     @include trim-both;
@@ -877,6 +876,27 @@ form {
       flex-direction: column;
       padding: 0;
       gap: 1.6rem;
+
+      input {
+        background: $white;
+
+        &::-webkit-input-placeholder {
+          color: $dark;
+        }
+
+        &:-ms-input-placeholder {
+          color: $dark;
+        }
+
+        &::placeholder {
+          color: $dark;
+        }
+
+        &:focus {
+          color: $dark;
+          background: rgba($white, 0.9);
+        }
+      }
 
       input,
       button {

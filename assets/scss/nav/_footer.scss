@@ -105,6 +105,16 @@ footer {
       font-size: 1.8rem;
       color: $light-blue;
       margin-bottom: 2rem;
+
+      a {
+        color: $light-blue;
+        @include fade-transition;
+
+        &:hover {
+          @include fade-transition;
+          opacity: 0.5;
+        }
+      }
     }
 
     .items {
