@@ -16,7 +16,7 @@ function openMegaMenu(menuType) {
   });
 
   const activeBlock = document.querySelector(
-    `.mega-menu-block[data-menu="${menuType}"]`
+    `.mega-menu-block[data-menu="${menuType}"]`,
   );
 
   if (!activeBlock) return;
@@ -162,10 +162,20 @@ $(document).ready(function () {
   });
 });
 
-// $(document).on('click', '.search-now', function () {
-//   $('body').addClass('no-scroll');
-// });
+//Menu
+const navItems = document.querySelectorAll(".nav-item.has-mega");
 
-// $(document).on('click', '.close-mega-menu', function () {
-//   $('body').removeClass('no-scroll');
-// });
+navItems.forEach((item) => {
+  const menuKey = item.dataset.menu;
+  const subMenu = item.querySelector(`.sub-menu[data-menu="${menuKey}"]`);
+
+  item.addEventListener("mouseenter", () => {
+    item.classList.add("active");
+    if (subMenu) subMenu.classList.add("active");
+  });
+
+  item.addEventListener("mouseleave", () => {
+    item.classList.remove("active");
+    if (subMenu) subMenu.classList.remove("active");
+  });
+});
