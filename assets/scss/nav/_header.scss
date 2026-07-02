@@ -133,6 +133,10 @@ header {
       img {
         width: 40rem;
 
+        @media only screen and (max-width: $desktop-l) {
+          width: 36rem;
+        }
+
         @media only screen and (max-width: $desktop) {
           width: 26rem;
         }

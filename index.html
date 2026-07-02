@@ -2446,12 +2446,10 @@
       <span class="divider"></span>`;
     }
 
-    // Tek bir set'in HTML'i
     const oneSetHTML = data.map(buildItemHTML).join("");
 
-    // Ekranı dolduracak kadar set çoğalt (en az 2x ekran genişliği) + emniyet payı
     function buildTrack() {
-      track.innerHTML = oneSetHTML; // önce bir set koy, genişliğini ölç
+      track.innerHTML = oneSetHTML;
       const oneSetWidth = track.scrollWidth;
       const needed = Math.ceil((slider.offsetWidth * 2) / oneSetWidth) + 1;
 
@@ -2475,7 +2473,6 @@
       if (!paused) {
         offset -= SPEED * dt;
 
-        // Bir set tamamen geçince başa al — kusursuz döngü, boşluk yok
         if (offset <= -oneSetWidth) {
           offset += oneSetWidth;
         }
