@@ -96,6 +96,7 @@
       span {
         font-size: 1.8rem;
         color: $dark-blue;
+        font-weight: $font-medium;
 
         @media only screen and (max-width: $tablet-v) {
           font-size: 1.6rem;
@@ -105,6 +106,7 @@
       a {
         font-size: 1.8rem;
         color: $blue;
+        font-weight: $font-medium;
 
         @media only screen and (max-width: $tablet-v) {
           font-size: 1.6rem;
@@ -588,7 +590,7 @@ form {
     width: 100%;
     font-size: 1.6rem;
     color: $blue;
-    font-weight: $font-light;
+    font-weight: $font-medium;
     padding: 0 2rem;
     @include fade-transition;
     font-family: $font-family;
@@ -688,7 +690,6 @@ form {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  display: none;
 
   svg {
     width: 1.8rem;
