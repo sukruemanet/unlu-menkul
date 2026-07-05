@@ -135,6 +135,251 @@
   }
 }
 
+.hero-content {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+
+  video,
+  figure {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  .heroo-slide-contol {
+    display: flex;
+    justify-content: space-between;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: relative;
+
+      svg {
+        width: 2rem;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      width: 5rem;
+      height: 0.8rem;
+      border-radius: 0;
+      background: #80d4ff;
+    }
+  }
+}
+
+.hero-slider {
+  position: relative;
+
+  figure {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba($black, 0.4);
+      z-index: 3;
+    }
+  }
+
+  .caption {
+    max-width: 70rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    inset: auto 6rem 10rem;
+    z-index: 3;
+
+    @media only screen and (max-width: $tablet-h) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      inset: auto 2rem 4rem;
+    }
+
+    h1 {
+      color: $white;
+      font-size: 10rem;
+      font-weight: $font-regular;
+      font-family: $font-ibm;
+      line-height: 1.1;
+      letter-spacing: -6.4px;
+      max-width: 100rem;
+
+      strong {
+        font-weight: $font-medium;
+      }
+
+      @media only screen and (max-width: $desktop-l) {
+        font-size: 8rem;
+        letter-spacing: -3.4px;
+      }
+
+      @media only screen and (max-width: $desktop) {
+        font-size: 6rem;
+      }
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: 3.6rem;
+        letter-spacing: -1.4px;
+      }
+    }
+
+    span {
+      max-width: 60rem;
+      font-size: 2.2rem;
+      line-height: 1.4;
+      color: $white;
+      font-weight: $font-regular;
+
+      @media only screen and (max-width: $desktop) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.hero-slider-items {
+  max-width: 60rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  inset: auto 6rem 10rem auto;
+  z-index: 3;
+
+  .widget {
+    margin-left: auto;
+    max-width: 50rem;
+    background: $blue-2;
+    padding: 2rem;
+
+    @media only screen and (max-width: $tablet-v) {
+      margin-bottom: 0;
+    }
+
+    .swiper-slide {
+      display: flex;
+      gap: 2rem;
+
+      .image {
+        width: 12rem;
+        flex-shrink: 0;
+
+        @media only screen and (max-width: $desktop) {
+          width: 8rem;
+        }
+
+        img {
+          aspect-ratio: 1;
+        }
+      }
+
+      .slide-caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a,
+        .detail {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          font-size: 1.6rem;
+          color: $light-blue;
+          @include fade-transition;
+
+          &:hover {
+            @include fade-transition;
+            opacity: 0.5;
+          }
+
+          @media only screen and (max-width: $tablet-h) {
+            font-size: 1.4rem;
+          }
+        }
+
+        span {
+          font-size: 2.2rem;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          @media only screen and (max-width: $desktop) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
+    .slide-control {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2rem;
+      margin-top: 1rem;
+
+      .swiper-pagination-fraction {
+        width: auto;
+        font-size: 2.4rem;
+        color: $white;
+        font-weight: $font-light;
+        border-right: solid rgba($white, 0.2) 0.1rem;
+        padding-right: 2rem;
+
+        @media only screen and (max-width: $desktop) {
+          font-size: 1.8rem;
+        }
+      }
+
+      .swiper-pagination-current {
+        color: $light-blue;
+        font-weight: $font-medium;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 2rem;
+
+      svg {
+        width: 2rem;
+        stroke: $white;
+        stroke-width: 0.2rem;
+      }
+    }
+  }
+
+  span {
+    max-width: 40rem;
+    font-size: 2.2rem;
+    line-height: 1.4;
+    color: $white;
+    font-weight: $font-regular;
+
+    @media only screen and (max-width: $desktop) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
 .what-are-we-slider {
   margin-top: 4rem;
   display: none;

@@ -1,5 +1,27 @@
-﻿//Widget Swiper
-var swiper = new Swiper(".widget-swiper", {
+﻿//Hero Slider
+var heroSwiper = new Swiper(".hero-swiper", {
+  allowTouchMove: false,
+  speed: 1000,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  navigation: {
+    nextEl: ".hero-next",
+    prevEl: ".hero-prev",
+  },
+  pagination: {
+    el: ".hero-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+});
+
+//Widget Slider
+var widgetSwiper = new Swiper(".widget-swiper", {
   slidesPerView: 1,
   centeredSlides: true,
   loop: true,
@@ -16,12 +38,12 @@ var swiper = new Swiper(".widget-swiper", {
     },
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".widget-pagination",
     type: "fraction",
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".widget-next",
+    prevEl: ".widget-prev",
   },
   autoplay: {
     delay: 4000,

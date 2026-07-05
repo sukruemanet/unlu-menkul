@@ -38,6 +38,101 @@
 
 <body id="top">
 
+  <div class="drawwer-menu-content" id="account-menu">
+    <div class="drawwer-menu">
+      <i class="drawwer-menu-close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </i>
+      <h3>
+        Hesap Aç veya Bilgi Al
+      </h3>
+      <div class="tab-menu-content">
+        <ul class="tabs">
+          <li class="tab-link current" data-tab="open-account">
+            Hesap aç
+          </li>
+          <li class="tab-link" data-tab="get-information">
+            Bilgi Al
+          </li>
+        </ul>
+
+        <div id="open-account" class="tab-content current">
+          <div class="drawer-form">
+            <form>
+              <div class="item">
+                <input type="text" placeholder="Adınız Soyadınız">
+              </div>
+              <div class="item">
+                <input id="id-number" type="tel" placeholder="TC Kimlik Numarası" maxlength="11">
+              </div>
+              <div class="item">
+                <input id="mobile-number" type="tel" placeholder="Cep Telefonu">
+              </div>
+              <div class="item">
+                <div class="checkbox-items">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="check-01">
+                    <label for="check-01">
+                      Kişisel verilerin işlenmesine ilişkin <a
+                        href="assets/unluyatirim-cerez_aydinlatma_metnimart2024-3436.docx">metni</a> okudum, anladım
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <button class="button primary">
+                  Gönder
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="get-information" class="tab-content">
+          <div class="drawer-form">
+            <form>
+              <div class="item">
+                <input type="text" placeholder="Adınız Soyadınız">
+              </div>
+              <div class="item">
+                <input id="phone" type="tel" placeholder="Telefon Numarası">
+              </div>
+              <div class="item">
+                <input type="mail" placeholder="E-Posta">
+              </div>
+              <div class="item">
+                <div class="checkbox-items">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="check-02">
+                    <label for="check-02">
+                      ÜNLÜ&Co tarafından elektronik iletişim adreslerime ticari elektronik ileti gönderilmesine izin
+                      veriyorum.
+                    </label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="check-03">
+                    <label for="check-03">
+                      <a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum, bilgilendirildim, ileti almak ve aranmak
+                      istiyorum.
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <button class="button primary">
+                  Gönder
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="category-menu" id="hamburger-menu" data-lenis-prevent-wheel data-lenis-prevent-touch>
     <div class="category-menu-content">
       <div class="menu-content" data-lenis-prevent-wheel data-lenis-prevent-touch>
@@ -64,84 +159,28 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="has-submenu" data-target="activities">
-                      <span class="label">Faaliyetlerimiz</span>
+                    <a href="#" class="has-submenu" data-target="services">
+                      <span class="label">Hizmetlerimiz</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="has-submenu" data-target="products">
+                      <span class="label">Ürünlerimiz</span>
                     </a>
                   </li>
                   <li>
                     <a href="#" class="has-submenu" data-target="research">
-                      <span class="label">Araştırmalar</span>
+                      <span class="label">Araştırma</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="has-submenu" data-target="career">
-                      <span class="label">Kariyer</span>
+                    <a href="#" class="has-submenu" data-target="channels">
+                      <span class="label">İşlem Kanalları</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="has-submenu" data-target="sustainability">
-                      <span class="label">Sürdürülebilirlik</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="has-submenu" data-target="investor">
-                      <span class="label">Yatırımcı İlişkileri</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="has-submenu" data-target="press">
-                      <span class="label">Basın Odası</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- About -->
-              <div class="menu-level" data-menu-id="about" data-title="Hakkımızda">
-                <ul>
-                  <!-- <li>
-                    <a href="#" class="has-submenu" data-target="contact">
-                      <span class="label">Contact</span>
-                    </a>
-                  </li> -->
-                  <li>
-                    <a href="yolculugumuz.html">
-                      <span class="label">Yolculuğumuz</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="tarihcemiz.html">
-                      <span class="label">Tarihçemiz</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="misyon-vizyon.html">
-                      <span class="label">Misyon & Vizyon</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="yonetim-kurulu.html">
-                      <span class="label">Yönetim Kurulumuz</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="icra-kurulu.html">
-                      <span class="label">İcra Kurulumuz</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="grup-sirketlerimiz.html">
-                      <span class="label">Grup Şirketlerimiz</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="odullerimiz.html">
-                      <span class="label">Ödüllerimiz</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="faaliyet-raporlarimiz.html">
-                      <span class="label">Faaliyet Raporlarımız</span>
+                    <a href="#" class="has-submenu" data-target="blog">
+                      <span class="label">Ünlü Kılavuz / Blog</span>
                     </a>
                   </li>
                   <li>
@@ -152,106 +191,198 @@
                 </ul>
               </div>
 
-              <!-- Activities -->
-              <div class="menu-level" data-menu-id="activities" data-title="Faaliyetlerimiz">
+              <!-- About -->
+              <div class="menu-level" data-menu-id="about" data-title="Hakkımızda">
                 <ul>
                   <li>
-                    <a href="#" class="has-submenu" data-target="finance-activities">
-                      <span class="label">Kurumsal Finansman Faaliyetlerimiz</span>
+                    <a href="#">
+                      <span class="label">Bizi Tanıyın / Genel Bakış</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="has-submenu" data-target="market-activities">
-                      <span class="label">Sermaye Piyasaları Faaliyetlerimiz</span>
+                    <a href="#">
+                      <span class="label">Tarihçemiz</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="has-submenu" data-target="investment-activities">
-                      <span class="label">Yatırım Faaliyetlerimiz</span>
+                    <a href="#">
+                      <span class="label">Misyonumuz</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="has-submenu" data-target="management-activities">
-                      <span class="label">Varlık Yönetim Faaliyetlerimiz</span>
+                    <a href="#">
+                      <span class="label">Üst Yönetim</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">ÜNLÜ &amp; Co</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Finansal Bilgiler</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Sürdürülebilirlik Raporları</span>
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <!-- Activities > Investment Activities -->
-              <div class="menu-level" data-menu-id="finance-activities" data-title="Kurumsal Finansman Faaliyetlerimiz">
+              <!-- Services -->
+              <div class="menu-level" data-menu-id="services" data-title="Hizmetlerimiz">
                 <ul>
                   <li>
-                    <a href="birlesme-ve-satin-alma-danismanligi.html">
-                      <span class="label">Birleşme ve Satın Alma Danışmanlığı</span>
+                    <a href="#" class="has-submenu" data-target="services-individual">
+                      <span class="label">Bireysel</span>
                     </a>
                   </li>
                   <li>
-                    <a href="kurumsal-kredi-danismanligi.html">
-                      <span class="label">Kurumsal Kredi Danışmanlığı</span>
+                    <a href="#" class="has-submenu" data-target="services-corporate">
+                      <span class="label">Kurumsal</span>
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <!-- Activities > Market Activities -->
-              <div class="menu-level" data-menu-id="market-activities" data-title="Sermaye Piyasaları Faaliyetlerimiz">
+              <!-- Services > Individual -->
+              <div class="menu-level" data-menu-id="services-individual" data-title="Bireysel">
                 <ul>
                   <li>
-                    <a href="halka-arz-ve-blok-satis.html">
-                      <span class="label">Halka Arz ve Blok Satış</span>
+                    <a href="#">
+                      <span class="label">DAHA Yatırım Danışmanlığı</span>
                     </a>
                   </li>
                   <li>
-                    <a href="kurumsal-satis.html">
+                    <a href="#">
+                      <span class="label">Araştırma Hizmetleri</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Piapiri Yatırım Uygulaması</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Services > Corporate -->
+              <div class="menu-level" data-menu-id="services-corporate" data-title="Kurumsal">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span class="label">Kurumsal Finansman Danışmanlığı</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Borç Sermaye Piyasaları ve Danışmanlık</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
                       <span class="label">Kurumsal Satış</span>
                     </a>
                   </li>
                   <li>
-                    <a href="arastirma.html">
-                      <span class="label">Araştırma</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="borclanma-araclari-sermaye-piyasalari.html">
-                      <span class="label">Borçlanma Araçları Sermaye Piyasaları</span>
+                    <a href="#">
+                      <span class="label">BIST Kolokasyon ile Hızlı Emir İletimi</span>
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <!-- Activities > Investmentt Activities -->
-              <div class="menu-level" data-menu-id="investment-activities" data-title="Yatırım Faaliyetlerimiz">
+              <!-- Products -->
+              <div class="menu-level" data-menu-id="products" data-title="Ürünlerimiz">
                 <ul>
                   <li>
-                    <a href="daha-aracilik-ve-yatirim-danismanligi.html">
-                      <span class="label">DAHA Aracılık ve Yatırım Danışmanlığı</span>
+                    <a href="#" class="has-submenu" data-target="products-domestic">
+                      <span class="label">Yurtiçi Piyasa Ürünleri</span>
                     </a>
                   </li>
                   <li>
-                    <a href="portfoy-yonetimi.html">
-                      <span class="label">Portföy Yönetim</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="hazine-ve-nakit-yonetimi.html">
-                      <span class="label">Hazine ve Nakit Yönetimi</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="risk-sermayesi-ve-girisim-sermayesi-yatirimlari.html">
-                      <span class="label">Risk Sermayesi ve Girişim Sermayesi Yatırımları</span>
+                    <a href="#" class="has-submenu" data-target="products-global">
+                      <span class="label">Global Piyasa Ürünleri</span>
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <!-- Activities > Management Servicess -->
-              <div class="menu-level" data-menu-id="management-activities" data-title="Varlık Yönetim Hizmetleri">
+              <!-- Products > Domestic -->
+              <div class="menu-level" data-menu-id="products-domestic" data-title="Yurtiçi Piyasa Ürünleri">
                 <ul>
                   <li>
-                    <a href="tahsili-gecikmiş-alacak-yonetimi.html">
-                      <span class="label">Tahsili Gecikmiş Alacak Yönetimi</span>
+                    <a href="#">
+                      <span class="label">BİST Hisse Senedi</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Yatırım Fonları</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Halka Arzlar</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Varant</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Vadeli İşlem ve Opsiyon Piyasası (VİOP)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Sabit Getirili Ürünler</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Borçlanma Araçları</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Tezgahüstü Türev Ürünler</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Products > Global -->
+              <div class="menu-level" data-menu-id="products-global" data-title="Global Piyasa Ürünleri">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span class="label">Uluslararası Borsalar (Uluslararası Pay Piyasaları)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Borsa Yatırım Fonları (ETF)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Vadeli İşlem Sözleşmeleri (Futures)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Opsiyon Piyasaları</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">London Metal Exchange (LME)</span>
                     </a>
                   </li>
                 </ul>
@@ -261,157 +392,95 @@
               <div class="menu-level" data-menu-id="research" data-title="Araştırma">
                 <ul>
                   <li>
-                    <a href="arastirma-raporlarimiz.html">
-                      <span class="label">Araştırma Raporlarımız</span>
+                    <a href="#">
+                      <span class="label">Araştırma Raporları</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Günlük Bülten</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Halka Arz Takvimi</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Temettü Takvimi</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Sermaye Artırımı</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Sektör ve Şirket Haberleri</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Bilanço Takvimi</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="label">Model Portföy</span>
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <!-- Career -->
-              <div class="menu-level" data-menu-id="career" data-title="Kariyer">
+              <!-- Channels -->
+              <div class="menu-level" data-menu-id="channels" data-title="İşlem Kanalları">
                 <ul>
                   <li>
-                    <a href="unlu-co-kariyer.html">
-                      <span class="label">ÜNLÜ & Co’da Kariyer</span>
+                    <a href="#">
+                      <span class="label">DAHA Yatırım Danışmanlığı</span>
                     </a>
                   </li>
                   <li>
-                    <a href="mt-programimiz.html">
-                      <span class="label">MT Programımız</span>
+                    <a href="#">
+                      <span class="label">Piapiri Yatırım Uygulaması</span>
                     </a>
                   </li>
                   <li>
-                    <a href="staj-olanaklari.html">
-                      <span class="label">Staj Olanakları</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="cesitlilik-ve-kapsayicilik.html">
-                      <span class="label">Çeşitlilik ve Kapsayıcılık</span>
+                    <a href="#">
+                      <span class="label">Diğer (Matriks vb)</span>
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <!-- Sustainability -->
-              <div class="menu-level" data-menu-id="sustainability" data-title="Sürdürülebilirlik">
+              <!-- Blog -->
+              <div class="menu-level" data-menu-id="blog" data-title="Ünlü Kılavuz / Blog">
                 <ul>
                   <li>
-                    <a href="surdurulebilirlik.html">
-                      <span class="label">Genel Bakış</span>
+                    <a href="#">
+                      <span class="label">Temel Analiz</span>
                     </a>
                   </li>
                   <li>
-                    <a href="yonetisim.html">
-                      <span class="label">Yönetişim</span>
+                    <a href="#">
+                      <span class="label">Teknik Analiz</span>
                     </a>
                   </li>
                   <li>
-                    <a href="sosyal.html">
-                      <span class="label">Sosyal</span>
+                    <a href="#">
+                      <span class="label">Yatırım Sözlüğü</span>
                     </a>
                   </li>
                   <li>
-                    <a href="cevre.html">
-                      <span class="label">Çevre</span>
+                    <a href="#">
+                      <span class="label">Borsa İstanbul</span>
                     </a>
                   </li>
                   <li>
-                    <a href="kadin-girisim.html">
-                      <span class="label">Kadın Teknoloji Girişimcileri Akademisi</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="surdurulebilirlik-yatirimci-iliskileri.html">
-                      <span class="label">Sürdürülebilirlik Raporlarımız</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Investor -->
-              <div class="menu-level" data-menu-id="investor" data-title="Yatırımcı İlişkileri">
-                <ul>
-                  <li>
-                    <a href="yatirimci-iliskileri.html">
-                      <span class="label">Genel Bakış</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="hisse-bilgisi.html">
-                      <span class="label">Hisse Bilgisi</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="finansal-raporlar-sunumlar.html">
-                      <span class="label">Finansal Raporlar ve Sunumlar</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="kurumsal-yonetim.html">
-                      <span class="label">Kurumsal Yönetim</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="genel-kurullar.html">
-                      <span class="label">Genel Kurullar</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="surdurulebilirlik-yatirimci-iliskileri.html">
-                      <span class="label">Sürdürülebilirlik</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="kredi-derecelendirme-raporlari.html">
-                      <span class="label">Kredi Derecelendirme Raporları</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="haberler-ve-duyurular.html">
-                      <span class="label">Haberler ve Duyurular</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ozel-durum-aciklamalari.html">
-                      <span class="label">Özel Durum Açıklamaları</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="halka-arz.html">
-                      <span class="label">Halka Arz</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="tahvil-ve-bono-ihraclari.html">
-                      <span class="label">Tahvil ve Bono İhraçları</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Investor -->
-              <div class="menu-level" data-menu-id="press" data-title="Basın Odası">
-                <ul>
-                  <li>
-                    <a href="basin-bultenleri.html">
-                      <span class="label">Basın Bültenleri</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="haberler-ve-duyurular.html">
-                      <span class="label">Haberler ve Duyurular</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="medya-iliskileri.html">
-                      <span class="label">Medya İlişkileri</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="medya-kiti.html">
-                      <span class="label">Medya Kiti</span>
+                    <a href="#">
+                      <span class="label">Yatırım Rehberi</span>
                     </a>
                   </li>
                 </ul>
@@ -437,7 +506,7 @@
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" class="button primary">
+            <a href="#" target="_blank" class="button primary open-drawwer" data-drawer="account-menu">
               Hesap Aç
             </a>
           </li>
@@ -461,29 +530,121 @@
         <div class="main-menu category-menu-item">
           <nav>
             <ul class="menu">
-              <li class="nav-item has-mega" data-menu="product">
+
+              <!-- HAKKIMIZDA -->
+              <li class="nav-item has-mega" data-menu="about">
                 Hakkımızda
+                <div class="sub-menu" data-menu="about">
+                  <span>Hakkımızda</span>
+                  <ul class="sub-menu-items">
+                    <li><a href="#">Bizi Tanıyın / Genel Bakış</a></li>
+                    <li><a href="#">Tarihçemiz</a></li>
+                    <li><a href="#">Misyonumuz</a></li>
+                    <li><a href="#">Üst Yönetim</a></li>
+                    <li><a href="#">ÜNLÜ &amp; Co</a></li>
+                    <li><a href="#">Finansal Bilgiler</a></li>
+                    <li><a href="#">Sürdürülebilirlik Raporları</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="activities">
+
+              <!-- HİZMETLERİMİZ -->
+              <li class="nav-item has-mega" data-menu="services">
                 Hizmetlerimiz
+                <div class="sub-menu" data-menu="services">
+                  <span>Hizmetlerimiz</span>
+                  <ul class="sub-menu-items">
+                    <li class="sub-menu-group-title">Bireysel</li>
+                    <li><a href="#">DAHA Yatırım Danışmanlığı</a></li>
+                    <li><a href="#">Araştırma Hizmetleri</a></li>
+                    <li><a href="#">Piapiri Yatırım Uygulaması</a></li>
+
+                    <li class="sub-menu-group-title">Kurumsal</li>
+                    <li><a href="#">Kurumsal Finansman Danışmanlığı</a></li>
+                    <li><a href="#">Borç Sermaye Piyasaları ve Danışmanlık</a></li>
+                    <li><a href="#">Kurumsal Satış</a></li>
+                    <li><a href="#">BIST Kolokasyon ile Hızlı Emir İletimi</a></li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <a href="/arastirma.html">
-                  Ürünlerimiz
-                </a>
+
+              <!-- ÜRÜNLERİMİZ -->
+              <li class="nav-item has-mega" data-menu="products">
+                Ürünlerimiz
+                <div class="sub-menu" data-menu="products">
+                  <span>Ürünlerimiz</span>
+                  <ul class="sub-menu-items">
+                    <li class="sub-menu-group-title">Yurtiçi Piyasa Ürünleri</li>
+                    <li><a href="#">BİST Hisse Senedi</a></li>
+                    <li><a href="#">Yatırım Fonları</a></li>
+                    <li><a href="#">Halka Arzlar</a></li>
+                    <li><a href="#">Varant</a></li>
+                    <li><a href="#">Vadeli İşlem ve Opsiyon Piyasası (VİOP)</a></li>
+                    <li><a href="#">Sabit Getirili Ürünler</a></li>
+                    <li><a href="#">Borçlanma Araçları</a></li>
+                    <li><a href="#">Tezgahüstü Türev Ürünler</a></li>
+
+                    <li class="sub-menu-group-title">Global Piyasa Ürünleri</li>
+                    <li><a href="#">Uluslararası Borsalar (Uluslararası Pay Piyasaları)</a></li>
+                    <li><a href="#">Borsa Yatırım Fonları (ETF)</a></li>
+                    <li><a href="#">Vadeli İşlem Sözleşmeleri (Futures)</a></li>
+                    <li><a href="#">Opsiyon Piyasaları</a></li>
+                    <li><a href="#">London Metal Exchange (LME)</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="career">
+
+              <!-- ARAŞTIRMA -->
+              <li class="nav-item has-mega" data-menu="research">
                 Araştırma
+                <div class="sub-menu" data-menu="research">
+                  <span>Araştırma</span>
+                  <ul class="sub-menu-items">
+                    <li><a href="#">Araştırma Raporları</a></li>
+                    <li><a href="#">Günlük Bülten</a></li>
+                    <li><a href="#">Halka Arz Takvimi</a></li>
+                    <li><a href="#">Temettü Takvimi</a></li>
+                    <li><a href="#">Sermaye Artırımı</a></li>
+                    <li><a href="#">Sektör ve Şirket Haberleri</a></li>
+                    <li><a href="#">Bilanço Takvimi</a></li>
+                    <li><a href="#">Model Portföy</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="sustainability">
+
+              <!-- İŞLEM KANALLARI -->
+              <li class="nav-item has-mega" data-menu="channels">
                 İşlem Kanalları
+                <div class="sub-menu" data-menu="channels">
+                  <span>İşlem Kanalları</span>
+                  <ul class="sub-menu-items">
+                    <li><a href="#">DAHA Yatırım Danışmanlığı</a></li>
+                    <li><a href="#">Piapiri Yatırım Uygulaması</a></li>
+                    <li><a href="#">Diğer (Matriks vb)</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="investor">
-                Yatırımcı Kılavuz / Blog
+
+              <!-- ÜNLÜ KILAVUZ / BLOG -->
+              <li class="nav-item has-mega" data-menu="blog">
+                Ünlü Kılavuz / Blog
+                <div class="sub-menu" data-menu="blog">
+                  <span>Ünlü Kılavuz / Blog</span>
+                  <ul class="sub-menu-items">
+                    <li><a href="#">Temel Analiz</a></li>
+                    <li><a href="#">Teknik Analiz</a></li>
+                    <li><a href="#">Yatırım Sözlüğü</a></li>
+                    <li><a href="#">Borsa İstanbul</a></li>
+                    <li><a href="#">Yatırım Rehberi</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="press">
-                İletişim
+
+              <!-- İLETİŞİM -->
+              <li class="nav-item">
+                <a href="#">İletişim</a>
               </li>
+
             </ul>
           </nav>
         </div>
@@ -496,6 +657,45 @@
       </div>
     </nav>
   </header>
+
+  <div class="mega-menu-wrapper" id="megaMenuWrapper">
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu-content">
+        <div class="mega-menu-block" data-menu="search-now">
+          <div class="menu-wrapper">
+            <div class="search-wrapper">
+              <div class="search-container">
+                <div class="head">
+                  <span>
+                    Arama yap
+                  </span>
+                  <i class="close-mega-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                      stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 6l-12 12" />
+                      <path d="M6 6l12 12" />
+                    </svg>
+                  </i>
+                </div>
+                <form class="form-search">
+                  <input type="text" placeholder="Arama yap">
+                  <button class="button light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                      <path d="M21 21l-6 -6" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="mega-menu-wrapper" id="megaMenuWrapper">
     <div class="mega-menu" id="megaMenu">
@@ -1757,6 +1957,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/common/menu.js"></script>
   <script src="assets/lenis/lenis.min.js"></script>
   <script src="assets/js/gsap/gsap.min.js"></script>
   <script src="assets/js/gsap/ScrollTrigger.min.js"></script>
@@ -1772,7 +1973,6 @@
   <script src="assets/swiper/swiper-custom.js"></script>
 
   <script src="assets/js/common/mobile-accordion-menu.js"></script>
-  <script src="assets/js/common/mega-menu.js"></script>
   <script src="assets/js/common/mobile-menu.js"></script>
   <script src="assets/js/common/accordion-menu.js"></script>
 

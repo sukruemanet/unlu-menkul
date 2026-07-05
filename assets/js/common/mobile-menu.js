@@ -1,66 +1,181 @@
-$(document).ready(function () {
-  const $backBtn = $("#backBtn");
-  const $menuTitle = $("#menuTitle");
-  const navigationHistory = [];
+const megaNavItems = document.querySelectorAll(".nav-item.has-mega");
 
-  function showMenu(menuId) {
-    const $targetMenu = $(`.menu-level[data-menu-id="${menuId}"]`);
+const megaMenuWrapper = document.getElementById("megaMenuWrapper");
+const megaMenu = document.getElementById("megaMenu");
+const megaMenuContent = document.querySelector(".mega-menu-content");
 
-    if ($targetMenu.length) {
-      // Mevcut aktif menüyü gizle
-      const $currentMenu = $(".menu-level.active");
+const megaMenuBlocks = document.querySelectorAll(".mega-menu-block");
 
-      // History'e ekle
-      if ($currentMenu.length) {
-        navigationHistory.push({
-          id: $currentMenu.data("menu-id"),
-          title: $currentMenu.data("title"),
-        });
-      }
+let isMenuOpen = false;
+let currentMenu = null;
 
-      // Menü değiştir
-      $(".menu-level").removeClass("active");
-      $targetMenu.addClass("active");
+function openMegaMenu(menuType) {
+  megaMenuBlocks.forEach((block) => {
+    block.style.display = "none";
+    block.classList.remove("loaded");
+  });
 
-      // Başlığı güncelle
-      $menuTitle.text($targetMenu.data("title"));
+  const activeBlock = document.querySelector(
+    `.mega-menu-block[data-menu="${menuType}"]`,
+  );
 
-      // Back button göster
-      $backBtn.addClass("active");
+  if (!activeBlock) return;
+
+  megaMenuWrapper.classList.add("active");
+
+  activeBlock.style.display = "block";
+  activeBlock.style.opacity = "0";
+
+  requestAnimationFrame(() => {
+    const blockHeight = activeBlock.scrollHeight;
+
+    const contentStyles = window.getComputedStyle(megaMenuContent);
+    const paddingTop = parseFloat(contentStyles.paddingTop);
+    const paddingBottom = parseFloat(contentStyles.paddingBottom);
+
+    const menuStyles = window.getComputedStyle(megaMenu);
+    const menuPaddingTop = parseFloat(menuStyles.paddingTop);
+    const menuPaddingBottom = parseFloat(menuStyles.paddingBottom);
+
+    const totalHeight =
+      blockHeight +
+      paddingTop +
+      paddingBottom +
+      menuPaddingTop +
+      menuPaddingBottom;
+
+    megaMenu.style.height = totalHeight + "px";
+
+    setTimeout(() => {
+      activeBlock.style.opacity = "1";
+    }, 60);
+  });
+
+  isMenuOpen = true;
+  currentMenu = menuType;
+
+  setTimeout(() => {
+    activeBlock.classList.add("loaded");
+
+    const items = activeBlock.querySelectorAll(".mega-menu-item");
+
+    items.forEach((item, index) => {
+      setTimeout(() => item.classList.add("animate"), 80 * index);
+    });
+  }, 40);
+}
+
+function closeMenu() {
+  megaMenu.style.height = "0px";
+
+  setTimeout(() => {
+    megaMenuWrapper.classList.remove("active");
+    isMenuOpen = false;
+    currentMenu = null;
+
+    megaNavItems.forEach((i) => i.classList.remove("active"));
+
+    megaMenuBlocks.forEach((block) => {
+      block.style.display = "none";
+      block.style.opacity = "0";
+    });
+  }, 350);
+}
+
+megaNavItems.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    if (e.target.tagName.toLowerCase() === "a") return;
+
+    e.preventDefault();
+
+    const menuType = this.getAttribute("data-menu");
+    if (!menuType) return;
+
+    if (currentMenu === menuType && isMenuOpen) {
+      closeMenu();
+      return;
     }
+
+    megaNavItems.forEach((i) => i.classList.remove("active"));
+    this.classList.add("active");
+
+    openMegaMenu(menuType);
+  });
+});
+
+document.addEventListener("click", function (e) {
+  const isClickInside =
+    megaMenu.contains(e.target) ||
+    [...megaNavItems].some((i) => i.contains(e.target));
+
+  if (!isClickInside && isMenuOpen) {
+    closeMenu();
   }
+});
 
-  // Alt menüye geçiş
-  $(".has-submenu").on("click", function (e) {
-    e.preventDefault();
-    const targetMenuId = $(this).data("target");
-    showMenu(targetMenuId);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && isMenuOpen) {
+    closeMenu();
+  }
+});
+
+const closeMegaMenuBtns = document.querySelectorAll(".close-mega-menu");
+
+closeMegaMenuBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeMenu();
   });
+});
 
-  // Geri butonu
-  $backBtn.on("click", function () {
-    if (navigationHistory.length > 0) {
-      const previous = navigationHistory.pop();
-      const $prevMenu = $(`.menu-level[data-menu-id="${previous.id}"]`);
+$(document).ready(function () {
+  const $header = $("header");
+  let lastScrollY = 0;
 
-      // Menü değiştir
-      $(".menu-level").removeClass("active");
-      $prevMenu.addClass("active");
+  // Mobil cihaz kontrolü
+  const isMobile = () => window.innerWidth <= 768;
 
-      // Başlığı güncelle
-      $menuTitle.text(previous.title);
+  $(window).on("scroll", function () {
+    const currentScrollY = $(this).scrollTop();
 
-      // Ana menüdeyse back button gizle
-      if (navigationHistory.length === 0) {
-        $backBtn.removeClass("active");
+    // Sadece mobil OLMAYAN cihazlarda scroll'da menüyü kapat
+    if (
+      isMenuOpen &&
+      !isMobile() &&
+      Math.abs(currentScrollY - lastScrollY) > 5
+    ) {
+      closeMenu();
+    }
+
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      $header.addClass("hidden");
+    } else {
+      $header.removeClass("hidden");
+      if (currentScrollY > 50) {
+        $header.addClass("background");
+      } else {
+        $header.removeClass("background");
       }
     }
+
+    lastScrollY = currentScrollY;
+  });
+});
+
+//Menu
+const navItems = document.querySelectorAll(".nav-item.has-mega");
+
+navItems.forEach((item) => {
+  const menuKey = item.dataset.menu;
+  const subMenu = item.querySelector(`.sub-menu[data-menu="${menuKey}"]`);
+
+  item.addEventListener("mouseenter", () => {
+    item.classList.add("active");
+    if (subMenu) subMenu.classList.add("active");
   });
 
-  // Normal menu item tıklamaları
-  $(".menu-item").on("click", function (e) {
-    e.preventDefault();
-    const itemName = $(this).find(".label").text();
-    alert(`${itemName} sayfasına yönlendiriliyorsunuz...`);
+  item.addEventListener("mouseleave", () => {
+    item.classList.remove("active");
+    if (subMenu) subMenu.classList.remove("active");
   });
 });

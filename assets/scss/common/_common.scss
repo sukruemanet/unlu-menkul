@@ -859,7 +859,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    inset: auto 6rem 10rem 14rem;
+    inset: auto 6rem 10rem;
     z-index: 3;
 
     @media only screen and (max-width: $desktop-l) {
@@ -1793,7 +1793,7 @@
         width: 100%;
         position: absolute;
         padding: 4rem 2rem 2rem;
-        background: $light-blue-2;
+        background: $white;
         bottom: calc(100% + 2rem);
         left: 0;
         display: flex;
@@ -1892,7 +1892,7 @@
           align-items: center;
           justify-content: space-between;
           padding: 0 2rem;
-          background: $dark-blue;
+          background: $blue-2;
           cursor: pointer;
           font-size: 2rem;
           color: $light-blue-2;
