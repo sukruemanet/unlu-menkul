@@ -107,18 +107,70 @@ header {
       }
     }
 
+    span {
+      font-size: 2rem;
+      color: #80d4ff;
+      margin-bottom: 3.2rem;
+      display: block;
+
+      @media only screen and (max-width: $desktop-sm) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .menu-items {
+      display: flex;
+      gap: 4rem;
+
+      ul {
+        &:last-child {
+          border-left: solid rgba($white, 0.1) 0.1rem;
+          padding-left: 4rem;
+        }
+      }
+
+      .sub-menu-group-title {
+        font-size: 1.5rem;
+        font-weight: $font-bold;
+        color: #c3e6f8;
+
+        @media only screen and (max-width: $desktop-sm) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
     .sub-menu {
       position: absolute;
       top: 100%;
-      left: 0;
-      width: 36rem;
+      // left: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 25rem;
       padding: 3rem;
-      background: #04142d;
+      background: #12223b;
       opacity: 0;
       visibility: hidden;
       transition:
         opacity 0.3s ease,
         visibility 0.3s ease;
+      overflow: hidden;
+
+      // @media only screen and (max-width: $desktop-sm) {
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      // }
+
+      // &:before {
+      //   content: "";
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 100%;
+      //   background: url(/assets/images/main/unlu-logo-icon.svg) no-repeat bottom
+      //     right;
+      //   background-size: 50rem;
+      //   opacity: 0.1;
+      // }
 
       &.active {
         opacity: 1;
@@ -126,13 +178,6 @@ header {
         transition:
           opacity 0.3s ease,
           visibility 0.3s ease;
-      }
-
-      span {
-        font-size: 2rem;
-        color: #80d4ff;
-        margin-bottom: 2rem;
-        display: block;
       }
 
       ul {
@@ -145,8 +190,12 @@ header {
           padding: 0;
 
           a {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: $white;
+
+            @media only screen and (max-width: $desktop-sm) {
+              font-size: 1.4rem;
+            }
           }
         }
       }
@@ -574,7 +623,6 @@ header {
 
     .menu-container {
       width: 100%;
-      max-width: 400px;
       overflow: hidden;
     }
 

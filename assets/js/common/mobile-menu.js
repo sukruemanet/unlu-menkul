@@ -1,181 +1,66 @@
-const megaNavItems = document.querySelectorAll(".nav-item.has-mega");
-
-const megaMenuWrapper = document.getElementById("megaMenuWrapper");
-const megaMenu = document.getElementById("megaMenu");
-const megaMenuContent = document.querySelector(".mega-menu-content");
-
-const megaMenuBlocks = document.querySelectorAll(".mega-menu-block");
-
-let isMenuOpen = false;
-let currentMenu = null;
-
-function openMegaMenu(menuType) {
-  megaMenuBlocks.forEach((block) => {
-    block.style.display = "none";
-    block.classList.remove("loaded");
-  });
-
-  const activeBlock = document.querySelector(
-    `.mega-menu-block[data-menu="${menuType}"]`,
-  );
-
-  if (!activeBlock) return;
-
-  megaMenuWrapper.classList.add("active");
-
-  activeBlock.style.display = "block";
-  activeBlock.style.opacity = "0";
-
-  requestAnimationFrame(() => {
-    const blockHeight = activeBlock.scrollHeight;
-
-    const contentStyles = window.getComputedStyle(megaMenuContent);
-    const paddingTop = parseFloat(contentStyles.paddingTop);
-    const paddingBottom = parseFloat(contentStyles.paddingBottom);
-
-    const menuStyles = window.getComputedStyle(megaMenu);
-    const menuPaddingTop = parseFloat(menuStyles.paddingTop);
-    const menuPaddingBottom = parseFloat(menuStyles.paddingBottom);
-
-    const totalHeight =
-      blockHeight +
-      paddingTop +
-      paddingBottom +
-      menuPaddingTop +
-      menuPaddingBottom;
-
-    megaMenu.style.height = totalHeight + "px";
-
-    setTimeout(() => {
-      activeBlock.style.opacity = "1";
-    }, 60);
-  });
-
-  isMenuOpen = true;
-  currentMenu = menuType;
-
-  setTimeout(() => {
-    activeBlock.classList.add("loaded");
-
-    const items = activeBlock.querySelectorAll(".mega-menu-item");
-
-    items.forEach((item, index) => {
-      setTimeout(() => item.classList.add("animate"), 80 * index);
-    });
-  }, 40);
-}
-
-function closeMenu() {
-  megaMenu.style.height = "0px";
-
-  setTimeout(() => {
-    megaMenuWrapper.classList.remove("active");
-    isMenuOpen = false;
-    currentMenu = null;
-
-    megaNavItems.forEach((i) => i.classList.remove("active"));
-
-    megaMenuBlocks.forEach((block) => {
-      block.style.display = "none";
-      block.style.opacity = "0";
-    });
-  }, 350);
-}
-
-megaNavItems.forEach((item) => {
-  item.addEventListener("click", function (e) {
-    if (e.target.tagName.toLowerCase() === "a") return;
-
-    e.preventDefault();
-
-    const menuType = this.getAttribute("data-menu");
-    if (!menuType) return;
-
-    if (currentMenu === menuType && isMenuOpen) {
-      closeMenu();
-      return;
-    }
-
-    megaNavItems.forEach((i) => i.classList.remove("active"));
-    this.classList.add("active");
-
-    openMegaMenu(menuType);
-  });
-});
-
-document.addEventListener("click", function (e) {
-  const isClickInside =
-    megaMenu.contains(e.target) ||
-    [...megaNavItems].some((i) => i.contains(e.target));
-
-  if (!isClickInside && isMenuOpen) {
-    closeMenu();
-  }
-});
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && isMenuOpen) {
-    closeMenu();
-  }
-});
-
-const closeMegaMenuBtns = document.querySelectorAll(".close-mega-menu");
-
-closeMegaMenuBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    closeMenu();
-  });
-});
-
 $(document).ready(function () {
-  const $header = $("header");
-  let lastScrollY = 0;
+  const $backBtn = $("#backBtn");
+  const $menuTitle = $("#menuTitle");
+  const navigationHistory = [];
 
-  // Mobil cihaz kontrolü
-  const isMobile = () => window.innerWidth <= 768;
+  function showMenu(menuId) {
+    const $targetMenu = $(`.menu-level[data-menu-id="${menuId}"]`);
 
-  $(window).on("scroll", function () {
-    const currentScrollY = $(this).scrollTop();
+    if ($targetMenu.length) {
+      // Mevcut aktif menÃ¼yÃ¼ gizle
+      const $currentMenu = $(".menu-level.active");
 
-    // Sadece mobil OLMAYAN cihazlarda scroll'da menüyü kapat
-    if (
-      isMenuOpen &&
-      !isMobile() &&
-      Math.abs(currentScrollY - lastScrollY) > 5
-    ) {
-      closeMenu();
+      // History'e ekle
+      if ($currentMenu.length) {
+        navigationHistory.push({
+          id: $currentMenu.data("menu-id"),
+          title: $currentMenu.data("title"),
+        });
+      }
+
+      // MenÃ¼ deÄŸiÅŸtir
+      $(".menu-level").removeClass("active");
+      $targetMenu.addClass("active");
+
+      // BaÅŸlÄ±ÄŸÄ± gÃ¼ncelle
+      $menuTitle.text($targetMenu.data("title"));
+
+      // Back button gÃ¶ster
+      $backBtn.addClass("active");
     }
+  }
 
-    if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      $header.addClass("hidden");
-    } else {
-      $header.removeClass("hidden");
-      if (currentScrollY > 50) {
-        $header.addClass("background");
-      } else {
-        $header.removeClass("background");
+  // Alt menÃ¼ye geÃ§iÅŸ
+  $(".has-submenu").on("click", function (e) {
+    e.preventDefault();
+    const targetMenuId = $(this).data("target");
+    showMenu(targetMenuId);
+  });
+
+  // Geri butonu
+  $backBtn.on("click", function () {
+    if (navigationHistory.length > 0) {
+      const previous = navigationHistory.pop();
+      const $prevMenu = $(`.menu-level[data-menu-id="${previous.id}"]`);
+
+      // MenÃ¼ deÄŸiÅŸtir
+      $(".menu-level").removeClass("active");
+      $prevMenu.addClass("active");
+
+      // BaÅŸlÄ±ÄŸÄ± gÃ¼ncelle
+      $menuTitle.text(previous.title);
+
+      // Ana menÃ¼deyse back button gizle
+      if (navigationHistory.length === 0) {
+        $backBtn.removeClass("active");
       }
     }
-
-    lastScrollY = currentScrollY;
-  });
-});
-
-//Menu
-const navItems = document.querySelectorAll(".nav-item.has-mega");
-
-navItems.forEach((item) => {
-  const menuKey = item.dataset.menu;
-  const subMenu = item.querySelector(`.sub-menu[data-menu="${menuKey}"]`);
-
-  item.addEventListener("mouseenter", () => {
-    item.classList.add("active");
-    if (subMenu) subMenu.classList.add("active");
   });
 
-  item.addEventListener("mouseleave", () => {
-    item.classList.remove("active");
-    if (subMenu) subMenu.classList.remove("active");
+  // Normal menu item tÄ±klamalarÄ±
+  $(".menu-item").on("click", function (e) {
+    e.preventDefault();
+    const itemName = $(this).find(".label").text();
+    alert(`${itemName} sayfasÄ±na yÃ¶nlendiriliyorsunuz...`);
   });
 });
