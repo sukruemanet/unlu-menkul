@@ -1,4 +1,5 @@
 @use "../base/base";
+@use "../../intl/intl";
 
 .contact-content {
   background: $light-blue-2;
@@ -683,6 +684,62 @@ form {
   }
 }
 
+.drawer-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    font-size: 2.4rem;
+    color: $white;
+    font-weight: $font-bold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    input {
+      border: solid rgba($dark, 0.2) 0.1rem;
+    }
+
+    .select-item {
+      background: $white;
+      border: none;
+
+      select {
+        font-size: 1.6rem;
+        color: $dark;
+        font-weight: $font-light;
+        padding: 0 2rem;
+        font-family: $font-family;
+        border: solid transparent 0.1rem;
+      }
+    }
+
+    small {
+      font-size: 1.4rem;
+      color: $white;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .iti {
+    width: 100%;
+  }
+
+  .iti__country-name {
+    font-size: 1.5rem;
+    color: $dark;
+    font-weight: $font-regular;
+  }
+}
+
 .validation-text {
   font-size: 1.3rem;
   color: red;
@@ -698,7 +755,7 @@ form {
 
 .checkbox {
   display: flex;
-  align-items: flex-start; /* metin alta kaymasın */
+  align-items: flex-start;
   margin-bottom: 2rem;
 
   input {
@@ -1817,6 +1874,235 @@ table {
 
     td:first-child {
       max-width: 180px;
+    }
+  }
+}
+
+.drawwer-menu-content {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba($dark, 0.45);
+    opacity: 0;
+    transition: opacity 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .tabs {
+    .tab-link {
+      flex: 1;
+    }
+  }
+
+  .drawwer-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50rem;
+    max-width: 100%;
+    height: 100vh;
+    background: $white;
+    z-index: 2;
+    padding: 2.6rem 2rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.65s cubic-bezier(0.76, 0, 0.24, 1);
+    will-change: transform;
+    box-shadow: -2rem 0 6rem rgba($dark, 0.08);
+
+    @media only screen and (max-width: $tablet-h) {
+      padding: 5em 1rem 2rem;
+      height: 100dvh;
+    }
+
+    .drawwer-menu-close {
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 100vmax;
+      margin-left: auto;
+      transition: all 0.3s ease;
+      position: absolute;
+      top: 0;
+      right: 0.5rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      &:hover {
+        transform: rotate(90deg);
+        background: rgba($dark, 0.04);
+      }
+
+      svg {
+        width: 2.4rem;
+
+        @media only screen and (max-width: $tablet-h) {
+          width: 2rem;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 2.2rem;
+      font-weight: $font-medium;
+      color: $dark;
+      padding-bottom: 2rem;
+      border-bottom: solid rgba($dark, 0.1) 0.1rem;
+    }
+
+    i {
+      margin: 1rem 0;
+      display: block;
+
+      img {
+        width: 10rem;
+      }
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    &:before {
+      opacity: 1;
+    }
+
+    .drawwer-menu {
+      transform: translateX(0);
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $dark;
+      text-decoration: underline;
+    }
+  }
+
+  .checkbox-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media only screen and (max-width: $tablet-h) {
+      padding-right: 0rem;
+    }
+
+    .checkbox-check-item {
+      display: flex;
+      flex-direction: column;
+
+      .validation-text {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 2.2rem;
+        height: 2.2rem;
+        min-width: 2.2rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+        cursor: pointer;
+        border: 1px solid $dark-blue;
+        border-radius: 4px;
+        background: white;
+        position: relative;
+        transition: all 0.2s ease;
+
+        &:hover {
+          border-color: $blue;
+        }
+
+        &:checked {
+          background: #2563eb;
+          border-color: #2563eb;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 11px;
+            height: 8px;
+            background-image: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.36396 9.19238L15.5564 0L16.9706 1.41421L6.36396 12.0208L0 5.65688L1.41422 4.24268L6.36396 9.19238Z' fill='white'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      label {
+        font-size: 1.4rem;
+        font-weight: $font-regular;
+        color: $dark;
+        cursor: pointer;
+        user-select: none;
+        padding-top: 0.4rem;
+
+        @media only screen and (max-width: $tablet-v) {
+          font-size: 1.4rem;
+        }
+
+        a {
+          color: #2563eb;
+          text-decoration: underline;
+
+          &:hover {
+            color: #1d4ed8;
+          }
+        }
+      }
+    }
+  }
+
+  .check-error {
+    .checkbox-item {
+      input[type="checkbox"] {
+        border: solid red 0.1rem;
+      }
+      label {
+        color: red;
+      }
+    }
+
+    .validation-text {
+      display: flex;
     }
   }
 }

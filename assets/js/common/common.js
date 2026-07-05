@@ -96,3 +96,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//Drawer Menu
+document.addEventListener("DOMContentLoaded", function () {
+  const openDrawerBtns = document.querySelectorAll(".open-drawwer");
+
+  function checkNoScroll() {
+    const anyActive = document.querySelector(
+      ".drawwer-menu-content.active, .drawwer-product-content.active",
+    );
+
+    if (!anyActive) {
+      document.documentElement.classList.remove("no-scroll");
+
+      if (typeof lenis !== "undefined" && lenis) {
+        lenis.start();
+      }
+    }
+  }
+
+  function openDrawer(targetId) {
+    const targetDrawer = document.getElementById(targetId);
+
+    if (!targetDrawer) return;
+
+    targetDrawer.classList.add("active");
+
+    document.documentElement.classList.add("no-scroll");
+
+    if (typeof lenis !== "undefined" && lenis) {
+      lenis.stop();
+    }
+  }
+
+  function closeDrawer(drawer) {
+    drawer.classList.remove("active");
+    checkNoScroll();
+  }
+
+  openDrawerBtns.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.dataset.drawer;
+
+      openDrawer(targetId);
+    });
+  });
+
+  document.querySelectorAll(".drawwer-menu-content").forEach((drawer) => {
+    const drawerMenu = drawer.querySelector(".drawwer-menu");
+    const closeBtn = drawer.querySelector(".drawwer-menu-close");
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        closeDrawer(drawer);
+      });
+    }
+
+    drawer.addEventListener("click", function (e) {
+      if (!drawerMenu.contains(e.target)) {
+        closeDrawer(drawer);
+      }
+    });
+  });
+});

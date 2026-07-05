@@ -46,6 +46,101 @@
 
 <body id="top">
 
+  <div class="drawwer-menu-content" id="account-menu">
+    <div class="drawwer-menu">
+      <i class="drawwer-menu-close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </i>
+      <h3>
+        Hesap Aç veya Bilgi Al
+      </h3>
+      <div class="tab-menu-content">
+        <ul class="tabs">
+          <li class="tab-link current" data-tab="open-account">
+            Hesap aç
+          </li>
+          <li class="tab-link" data-tab="get-information">
+            Bilgi Al
+          </li>
+        </ul>
+
+        <div id="open-account" class="tab-content current">
+          <div class="drawer-form">
+            <form>
+              <div class="item">
+                <input type="text" placeholder="Adınız Soyadınız">
+              </div>
+              <div class="item">
+                <input id="id-number" type="tel" placeholder="TC Kimlik Numarası" maxlength="11">
+              </div>
+              <div class="item">
+                <input id="mobile-number" type="tel" placeholder="Cep Telefonu">
+              </div>
+              <div class="item">
+                <div class="checkbox-items">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="check-01">
+                    <label for="check-01">
+                      Kişisel verilerin işlenmesine ilişkin <a
+                        href="assets/unluyatirim-cerez_aydinlatma_metnimart2024-3436.docx">metni</a> okudum, anladım
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <button class="button primary">
+                  Gönder
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="get-information" class="tab-content">
+          <div class="drawer-form">
+            <form>
+              <div class="item">
+                <input type="text" placeholder="Adınız Soyadınız">
+              </div>
+              <div class="item">
+                <input id="phone" type="tel" placeholder="Telefon Numarası">
+              </div>
+              <div class="item">
+                <input type="mail" placeholder="E-Posta">
+              </div>
+              <div class="item">
+                <div class="checkbox-items">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="check-02">
+                    <label for="check-02">
+                      ÜNLÜ&Co tarafından elektronik iletişim adreslerime ticari elektronik ileti gönderilmesine izin
+                      veriyorum.
+                    </label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="check-03">
+                    <label for="check-03">
+                      <a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum, bilgilendirildim, ileti almak ve aranmak
+                      istiyorum.
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <button class="button primary">
+                  Gönder
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="category-menu" id="hamburger-menu" data-lenis-prevent-wheel data-lenis-prevent-touch>
     <div class="category-menu-content">
       <div class="menu-content" data-lenis-prevent-wheel data-lenis-prevent-touch>
@@ -445,7 +540,7 @@
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" class="button primary">
+            <a href="#" target="_blank" class="button primary open-drawwer" data-drawer="account-menu">
               Hesap Aç
             </a>
           </li>
@@ -2228,6 +2323,121 @@
         offset = 0;
         lastTime = null;
       }, 200);
+    });
+  </script>
+
+  <script src="assets/js/common/jquery.mask.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      //Id Number
+      $('#id-number').mask('00000000000');
+
+      //Normal Number
+      $('#phone').mask('000 000 00 00', {
+        placeholder: '___ __ __'
+      });
+
+      //Mobile Number
+      var prefix = '0 (';
+      $('#mobile-number').on('focus', function () {
+        var input = this;
+
+        if (!$(input).data('masked')) {
+          $(input).mask('0 (000) 000-00-00', {
+            placeholder: '0 (___) ___-__-__'
+          });
+          $(input).data('masked', true);
+        }
+
+        if ($(input).val() === '') {
+          $(input).val(prefix);
+        }
+
+        setTimeout(function () {
+          var len = input.value.length;
+          input.setSelectionRange(len, len);
+        }, 0);
+      });
+
+      $('#mobile-number').on('blur', function () {
+        var val = $(this).val();
+        if (val === '' || val === prefix || val === '0' || val === '0 ') {
+          $(this).unmask();
+          $(this).val('');
+          $(this).data('masked', false);
+          $(this).attr('placeholder', 'Cep Telefonu');
+        }
+      });
+
+      $('#mobile-number').on('keydown', function (e) {
+        var input = this;
+        var val = input.value;
+        if ((e.key === 'Backspace' || e.key === 'ArrowLeft') && input.selectionStart <= prefix.length) {
+          if (e.key === 'Backspace' && input.selectionStart <= prefix.length && input.selectionEnd <= prefix.length) {
+            e.preventDefault();
+          }
+        }
+      });
+    });
+  </script>
+
+  <script src="assets/intl/intlTelInput.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.querySelector("#phone");
+
+      if (!input) return;
+
+      const iti = window.intlTelInput(input, {
+        initialCountry: "tr",
+        preferredCountries: ["tr", "us", "gb", "de", "fr"],
+        separateDialCode: true,
+        nationalMode: true,
+        formatAsYouType: true,
+        autoPlaceholder: "aggressive",
+        strictMode: true,
+        utilsScript: "/intl/utils.js",
+      });
+
+      window.iti = iti;
+
+      const addLenisPreventToDropdown = () => {
+        const dropdown = document.querySelector(".iti__dropdown-content");
+        const countryList = document.querySelector(".iti__country-list");
+        const searchInput = document.querySelector(".iti__search-input");
+        const container = document.querySelector(".iti--container");
+
+        [dropdown, countryList, searchInput, container].forEach((el) => {
+          if (!el) return;
+          el.setAttribute("data-lenis-prevent-wheel", "");
+          el.setAttribute("data-lenis-prevent-touch", "");
+        });
+      };
+
+      input.addEventListener("click", () => {
+        setTimeout(() => {
+          addLenisPreventToDropdown();
+        }, 50);
+      });
+
+      input.addEventListener("focus", () => {
+        setTimeout(() => {
+          addLenisPreventToDropdown();
+        }, 50);
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (e.target.closest(".iti")) {
+        setTimeout(() => {
+          const list = document.querySelector(".iti__country-list");
+          if (!list) return;
+
+          list.setAttribute("data-lenis-prevent-wheel", "");
+          list.setAttribute("data-lenis-prevent-touch", "");
+        }, 50);
+      }
     });
   </script>
 
