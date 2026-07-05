@@ -834,7 +834,7 @@ form {
 .newsletter {
   width: 100%;
   padding: 6rem 0;
-  background: $dark;
+  background: #eff7ff;
 
   @media only screen and (max-width: $tablet-h) {
     padding: 4rem 2rem;
@@ -848,7 +848,7 @@ form {
 
   span {
     font-size: 3rem;
-    color: $white;
+    color: $dark;
     text-align: center;
     display: block;
     @include trim-both;
@@ -861,7 +861,7 @@ form {
   p {
     font-size: 1.4rem;
     line-height: 1.2;
-    color: $white;
+    color: $dark;
     padding: 1rem 0 2rem;
     text-align: center;
     font-weight: $font-regular;
@@ -879,7 +879,7 @@ form {
       gap: 1.6rem;
 
       input {
-        background: $white;
+        background: #dde9f4;
 
         &::-webkit-input-placeholder {
           color: $dark;
@@ -941,11 +941,11 @@ form {
 
         label {
           padding: 0;
-          color: $white;
+          color: $dark;
           font-size: 1.2rem;
 
           a {
-            color: $white;
+            color: $dark;
             @include fade-transition;
 
             &:hover {
