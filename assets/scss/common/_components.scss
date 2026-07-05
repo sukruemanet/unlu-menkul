@@ -589,12 +589,12 @@ form {
   input:not([type="checkbox"]),
   textarea {
     width: 100%;
-    font-size: 1.6rem;
     color: $blue;
-    font-weight: $font-medium;
+    font-size: 1.6rem;
+    font-family: $font-family;
+    font-weight: $font-regular;
     padding: 0 2rem;
     @include fade-transition;
-    font-family: $font-family;
     border: solid transparent 0.1rem;
 
     &::-webkit-input-placeholder {
@@ -712,10 +712,10 @@ form {
       select {
         font-size: 1.6rem;
         color: $dark;
-        font-weight: $font-light;
+        font-weight: $font-regular;
         padding: 0 2rem;
         font-family: $font-family;
-        border: solid transparent 0.1rem;
+        border: solid rgba($dark, 0.2) 0.1rem;
       }
     }
 

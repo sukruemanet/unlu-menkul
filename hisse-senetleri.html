@@ -32,6 +32,8 @@
   <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet" />
   <script src="assets/js/common/jquery.min.js"></script>
   <script src="assets/js/common/common.js"></script>
+  <script src="assets/js/common/components.js"></script>
+  <script src="assets/js/common/tabmenu.js"></script>
   <script src="assets/js/common/tabmenu.js"></script>
 
 </head>
@@ -1832,6 +1834,121 @@
   <script src="assets/js/common/mobile-menu.js"></script>
   <script src="assets/js/common/accordion-menu.js"></script>
 
+  <script src="assets/js/common/jquery.mask.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      //Id Number
+      $('#id-number').mask('00000000000');
+
+      //Normal Number
+      $('#phone').mask('000 000 00 00', {
+        placeholder: '___ __ __'
+      });
+
+      //Mobile Number
+      var prefix = '0 (';
+      $('#mobile-number').on('focus', function () {
+        var input = this;
+
+        if (!$(input).data('masked')) {
+          $(input).mask('0 (000) 000-00-00', {
+            placeholder: '0 (___) ___-__-__'
+          });
+          $(input).data('masked', true);
+        }
+
+        if ($(input).val() === '') {
+          $(input).val(prefix);
+        }
+
+        setTimeout(function () {
+          var len = input.value.length;
+          input.setSelectionRange(len, len);
+        }, 0);
+      });
+
+      $('#mobile-number').on('blur', function () {
+        var val = $(this).val();
+        if (val === '' || val === prefix || val === '0' || val === '0 ') {
+          $(this).unmask();
+          $(this).val('');
+          $(this).data('masked', false);
+          $(this).attr('placeholder', 'Cep Telefonu');
+        }
+      });
+
+      $('#mobile-number').on('keydown', function (e) {
+        var input = this;
+        var val = input.value;
+        if ((e.key === 'Backspace' || e.key === 'ArrowLeft') && input.selectionStart <= prefix.length) {
+          if (e.key === 'Backspace' && input.selectionStart <= prefix.length && input.selectionEnd <= prefix.length) {
+            e.preventDefault();
+          }
+        }
+      });
+    });
+  </script>
+
+  <script src="assets/intl/intlTelInput.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.querySelector("#phone");
+
+      if (!input) return;
+
+      const iti = window.intlTelInput(input, {
+        initialCountry: "tr",
+        preferredCountries: ["tr", "us", "gb", "de", "fr"],
+        separateDialCode: true,
+        nationalMode: true,
+        formatAsYouType: true,
+        autoPlaceholder: "aggressive",
+        strictMode: true,
+        utilsScript: "/intl/utils.js",
+      });
+
+      window.iti = iti;
+
+      const addLenisPreventToDropdown = () => {
+        const dropdown = document.querySelector(".iti__dropdown-content");
+        const countryList = document.querySelector(".iti__country-list");
+        const searchInput = document.querySelector(".iti__search-input");
+        const container = document.querySelector(".iti--container");
+
+        [dropdown, countryList, searchInput, container].forEach((el) => {
+          if (!el) return;
+          el.setAttribute("data-lenis-prevent-wheel", "");
+          el.setAttribute("data-lenis-prevent-touch", "");
+        });
+      };
+
+      input.addEventListener("click", () => {
+        setTimeout(() => {
+          addLenisPreventToDropdown();
+        }, 50);
+      });
+
+      input.addEventListener("focus", () => {
+        setTimeout(() => {
+          addLenisPreventToDropdown();
+        }, 50);
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (e.target.closest(".iti")) {
+        setTimeout(() => {
+          const list = document.querySelector(".iti__country-list");
+          if (!list) return;
+
+          list.setAttribute("data-lenis-prevent-wheel", "");
+          list.setAttribute("data-lenis-prevent-touch", "");
+        }, 50);
+      }
+    });
+  </script>
   <div class="stocks-container" id="stocks-container"></div>
 
   <script>
