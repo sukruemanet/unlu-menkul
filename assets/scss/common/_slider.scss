@@ -263,6 +263,14 @@
       }
     }
 
+    .text-items {
+      @media only screen and (max-width: $tablet-v) {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-end;
+      }
+    }
+
     span {
       max-width: 60rem;
       font-size: 2.2rem;
@@ -272,6 +280,25 @@
 
       @media only screen and (max-width: $desktop) {
         font-size: 1.8rem;
+      }
+
+      @media only screen and (max-width: $tablet-v) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .button {
+      @media only screen and (max-width: $tablet-v) {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+        height: 5rem;
+        gap: 1rem;
+      }
+
+      svg {
+        @media only screen and (max-width: $tablet-v) {
+          width: 1.4rem;
+        }
       }
     }
   }
