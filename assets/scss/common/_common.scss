@@ -7203,6 +7203,10 @@
         position: relative;
         display: block;
 
+        @media only screen and (max-width: $tablet-h) {
+          font-size: 1.6rem;
+        }
+
         &:after {
           content: "";
           width: 15rem;
