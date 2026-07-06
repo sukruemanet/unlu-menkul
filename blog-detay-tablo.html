@@ -100,7 +100,7 @@
                 <input type="text" placeholder="Adınız Soyadınız">
               </div>
               <div class="item">
-                <input id="phone" type="tel" placeholder="Telefon Numarası">
+                <input type="tel" class="phone-input" name="phone1">
               </div>
               <div class="item">
                 <input type="mail" placeholder="E-Posta">
@@ -131,6 +131,52 @@
             </form>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawwer-menu-content" id="get-consultation">
+    <div class="drawwer-menu">
+      <i class="drawwer-menu-close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </i>
+      <h3>
+        Ücretsiz Danışmanlık Alın
+      </h3>
+      <div class="drawer-form">
+        <form>
+          <div class="item">
+            <input type="text" placeholder="Adınız Soyadınız">
+          </div>
+          <div class="item">
+            <input type="tel" class="phone-input" name="phone2">
+          </div>
+          <div class="item">
+            <input id="email" type="tel" placeholder="E-posta Adresiniz">
+          </div>
+          <div class="item">
+            <div class="selectbox-item">
+              <div class="select-item">
+                <select name="2025">
+                  <option value="0">İlgilendiğiniz Hizmet</option>
+                  <option value="0">Select item</option>
+                  <option value="0">Select item</option>
+                  <option value="0">Select item</option>
+                  <option value="0">Select item</option>
+                  <option value="0">Select item</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <button class="button primary">
+              Gönder
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -1731,20 +1777,25 @@
         </div>
         <div class="right-sticky">
           <div class="related-headings">
-            <span>
-              İlgili Başlıklar
-            </span>
+            <div class="top">
+              <span>
+                İlgili Başlıklar
+              </span>
+              <a href="#" target="_blank" class="button primary open-drawwer mobile" data-drawer="get-consultation">
+                Ücretsiz Danışmanlık Alın
+              </a>
+            </div>
             <ul>
-              <li><a href="#section-1">1. Şirketi Tanıma ve Temel Bilgileri İnceleme</a></li>
-              <li><a href="#section-2">2. Temel Analiz (Fundamental Analysis)</a></li>
-              <li><a href="#section-3">3. Çarpan Analizi (Valuation / Değerleme)</a></li>
-              <li><a href="#section-4">4. Teknik Analiz (Fiyat Hareketleri)</a></li>
-              <li><a href="#section-5">5. Sektör ve Makroekonomik Faktörler</a></li>
-              <li><a href="#section-6">6. Risk Analizi</a></li>
-              <li><a href="#section-7">7. Yatırım Vadesini Belirleme</a></li>
+              <li><a href="#section-1">Şirketi Tanıma ve Temel Bilgileri İnceleme</a></li>
+              <li><a href="#section-2">Temel Analiz (Fundamental Analysis)</a></li>
+              <li><a href="#section-3">Çarpan Analizi (Valuation / Değerleme)</a></li>
+              <li><a href="#section-4">Teknik Analiz (Fiyat Hareketleri)</a></li>
+              <li><a href="#section-5">Sektör ve Makroekonomik Faktörler</a></li>
+              <li><a href="#section-6">Risk Analizi</a></li>
+              <li><a href="#section-7">Yatırım Vadesini Belirleme</a></li>
               <li><a href="#section-8">Sonuç</a></li>
             </ul>
-            <a href="#" target="_blank" class="button primary open-drawwer" data-drawer="get-consultation">
+            <a href="#" target="_blank" class="button primary open-drawwer desktop" data-drawer="get-consultation">
               Ücretsiz Danışmanlık Alın
             </a>
           </div>
@@ -2063,6 +2114,62 @@
 
           list.setAttribute("data-lenis-prevent-wheel", "");
           list.setAttribute("data-lenis-prevent-touch", "");
+        }, 50);
+      }
+    });
+  </script>
+
+  <script src="assets/intl/intlTelInput.js"></script>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const inputs = document.querySelectorAll(".phone-input");
+      if (!inputs.length) return;
+
+      // Instance'ları saklamak için (form submit'te erişmek istersen)
+      window.itiInstances = new Map();
+
+      const addLenisPreventToDropdown = () => {
+        document
+          .querySelectorAll(
+            ".iti__dropdown-content, .iti__country-list, .iti__search-input, .iti--container"
+          )
+          .forEach((el) => {
+            el.setAttribute("data-lenis-prevent-wheel", "");
+            el.setAttribute("data-lenis-prevent-touch", "");
+          });
+      };
+
+      inputs.forEach((input) => {
+        const iti = window.intlTelInput(input, {
+          initialCountry: "tr",
+          preferredCountries: ["tr", "us", "gb", "de", "fr"],
+          separateDialCode: true,
+          nationalMode: true,
+          formatAsYouType: true,
+          autoPlaceholder: "aggressive",
+          strictMode: true,
+          utilsScript: "/intl/utils.js",
+        });
+
+        window.itiInstances.set(input, iti);
+
+        ["click", "focus"].forEach((evt) => {
+          input.addEventListener(evt, () => {
+            setTimeout(addLenisPreventToDropdown, 50);
+          });
+        });
+      });
+    });
+
+    // Delegasyon: herhangi bir iti widget'ına tıklanınca
+    document.addEventListener("click", (e) => {
+      if (e.target.closest(".iti")) {
+        setTimeout(() => {
+          document.querySelectorAll(".iti__country-list").forEach((list) => {
+            list.setAttribute("data-lenis-prevent-wheel", "");
+            list.setAttribute("data-lenis-prevent-touch", "");
+          });
         }, 50);
       }
     });

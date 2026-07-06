@@ -161,3 +161,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//
+document.addEventListener("DOMContentLoaded", function () {
+  const stickyEl = document.querySelector(".right-sticky");
+  const footerEl = document.querySelector("footer");
+
+  if (stickyEl && footerEl) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            stickyEl.style.opacity = "0";
+            stickyEl.style.zIndex = "-1";
+            stickyEl.style.visibility = "hidden";
+          } else {
+            stickyEl.style.visibility = "visible";
+            stickyEl.style.opacity = "1";
+            stickyEl.style.zIndex = "5";
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0,
+      },
+    );
+
+    observer.observe(footerEl);
+  }
+});

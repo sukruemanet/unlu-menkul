@@ -2,6 +2,14 @@
 
 .secondary {
   padding-top: 17.6rem;
+
+  @media only screen and (max-width: $desktop) {
+    padding-top: 14rem;
+  }
+
+  @media only screen and (max-width: $tablet-h) {
+    padding-top: 8rem;
+  }
 }
 
 header {
@@ -212,10 +220,6 @@ header {
       &::after {
         display: none !important;
       }
-
-      svg {
-        width: 2rem;
-      }
     }
 
     .logo {
@@ -385,13 +389,23 @@ header {
     }
 
     .search {
-      width: 6rem;
+      width: 4rem;
       height: 5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      padding: 0;
+      margin: 0 1rem;
       // border-left: solid rgba($white, 0.2) 0.1rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        width: 2rem;
+      }
+
+      svg {
+        width: 2rem;
+      }
     }
   }
 }

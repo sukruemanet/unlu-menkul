@@ -1899,6 +1899,7 @@ table {
   transition:
     opacity 0.35s ease,
     visibility 0.35s ease;
+  z-index: 11;
 
   &:before {
     content: "";
