@@ -227,7 +227,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 2rem;
-      inset: auto 4rem 27rem 2rem;
+      inset: auto 4rem 32rem 2rem;
     }
 
     h1 {
@@ -264,10 +264,15 @@
     }
 
     .text-items {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
       @media only screen and (max-width: $tablet-v) {
         display: flex;
         gap: 2rem;
         align-items: flex-end;
+        flex-direction: row;
       }
     }
 
