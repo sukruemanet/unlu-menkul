@@ -140,6 +140,10 @@
   overflow: hidden;
   height: 100vh;
 
+  @media only screen and (max-width: $tablet-h) {
+    height: 100dvh;
+  }
+
   video,
   figure {
     position: absolute;
