@@ -1633,6 +1633,10 @@ form {
 }
 
 .tab-menu-content {
+  @media only screen and (max-width: $tablet-h) {
+    padding: 0;
+  }
+
   ul.tabs {
     margin: 0;
     padding: 0;

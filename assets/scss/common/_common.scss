@@ -7040,6 +7040,10 @@
     flex-direction: column;
     padding: 4rem;
 
+    @media only screen and (max-width: $tablet-h) {
+      padding: 3rem 2rem;
+    }
+
     .caption {
       display: flex;
       flex-direction: column;
