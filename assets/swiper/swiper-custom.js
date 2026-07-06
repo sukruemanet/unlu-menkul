@@ -54,9 +54,9 @@ var widgetSwiper = new Swiper(".widget-swiper", {
 //Blog Slider
 var swiper = new Swiper(".blog-swiper", {
   slidesPerView: 1.2,
-  spaceBetween: 20,
+  spaceBetween: 10,
   pagination: {
-    el: ".research-pagination",
+    el: ".blog-pagination",
     type: "progressbar",
   },
   navigation: {
@@ -94,7 +94,7 @@ var swiper = new Swiper(".blog-swiper", {
 //Research Slider
 var swiper = new Swiper(".research-swiper", {
   slidesPerView: 1.2,
-  spaceBetween: 20,
+  spaceBetween: 10,
   pagination: {
     el: ".research-pagination",
     type: "progressbar",
@@ -109,11 +109,11 @@ var swiper = new Swiper(".research-swiper", {
       spaceBetween: 10,
     },
     768: {
-      slidesPerView: 1.2,
+      slidesPerView: 2.2,
       spaceBetween: 10,
     },
     1024: {
-      slidesPerView: 3.2,
+      slidesPerView: 3.4,
       spaceBetween: 30,
     },
     1368: {
@@ -134,7 +134,7 @@ var swiper = new Swiper(".research-swiper", {
 //News Slider
 var swiper = new Swiper(".news-swiper", {
   slidesPerView: 1.2,
-  spaceBetween: 20,
+  spaceBetween: 10,
   pagination: {
     el: ".news-pagination",
     type: "progressbar",
@@ -214,7 +214,7 @@ var swiper = new Swiper(".videos-swiper", {
 //What Are We Doing Slider
 var swiper = new Swiper(".what-are-we-swiper", {
   slidesPerView: 1.2,
-  spaceBetween: 20,
+  spaceBetween: 10,
   pagination: {
     el: ".what-are-we-pagination",
     type: "progressbar",
@@ -254,7 +254,7 @@ var swiper = new Swiper(".what-are-we-swiper", {
 //Highlightsg Slider
 var swiper = new Swiper(".highlights-swiper", {
   slidesPerView: 1.2,
-  spaceBetween: 20,
+  spaceBetween: 10,
   pagination: {
     el: ".highlights-pagination",
     type: "progressbar",

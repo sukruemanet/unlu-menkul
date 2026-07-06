@@ -265,6 +265,13 @@ header {
         display: flex;
         height: 100%;
 
+        .virtual-branch,
+        .account-open {
+          @media only screen and (max-width: $tablet-v) {
+            display: none;
+          }
+        }
+
         li {
           &:first-child {
             border: none;
@@ -581,8 +588,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-direction: column;
     z-index: 10000;
     padding: 0 14rem;
+
+    .button {
+      width: 100%;
+    }
 
     @media only screen and (max-width: $desktop-l) {
       padding: 0 0;
