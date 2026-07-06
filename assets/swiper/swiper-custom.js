@@ -14,10 +14,10 @@ var heroSwiper = new Swiper(".hero-swiper", {
     el: ".hero-pagination",
     clickable: true,
   },
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
 });
 
 //Widget Slider
