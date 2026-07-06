@@ -1644,6 +1644,21 @@ form {
     display: flex;
     justify-content: center;
 
+    &.type-2 {
+      li {
+        color: $dark;
+
+        &.current {
+          background: #e6edff;
+          color: $dark;
+
+          &::after {
+            background: $dark;
+          }
+        }
+      }
+    }
+
     &.left {
       justify-content: flex-start;
 
@@ -1653,6 +1668,7 @@ form {
     }
 
     li {
+      flex: 1;
       cursor: pointer;
       font-size: 1.8rem;
       white-space: nowrap;
