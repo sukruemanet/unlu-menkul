@@ -647,6 +647,14 @@ form {
   display: flex;
   flex-direction: column;
 
+  @media only screen and (max-width: $tablet-h) {
+    padding: 3rem 2rem;
+  }
+
+  @media only screen and (max-width: $tablet-v) {
+    width: 100%;
+  }
+
   span {
     font-size: 2.4rem;
     color: $white;
@@ -1633,16 +1641,17 @@ form {
 }
 
 .tab-menu-content {
-  @media only screen and (max-width: $tablet-h) {
-    padding: 0;
-  }
-
   ul.tabs {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
+
+    @media only screen and (max-width: $tablet-h) {
+      overflow-y: auto;
+      justify-content: flex-start;
+    }
 
     &.type-2 {
       li {
@@ -1687,7 +1696,7 @@ form {
       white-space: normal;
 
       @media only screen and (max-width: $tablet-h) {
-        flex: 1;
+        flex: none;
         padding: 2rem;
         font-size: 1.5rem;
       }
