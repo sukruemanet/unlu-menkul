@@ -574,6 +574,10 @@
       justify-content: space-between;
       height: 100%;
 
+      @media only screen and (max-width: $tablet-h) {
+        gap: 4rem;
+      }
+
       .item {
         small {
           font-size: 1.6rem;
@@ -585,6 +589,18 @@
           font-weight: $font-regular;
           color: $blue;
           letter-spacing: -0.02em;
+
+          @media only screen and (max-width: $desktop) {
+            font-size: 9rem;
+          }
+
+          @media only screen and (max-width: $desktop-sm) {
+            font-size: 7.6rem;
+          }
+
+          @media only screen and (max-width: $tablet-h) {
+            font-size: 5.8rem;
+          }
         }
       }
     }
@@ -4657,7 +4673,7 @@
 }
 
 .content-list-items {
-  padding: 6rem 0;
+  padding: 0 0 6rem;
   max-width: 110rem;
   width: 100%;
   display: flex;
@@ -6931,6 +6947,16 @@
   gap: 3rem;
 
   @media only screen and (max-width: $tablet-h) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media only screen and (max-width: $tablet-v) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: $phone) {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   &.list-4 {
@@ -7002,10 +7028,18 @@
     flex-direction: column;
     color: $dark;
 
+    @media only screen and (max-width: $tablet-h) {
+      padding: 2rem;
+    }
+
     span {
       font-size: 2.4rem;
       height: 6rem;
       font-weight: $font-medium;
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: 2rem;
+      }
     }
 
     p {
@@ -7014,6 +7048,10 @@
       margin-top: 8rem;
       border-top: solid rgba($dark, 0.1) 0.1rem;
       font-weight: $font-regular;
+
+      @media only screen and (max-width: $tablet-h) {
+        margin-top: 4rem;
+      }
     }
   }
 }
@@ -7337,18 +7375,38 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
+  @media only screen and (max-width: $tablet-h) {
+    display: flex;
+    overflow-y: auto;
+  }
+
   .item {
     padding: 5rem 4rem;
     display: flex;
     flex-direction: column;
     color: $white;
 
+    @media only screen and (max-width: $tablet-h) {
+      width: 30rem;
+      flex-shrink: 0;
+      padding: 2rem;
+    }
+
     span {
       font-size: 3.8rem;
       font-weight: $font-medium;
+      line-height: 1;
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: 2.6rem;
+      }
 
       small {
         font-size: 2.4rem;
+
+        @media only screen and (max-width: $tablet-h) {
+          font-size: 1.8rem;
+        }
       }
     }
 
@@ -7357,6 +7415,10 @@
       margin-top: 4rem;
       padding-top: 4rem;
       border-top: solid rgba($white, 0.2) 0.1rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: 1.6rem;
+      }
     }
   }
 }
@@ -7364,9 +7426,13 @@
 .stocks-items-content {
   .stocks-items {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 2rem;
     margin-top: 4rem;
+
+    @media only screen and (max-width: $phone) {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
 
     .item {
       border: solid rgba($dark, 0.1) 0.1rem;
@@ -7375,16 +7441,28 @@
       align-items: center;
       flex-direction: column;
 
+      @media only screen and (max-width: $phone) {
+        padding: 1.6rem;
+      }
+
       span {
         font-size: 2.6rem;
         color: $dark;
         font-weight: $font-medium;
+
+        @media only screen and (max-width: $phone) {
+          font-size: 1.8rem;
+        }
       }
 
       small {
         font-size: 1.6rem;
         color: $dark;
         margin: 2rem 0;
+
+        @media only screen and (max-width: $phone) {
+          font-size: 1.4rem;
+        }
       }
 
       .values {
@@ -7395,7 +7473,13 @@
         padding: 2rem;
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 1rem;
+
+        @media only screen and (max-width: $phone) {
+          padding: 1rem;
+          font-size: 1.5rem;
+        }
       }
 
       .values.up {
@@ -7431,6 +7515,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 4rem;
+
+    @media only screen and (max-width: $phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .box {
       display: flex;
@@ -7468,6 +7556,10 @@
         font-size: 2rem;
         font-weight: $font-medium;
         color: $dark;
+
+        @media only screen and (max-width: $phone) {
+          font-size: 1.8rem;
+        }
       }
     }
 
