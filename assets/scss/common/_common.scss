@@ -7639,6 +7639,10 @@
   display: flex;
   gap: 2rem;
 
+  @media only screen and (max-width: $tablet-v) {
+    flex-direction: column;
+  }
+
   .item {
     flex: 1;
     display: flex;
@@ -7648,6 +7652,10 @@
     border: solid rgba($black, 0.2) 0.1rem;
     @include fade-transition;
 
+    @media only screen and (max-width: $tablet-v) {
+      padding: 2rem;
+    }
+
     &:hover {
       border: solid rgba($black, 0.6) 0.1rem;
     }
@@ -7656,6 +7664,121 @@
       font-size: 2rem;
       color: $dark;
       font-weight: $font-medium;
+
+      @media only screen and (max-width: $tablet-v) {
+        font-size: 1.6rem;
+      }
+    }
+
+    svg {
+      @media only screen and (max-width: $tablet-v) {
+        width: 2.6rem;
+      }
+    }
+  }
+}
+
+.contact-cards-content {
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @media only screen and (max-width: $desktop-sm) {
+      gap: 2rem;
+    }
+
+    @media only screen and (max-width: $tablet-v) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item {
+      background: #f1faff;
+      padding: 8rem;
+      display: flex;
+      flex-direction: column;
+
+      @media only screen and (max-width: $desktop-sm) {
+        padding: 4rem;
+      }
+
+      @media only screen and (max-width: $tablet-h) {
+        padding: 2rem;
+      }
+
+      h6 {
+        color: $blue-2;
+        font-size: 3rem;
+        font-weight: $font-medium;
+        margin-bottom: 4rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+          font-size: 2.6rem;
+        }
+
+        @media only screen and (max-width: $tablet-h) {
+          font-size: 2.2rem;
+        }
+      }
+
+      .address,
+      a {
+        font-size: 2rem;
+        color: $dark;
+        font-weight: $font-medium;
+
+        @media only screen and (max-width: $desktop-sm) {
+          font-size: 1.8rem;
+        }
+
+        @media only screen and (max-width: $tablet-h) {
+          font-size: 1.6rem;
+        }
+      }
+
+      .address {
+        margin-top: 1rem;
+      }
+
+      a {
+        @include fade-transition;
+
+        &:hover {
+          color: $blue-2;
+          @include fade-transition;
+        }
+      }
+
+      small {
+        color: rgba($dark, 0.5);
+        font-size: 1.6rem;
+      }
+
+      .phones {
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+
+        @media only screen and (max-width: $tablet-h) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      i {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .contact-items {
+    margin-top: 4rem;
+    gap: 4rem;
+
+    @media only screen and (max-width: $desktop-sm) {
+      margin-top: 2rem;
+      gap: 2rem;
     }
   }
 }
