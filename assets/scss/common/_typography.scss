@@ -86,6 +86,16 @@
     }
   }
 
+  &.brown-2 {
+    h4 {
+      color: $brown;
+
+      &:after {
+        background: $brown;
+      }
+    }
+  }
+
   .right {
     max-width: 50%;
     width: 50%;
