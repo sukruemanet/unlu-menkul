@@ -139,6 +139,19 @@
     padding: 0 2rem 4rem;
   }
 
+  &.type-9 {
+    .container {
+      padding: 0 2rem;
+
+      .item-cards {
+        @media only screen and (max-width: $tablet-h) {
+          width: calc(100% + 2rem);
+          padding: 0 0 3rem 0;
+        }
+      }
+    }
+  }
+
   .video {
     width: 100%;
 
@@ -6793,9 +6806,8 @@
   margin-top: 4rem;
 
   @media only screen and (max-width: $tablet-v) {
-    width: calc(100% + 2rem);
+    width: 100%;
     overflow-y: auto;
-    padding-right: 2rem;
   }
 
   @media only screen and (max-width: $desktop-sm) {

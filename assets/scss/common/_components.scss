@@ -1677,7 +1677,7 @@ form {
     }
 
     li {
-      flex: 1;
+      flex: auto;
       cursor: pointer;
       font-size: 1.8rem;
       white-space: nowrap;
@@ -1696,7 +1696,6 @@ form {
       white-space: normal;
 
       @media only screen and (max-width: $tablet-h) {
-        flex: none;
         padding: 2rem;
         font-size: 1.5rem;
       }
