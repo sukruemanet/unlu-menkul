@@ -4572,7 +4572,6 @@
       .search-box {
         width: 100%;
         display: flex;
-        height: 100%;
         position: relative;
         background: url(/assets/images/icons/search-icon.svg) no-repeat left;
         background-size: 2.4rem;
@@ -4661,8 +4660,6 @@
     }
 
     input {
-      min-width: 68rem;
-      width: 100%;
       padding: 0 2rem 0 6rem;
       color: $blue;
       background: $white url(/assets/images/icons/input-search-icon.svg)
@@ -4670,10 +4667,6 @@
       background-size: 2rem;
       background-position: 2rem;
       border: solid rgba($dark-blue, 0.1) 0.1rem;
-
-      @media only screen and (max-width: $tablet-h) {
-        min-width: 100%;
-      }
 
       &::-webkit-input-placeholder {
         color: rgba($dark-blue, 0.4);
@@ -7791,6 +7784,83 @@
     @media only screen and (max-width: $desktop-sm) {
       margin-top: 2rem;
       gap: 2rem;
+    }
+  }
+}
+
+.dictionary {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+
+  .search-box {
+    max-width: 110rem;
+    width: 100%;
+    margin: auto;
+  }
+
+  .dictionary-menu {
+    padding: 2rem 0 2rem;
+    max-width: 110rem;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $tablet-h) {
+      display: none;
+    }
+
+    li {
+      &.active {
+        background: rgba($blue, 0.1);
+
+        a {
+          color: $blue;
+        }
+      }
+
+      a {
+        width: 3rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: $font-medium;
+        color: $dark;
+      }
+    }
+  }
+
+  .dictionary-head {
+    font-size: 5rem;
+    font-weight: $font-medium;
+    color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+
+    @media only screen and (max-width: $tablet-h) {
+      font-size: 3.2rem;
+    }
+  }
+
+  .content-list-items {
+    padding: 6rem 0 4rem;
+  }
+
+  .dictionary-select-menu {
+    width: 100%;
+    display: none;
+
+    .selectbox-item {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      display: flex;
     }
   }
 }

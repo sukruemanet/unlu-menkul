@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-  <title>ÜNLÜ & Co | Arama Sonuçları</title>
+  <title>ÜNLÜ Menkul | Arama Sonuçları</title>
   <meta name="theme-color" content="#061d8b">
 
   <link rel="preload" href="/assets/fonts/fk-grotesk/FKGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
@@ -431,6 +431,16 @@
       <div class="right">
         <ul class="top-menu">
           <li>
+            <a href="#" class="underline virtual-branch">
+              Sanal Şube
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="button primary open-drawwer account-open" data-drawer="account-menu">
+              Hesap Aç
+            </a>
+          </li>
+          <li>
             <i class="search search-now nav-item has-mega" data-menu="search-now">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -450,33 +460,130 @@
         <div class="main-menu category-menu-item">
           <nav>
             <ul class="menu">
-              <li class="nav-item has-mega" data-menu="product">
+
+              <!-- HAKKIMIZDA -->
+              <li class="nav-item has-mega" data-menu="about">
                 Hakkımızda
+                <div class="sub-menu" data-menu="about">
+                  <span>Hakkımızda</span>
+                  <ul class="sub-menu-items">
+                    <li><a href="#">Bizi Tanıyın / Genel Bakış</a></li>
+                    <li><a href="#">Tarihçemiz</a></li>
+                    <li><a href="#">Misyonumuz</a></li>
+                    <li><a href="#">Üst Yönetim</a></li>
+                    <li><a href="#">ÜNLÜ &amp; Co</a></li>
+                    <li><a href="#">Finansal Bilgiler</a></li>
+                    <li><a href="#">Sürdürülebilirlik Raporları</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="activities">
-                Faaliyetlerimiz
+
+              <!-- HİZMETLERİMİZ -->
+              <li class="nav-item has-mega" data-menu="services">
+                Hizmetlerimiz
+                <div class="sub-menu" data-menu="services">
+                  <span>Hizmetlerimiz</span>
+                  <div class="menu-items">
+                    <ul class="sub-menu-items">
+                      <li class="sub-menu-group-title">Bireysel</li>
+                      <li><a href="#">DAHA Yatırım Danışmanlığı</a></li>
+                      <li><a href="#">Araştırma Hizmetleri</a></li>
+                      <li><a href="#">Piapiri Yatırım Uygulaması</a></li>
+                    </ul>
+                    <ul>
+                      <li class="sub-menu-group-title">Kurumsal</li>
+                      <li><a href="#">Kurumsal Finansman Danışmanlığı</a></li>
+                      <li><a href="#">Borç Sermaye Piyasaları ve Danışmanlık</a></li>
+                      <li><a href="#">Kurumsal Satış</a></li>
+                      <li><a href="#">BIST Kolokasyon ile Hızlı Emir İletimi</a></li>
+                    </ul>
+                  </div>
+                </div>
               </li>
-              <li>
-                <a href="/arastirma.html">
-                  Araştırma
-                </a>
+
+              <!-- ÜRÜNLERİMİZ -->
+              <li class="nav-item has-mega" data-menu="products">
+                Ürünlerimiz
+                <div class="sub-menu" data-menu="products">
+                  <span>Ürünlerimiz</span>
+                  <div class="menu-items">
+                    <ul class="sub-menu-items">
+                      <li class="sub-menu-group-title">Yurtiçi Piyasa Ürünleri</li>
+                      <li><a href="#">BİST Hisse Senedi</a></li>
+                      <li><a href="#">Yatırım Fonları</a></li>
+                      <li><a href="#">Halka Arzlar</a></li>
+                      <li><a href="#">Varant</a></li>
+                      <li><a href="#">Vadeli İşlem ve Opsiyon Piyasası (VİOP)</a></li>
+                      <li><a href="#">Sabit Getirili Ürünler</a></li>
+                      <li><a href="#">Borçlanma Araçları</a></li>
+                      <li><a href="#">Tezgahüstü Türev Ürünler</a></li>
+                    </ul>
+                    <ul>
+                      <li class="sub-menu-group-title">Global Piyasa Ürünleri</li>
+                      <li><a href="#">Uluslararası Borsalar (Uluslararası Pay Piyasaları)</a></li>
+                      <li><a href="#">Borsa Yatırım Fonları (ETF)</a></li>
+                      <li><a href="#">Vadeli İşlem Sözleşmeleri (Futures)</a></li>
+                      <li><a href="#">Opsiyon Piyasaları</a></li>
+                      <li><a href="#">London Metal Exchange (LME)</a></li>
+                    </ul>
+                  </div>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="career">
-                Kariyer
+
+              <!-- ARAŞTIRMA -->
+              <li class="nav-item has-mega" data-menu="research">
+                Araştırma
+                <div class="sub-menu" data-menu="research">
+                  <span>Araştırma</span>
+                  <ul class="sub-menu-items">
+                    <li><a href="#">Araştırma Raporları</a></li>
+                    <li><a href="#">Günlük Bülten</a></li>
+                    <li><a href="#">Halka Arz Takvimi</a></li>
+                    <li><a href="#">Temettü Takvimi</a></li>
+                    <li><a href="#">Sermaye Artırımı</a></li>
+                    <li><a href="#">Sektör ve Şirket Haberleri</a></li>
+                    <li><a href="#">Bilanço Takvimi</a></li>
+                    <li><a href="#">Model Portföy</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="sustainability">
-                Sürdürülebilirlik
+
+              <!-- İŞLEM KANALLARI -->
+              <li class="nav-item has-mega" data-menu="channels">
+                İşlem Kanalları
+                <div class="sub-menu" data-menu="channels">
+                  <span>İşlem Kanalları</span>
+                  <ul class="sub-menu-items">
+                    <li><a href="#">DAHA Yatırım Danışmanlığı</a></li>
+                    <li><a href="#">Piapiri Yatırım Uygulaması</a></li>
+                    <li><a href="#">Diğer (Matriks vb)</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="investor">
-                Yatırımcı İlişkileri
+
+              <!-- ÜNLÜ KILAVUZ / BLOG -->
+              <li class="nav-item has-mega" data-menu="blog">
+                Ünlü Kılavuz / Blog
+                <div class="sub-menu" data-menu="blog">
+                  <span>Ünlü Kılavuz / Blog</span>
+                  <ul class="sub-menu-items">
+                    <li><a href="#">Temel Analiz</a></li>
+                    <li><a href="#">Teknik Analiz</a></li>
+                    <li><a href="#">Yatırım Sözlüğü</a></li>
+                    <li><a href="#">Borsa İstanbul</a></li>
+                    <li><a href="#">Yatırım Rehberi</a></li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-item has-mega" data-menu="press">
-                Basın Odası
+
+              <!-- İLETİŞİM -->
+              <li class="nav-item">
+                <a href="#">İletişim</a>
               </li>
+
             </ul>
           </nav>
         </div>
-
         <div class="hamburger-button" data-menu-trigger="hamburger-menu">
           <div class="hamburger-menu">
             <span></span>
@@ -847,7 +954,7 @@
       </div>
     </div>
 
-    <div class="content-wrapper type-1 fade-up">
+    <div class="content-wrapper type-1">
       <div class="error-content">
         <span>
           404
@@ -866,7 +973,7 @@
       </div>
     </div>
 
-    <div class="content-wrapper type-1 fade-up">
+    <div class="content-wrapper type-1">
     </div>
   </main>
 
