@@ -1093,13 +1093,13 @@ form {
   .accordion-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-
-    @media only screen and (max-width: $tablet-v) {
-    }
 
     .accordion-item {
       border-bottom: solid rgba($dark, 0.1) 0.1rem;
+
+      &:last-child {
+        border: none;
+      }
 
       @media only screen and (max-width: $tablet-v) {
         padding: 2rem 0;
@@ -1145,7 +1145,7 @@ form {
       font-weight: $font-medium;
 
       @media only screen and (max-width: $tablet-v) {
-        padding: 0 2rem;
+        padding: 0;
         font-size: 1.7rem;
         height: 5rem;
         line-height: 1.4;
