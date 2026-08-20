@@ -1646,7 +1646,7 @@ form {
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: center;
+    gap: 2rem;
 
     @media only screen and (max-width: $tablet-h) {
       overflow-y: auto;
@@ -1658,8 +1658,8 @@ form {
         color: $dark;
 
         &.current {
-          background: #e6edff;
-          color: $dark;
+          background: #04142d;
+          color: $white;
 
           &::after {
             background: $dark;
@@ -1677,7 +1677,6 @@ form {
     }
 
     li {
-      flex: auto;
       cursor: pointer;
       font-size: 1.8rem;
       white-space: nowrap;
@@ -1694,26 +1693,16 @@ form {
       text-align: center;
       @include fade-transition;
       white-space: normal;
+      border: solid rgba(#04142d, 0.1) 0.1rem;
 
       @media only screen and (max-width: $tablet-h) {
         padding: 2rem;
         font-size: 1.5rem;
       }
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0.2rem;
-        background: rgba($blue, 0.1);
-        z-index: 1;
-        @include fade-transition;
-      }
-
       &.current {
         color: $blue;
+        border: solid transparent 0.1rem;
         @include fade-transition;
 
         &::after {

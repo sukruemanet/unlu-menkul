@@ -1635,6 +1635,20 @@
   position: relative;
   overflow: hidden;
 
+  &.brown {
+    &:before {
+      content: "";
+      background:
+        linear-gradient(
+          270deg,
+          rgba(144, 117, 74, 0.31) 0%,
+          rgba(0, 0, 0, 0.31) 100%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 99.89%);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+  }
+
   &.type-2 {
     height: 70vh;
     position: relative;
@@ -1670,11 +1684,14 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
+    background:
+      linear-gradient(
+        270deg,
+        rgba(0, 21, 255, 0.31) 0%,
+        rgba(0, 13, 153, 0) 100%
+      ),
+      linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 99.89%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
     z-index: 1;
   }
 
@@ -7407,14 +7424,13 @@
   width: 100%;
   padding-top: 2rem;
 
-  @media only screen and (max-width: $tablet-h) {
-    overflow-y: auto;
-    padding-bottom: 2rem;
-  }
-
   ul {
+    width: 100%;
+
     @media only screen and (max-width: $tablet-h) {
-      min-width: 100rem;
+      overflow-x: auto;
+      padding-bottom: 2rem;
+      -webkit-overflow-scrolling: touch;
     }
 
     li {
@@ -7426,7 +7442,7 @@
 
       @media only screen and (max-width: $tablet-h) {
         font-size: 1.6rem;
-        gap: 2rem;
+        min-width: 100rem;
       }
 
       &.nb {
@@ -7437,9 +7453,22 @@
         border: none;
       }
 
-      span,
-      .item {
-        width: 50%;
+      > span,
+      > .item {
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+        padding-right: 2rem;
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+          flex: 0 0 40%;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
       }
     }
   }
