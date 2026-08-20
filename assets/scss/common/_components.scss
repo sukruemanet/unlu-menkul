@@ -899,7 +899,7 @@ form {
 .newsletter {
   width: 100%;
   padding: 6rem 0;
-  background: #eff7ff;
+  background: #04142d;
 
   @media only screen and (max-width: $tablet-h) {
     padding: 4rem 2rem;
@@ -913,7 +913,7 @@ form {
 
   span {
     font-size: 3rem;
-    color: $dark;
+    color: $white;
     text-align: center;
     display: block;
     @include trim-both;
@@ -926,7 +926,7 @@ form {
   p {
     font-size: 1.4rem;
     line-height: 1.2;
-    color: $dark;
+    color: $white;
     padding: 1rem 0 2rem;
     text-align: center;
     font-weight: $font-regular;
@@ -1006,11 +1006,11 @@ form {
 
         label {
           padding: 0;
-          color: $dark;
+          color: $white;
           font-size: 1.2rem;
 
           a {
-            color: $dark;
+            color: $white;
             @include fade-transition;
 
             &:hover {
