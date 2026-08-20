@@ -104,7 +104,11 @@
   }
 
   &.type-1 {
-    padding: 6rem 2rem 0;
+    padding: 6rem 0;
+
+    .container {
+      padding: 0 2rem;
+    }
   }
 
   &.type-2 {
