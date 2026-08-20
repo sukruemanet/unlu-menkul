@@ -100,15 +100,13 @@
   }
 
   .container {
-    padding: 0;
+    @media only screen and (max-width: $tablet-h) {
+      padding: 0;
+    }
   }
 
   &.type-1 {
-    padding: 6rem 0;
-
-    .container {
-      padding: 0 2rem;
-    }
+    padding: 6rem 2rem 0;
   }
 
   &.type-2 {
@@ -7896,7 +7894,6 @@
   display: flex;
   flex-direction: column;
   gap: 8rem;
-  padding: 0 2rem;
 
   .item {
     display: flex;
@@ -7907,11 +7904,96 @@
     h5 {
       font-size: 3rem;
       font-weight: $font-regular;
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: 2.2rem;
+      }
     }
 
     p {
       font-size: 1.8rem;
       max-width: 100rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: 1.6rem;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.content-card-items {
+  padding: 10rem 0;
+
+  @media only screen and (max-width: $tablet-h) {
+    padding: 4rem 0;
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10rem;
+
+    @media only screen and (max-width: $tablet-h) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    @media only screen and (max-width: $tablet-v) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 4rem;
+    }
+
+    .item {
+      .caption {
+        padding-top: 2rem;
+        transition: padding-top 0.3s ease;
+
+        .date {
+          font-size: 1.4rem;
+          color: #04142d;
+        }
+
+        .imfo {
+          display: flex;
+          justify-content: space-between;
+
+          h2 {
+            font-size: 2rem;
+            color: #04142d;
+            transition: color 0.3s ease;
+
+            @media only screen and (max-width: $tablet-h) {
+              font-size: 1.8rem;
+            }
+          }
+
+          svg {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+        }
+      }
+
+      &:hover {
+        .caption {
+          padding-top: 2rem;
+
+          .imfo {
+            h2 {
+              color: $blue;
+            }
+
+            svg {
+              opacity: 1;
+
+              @media only screen and (max-width: $tablet-h) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
