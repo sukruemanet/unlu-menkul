@@ -1647,67 +1647,113 @@ form {
     list-style: none;
     display: flex;
     gap: 2rem;
+    position: relative;
 
     @media only screen and (max-width: $tablet-h) {
       overflow-y: auto;
       justify-content: flex-start;
     }
 
-    &.type-2 {
+    li {
+      cursor: pointer;
+      font-size: 1.8rem;
+      font-weight: $font-medium;
+      white-space: nowrap;
+      padding: 2rem 4rem;
+      position: relative;
+      text-align: center;
+      transition: all 0.3s ease;
+
+      &::after {
+        transition: all 0.3s ease;
+      }
+    }
+
+    &.type-1 {
+      width: max-content;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.2rem;
+        background: rgba($blue, 0.2);
+      }
+
       li {
-        color: $dark;
+        color: $dark-blue;
+
+        @media only screen and (max-width: $tablet-h) {
+          padding: 2rem;
+          font-size: 1.5rem;
+        }
 
         &.current {
-          background: #04142d;
-          color: $white;
+          color: $blue;
 
           &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.2rem;
+            background: $blue;
+          }
+        }
+      }
+    }
+
+    &.type-2 {
+      width: 100%;
+      gap: 0;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.2rem;
+        background: rgba($blue, 0.2);
+      }
+
+      li {
+        flex: 1;
+        font-size: 1.8rem;
+        white-space: nowrap;
+
+        &.current {
+          background: #e6edff;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.2rem;
             background: $dark;
           }
         }
       }
     }
 
-    &.left {
-      justify-content: flex-start;
+    &.type-3 {
+      width: max-content;
+      gap: 2rem;
 
-      @media only screen and (max-width: $tablet-h) {
-        width: 100%;
-      }
-    }
+      li {
+        flex: 1;
+        font-size: 1.8rem;
+        white-space: nowrap;
+        border: solid rgba($dark, 0.1) 0.1rem;
 
-    li {
-      cursor: pointer;
-      font-size: 1.8rem;
-      white-space: nowrap;
-      color: $dark-blue;
-      font-weight: $font-medium;
-      padding: 2rem 4rem;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      position: relative;
-      text-align: center;
-      @include fade-transition;
-      white-space: normal;
-      border: solid rgba(#04142d, 0.1) 0.1rem;
-
-      @media only screen and (max-width: $tablet-h) {
-        padding: 2rem;
-        font-size: 1.5rem;
-      }
-
-      &.current {
-        color: $blue;
-        border: solid transparent 0.1rem;
-        @include fade-transition;
-
-        &::after {
-          background: $blue;
-          @include fade-transition;
+        &.current {
+          background: $dark;
+          color: $white;
         }
       }
     }
