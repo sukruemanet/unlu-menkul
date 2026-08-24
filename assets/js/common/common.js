@@ -23,6 +23,40 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.remove("active");
     });
   });
+
+  //Table List
+  document.querySelectorAll(".content-table-list").forEach((list) => {
+    const button = [...list.querySelectorAll(".more-table")].find(
+      (el) => el.closest(".content-table-list") === list,
+    );
+    const table = [...list.querySelectorAll("ul")].find(
+      (el) => el.closest(".content-table-list") === list,
+    );
+    if (!button || !table || button.dataset.tableMoreReady) return;
+    button.dataset.tableMoreReady = "true";
+
+    const rows = [...table.children].filter(
+      (li) => li.tagName === "LI" && !li.classList.contains("nb"),
+    );
+
+    const STEP = 5;
+    let visible = 0;
+
+    const showMore = () => {
+      visible = Math.min(visible + STEP, rows.length);
+      rows.forEach((li, i) => {
+        li.style.display = i < visible ? "" : "none";
+      });
+      button.style.display = visible >= rows.length ? "none" : "";
+    };
+
+    showMore();
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      showMore();
+    });
+  });
 });
 
 //Office Info Box

@@ -7493,6 +7493,16 @@
     font-size: 1.4rem;
     margin-top: 4rem;
   }
+
+  .more-table {
+    font-size: 1.6rem;
+    color: $blue;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+  }
 }
 
 .why-unlu-cards {
