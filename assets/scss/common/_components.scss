@@ -904,6 +904,14 @@ form {
   @media only screen and (max-width: $tablet-h) {
     padding: 4rem 2rem;
   }
+
+  &.type-2 {
+    margin-bottom: 10rem;
+
+    @media only screen and (max-width: $tablet-h) {
+      margin-bottom: 4rem;
+    }
+  }
 }
 
 .newsletter-content {
