@@ -796,6 +796,10 @@
     height: 90dvh;
   }
 
+  &.h-auto {
+    height: auto;
+  }
+
   &.nb {
     &:before {
       display: none;
@@ -1160,6 +1164,140 @@
 
         i {
           margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .checkbox-items {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+
+    @media only screen and (max-width: $tablet-v) {
+      flex-direction: column-reverse;
+    }
+
+    .checkbox-item {
+      flex: 1;
+
+      input {
+        width: 2.2rem !important;
+        height: 2.2rem !important;
+      }
+
+      input[type="checkbox"]:checked {
+        background: $dark-blue;
+
+        &:after {
+          width: 13px;
+          height: 11px;
+        }
+      }
+
+      label {
+        padding: 0;
+        color: $white;
+        font-size: 1.2rem;
+
+        a {
+          color: $white;
+          @include fade-transition;
+
+          &:hover {
+            color: rgba($white, 0.7);
+            @include fade-transition;
+          }
+        }
+      }
+    }
+  }
+
+  .checkbox-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media only screen and (max-width: $tablet-h) {
+      padding-right: 0rem;
+    }
+
+    .checkbox-check-item {
+      display: flex;
+      flex-direction: column;
+
+      .validation-text {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 2.2rem;
+        height: 2.2rem;
+        min-width: 2.2rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+        cursor: pointer;
+        border: 1px solid $dark-blue;
+        border-radius: 4px;
+        background: white;
+        position: relative;
+        transition: all 0.2s ease;
+
+        &:hover {
+          border-color: $blue;
+        }
+
+        &:checked {
+          background: #2563eb;
+          border-color: #2563eb;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 11px;
+            height: 8px;
+            background-image: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.36396 9.19238L15.5564 0L16.9706 1.41421L6.36396 12.0208L0 5.65688L1.41422 4.24268L6.36396 9.19238Z' fill='white'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      label {
+        font-size: 1.4rem;
+        font-weight: $font-regular;
+        color: $white;
+        cursor: pointer;
+        user-select: none;
+
+        @media only screen and (max-width: $tablet-v) {
+          font-size: 1.4rem;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: underline;
+
+          &:hover {
+            color: #1d4ed8;
+          }
         }
       }
     }
@@ -7126,6 +7264,20 @@
       p {
         color: $white;
         border-top: solid rgba($white, 0.1) 0.1rem;
+      }
+    }
+  }
+
+  &.type-2 {
+    margin-bottom: 6rem;
+
+    .item {
+      height: 17rem;
+      justify-content: center;
+      border: solid #001727 0.1rem;
+
+      span {
+        height: auto;
       }
     }
   }
