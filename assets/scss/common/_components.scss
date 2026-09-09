@@ -647,7 +647,7 @@ form {
   display: flex;
   flex-direction: column;
 
-  @media only screen and (max-width: $desktop-sm) {
+  @media only screen and (max-width: $desktop) {
     padding: 2rem;
   }
 
@@ -691,14 +691,14 @@ form {
       }
 
       input {
-        @media only screen and (max-width: $desktop-sm) {
+        @media only screen and (max-width: $desktop) {
           height: 5rem;
         }
       }
 
       .selectbox-item {
         .select-item {
-          @media only screen and (max-width: $desktop-sm) {
+          @media only screen and (max-width: $desktop) {
             height: 5rem;
           }
 
@@ -710,7 +710,7 @@ form {
     }
 
     button {
-      @media only screen and (max-width: $desktop-sm) {
+      @media only screen and (max-width: $desktop) {
         height: 5rem;
       }
     }
