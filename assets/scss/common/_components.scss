@@ -647,6 +647,10 @@ form {
   display: flex;
   flex-direction: column;
 
+  @media only screen and (max-width: $desktop-sm) {
+    padding: 2rem;
+  }
+
   @media only screen and (max-width: $tablet-h) {
     padding: 3rem 2rem;
   }
@@ -666,6 +670,50 @@ form {
     flex-direction: column;
     gap: 2rem;
     margin-top: 3rem;
+
+    .form-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      @media only screen and (max-width: $tablet-v) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .item {
+        &:last-child {
+          grid-column: span 2;
+
+          @media only screen and (max-width: $tablet-v) {
+            grid-column: span 1;
+          }
+        }
+      }
+
+      input {
+        @media only screen and (max-width: $desktop-sm) {
+          height: 5rem;
+        }
+      }
+
+      .selectbox-item {
+        .select-item {
+          @media only screen and (max-width: $desktop-sm) {
+            height: 5rem;
+          }
+
+          select {
+            white-space: normal;
+          }
+        }
+      }
+    }
+
+    button {
+      @media only screen and (max-width: $desktop-sm) {
+        height: 5rem;
+      }
+    }
 
     .select-item {
       background: $white;

@@ -957,7 +957,7 @@
     }
 
     @media only screen and (max-width: $desktop-sm) {
-      inset: auto 2rem 10rem 8rem;
+      inset: auto 2rem 4rem 4rem;
     }
 
     @media only screen and (max-width: $tablet-h) {
@@ -974,6 +974,10 @@
 
       @media only screen and (max-width: $desktop) {
         gap: 4rem;
+      }
+
+      @media only screen and (max-width: $desktop-sm) {
+        max-width: 60rem;
       }
 
       @media only screen and (max-width: $tablet-h) {
@@ -1032,8 +1036,7 @@
       flex-direction: column;
       justify-content: flex-end;
 
-      @media only screen and (max-width: $desktop) {
-        max-width: 44rem;
+      @media only screen and (max-width: $desktop-sm) {
       }
 
       @media only screen and (max-width: $tablet-h) {
@@ -1194,6 +1197,13 @@
           margin-left: auto;
         }
       }
+    }
+  }
+
+  .secondary-form {
+    display: flex;
+
+    form {
     }
   }
 
