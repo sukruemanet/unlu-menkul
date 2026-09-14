@@ -8292,20 +8292,42 @@
       gap: 1rem;
     }
 
+    @media only screen and (max-width: $tablet-v) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .item {
       aspect-ratio: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+      padding: 2rem;
       border: solid rgba($black, 0.1) 0.1rem;
+      @include fade-transition;
+
+      &:hover {
+        @include fade-transition;
+        background: #f6fcff;
+        border: solid rgba($black, 0.2) 0.1rem;
+      }
 
       span {
         font-size: 2rem;
         font-weight: $font-bold;
+        color: $dark;
 
         @media only screen and (max-width: $tablet-h) {
           font-size: 1.8rem;
         }
+      }
+
+      small {
+        font-size: 1.4rem;
+        font-weight: $font-regular;
+        color: $dark;
       }
     }
   }
