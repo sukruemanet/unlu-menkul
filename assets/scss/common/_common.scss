@@ -7474,6 +7474,35 @@
     padding: 2rem 0 8rem;
   }
 
+  .article-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0;
+    gap: 1rem;
+    padding: 3rem;
+    background: rgba($blue, 0.05);
+    border-left: solid $blue 0.2rem;
+
+    @media only screen and (max-width: $tablet-h) {
+      padding: 3rem 2rem;
+    }
+
+    li {
+      &:hover {
+        a {
+          color: rgba($blue, 0.7);
+          @include fade-transition;
+        }
+      }
+
+      a {
+        font-size: 1.6rem;
+        color: $blue;
+        @include fade-transition;
+      }
+    }
+  }
+
   .left {
     width: 100%;
 
