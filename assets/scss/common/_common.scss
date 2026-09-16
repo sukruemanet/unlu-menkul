@@ -8205,6 +8205,10 @@
     border: solid rgba($blue, 0.1) 0.1rem;
     padding: 3rem;
 
+    @media only screen and (max-width: $tablet-h) {
+      padding: 2rem;
+    }
+
     h5 {
       font-size: 2.6rem;
       @media only screen and (max-width: $tablet-h) {
@@ -8221,6 +8225,10 @@
         font-size: 1.6rem;
         max-width: 100%;
       }
+    }
+
+    .button {
+      margin-top: 1rem;
     }
   }
 }
