@@ -8,9 +8,13 @@ $(document).ready(function () {
     $(this).addClass("current");
 
     // Sadece bu ul'ün içinde bulunduğu tab-menu-content'teki tab-content'leri etkile
+    // (iç içe tab yapılarında alttaki tab'ların durumu korunur)
     var $tabContainer = $parentUl.closest(".tab-menu-content");
-    $tabContainer.find(".tab-content").removeClass("current");
-    $tabContainer.find("#" + tab_id).addClass("current");
+    var $tabContents = $tabContainer.find(".tab-content").filter(function () {
+      return $(this).closest(".tab-menu-content").is($tabContainer);
+    });
+    $tabContents.removeClass("current");
+    $tabContents.filter("#" + tab_id).addClass("current");
 
     // Animasyon
     gsap.fromTo(

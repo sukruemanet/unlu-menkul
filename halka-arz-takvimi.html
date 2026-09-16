@@ -1055,245 +1055,772 @@
 
     <div class="content-wrapper type-7">
       <div class="container">
-        <div class="content-table-list">
-          <ul>
-            <li class="nb">
-              <div class="item">
-                <span>
-                  <strong>Şirket Adı (Borsa Kodu)</strong>
-                </span>
-              </div>
-              <div class="item">
-                <span>
-                  <strong>Halka Arz Tarihi</strong>
-                </span>
-              </div>
-              <div class="item">
-                <span>
-                  <strong>Halka Arz Fiyatı</strong>
-                </span>
-              </div>
-              <div class="item">
-                <span>
-                  <strong>Durumu</strong>
-                </span>
-              </div>
+        <div class="tab-menu-content">
+          <ul class="tabs type-1">
+            <li class="tab-link current" data-tab="guncel-halka-arzlar">
+              Güncel Halka Arzlar
             </li>
-            <li>
-              <div class="item">
-                <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Taslak</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Özpet Plastik Global San. Tic. A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Taslak</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Özova Tarım A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Başvuru Sürecinde</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Taslak</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Taslak</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Taslak</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Özpet Plastik Global San. Tic. A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Taslak</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Özova Tarım A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Başvuru Sürecinde</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Taslak</span>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>-</span>
-              </div>
-              <div class="item">
-                <span>Taslak</span>
-              </div>
+            <li class="tab-link" data-tab="gecmis-halka-arzlar">
+              Geçmiş Halka Arzlar
             </li>
           </ul>
-          <a class="more-table">
-            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 7H15" stroke="#0015FF" />
-              <line x1="7.63281" y1="-2.18557e-08" x2="7.63281" y2="14" stroke="#0015FF" />
-            </svg>
-            Daha Fazla
-          </a>
+
+          <div id="guncel-halka-arzlar" class="tab-content current">
+            <div class="content-table-list">
+              <ul>
+                <li class="nb">
+                  <div class="item">
+                    <span>
+                      <strong>Şirket Adı (Borsa Kodu)</strong>
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span>
+                      <strong>Halka Arz Tarihi</strong>
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span>
+                      <strong>Halka Arz Fiyatı</strong>
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span>
+                      <strong>Durumu</strong>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Taslak</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Özpet Plastik Global San. Tic. A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Taslak</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Özova Tarım A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Başvuru Sürecinde</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Taslak</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Taslak</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Taslak</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Özpet Plastik Global San. Tic. A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Taslak</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Özova Tarım A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Başvuru Sürecinde</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Taslak</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>-</span>
+                  </div>
+                  <div class="item">
+                    <span>Taslak</span>
+                  </div>
+                </li>
+              </ul>
+              <a class="more-table">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 7H15" stroke="#0015FF" />
+                  <line x1="7.63281" y1="-2.18557e-08" x2="7.63281" y2="14" stroke="#0015FF" />
+                </svg>
+                Daha Fazla
+              </a>
+            </div>
+          </div>
+
+          <div id="gecmis-halka-arzlar" class="tab-content">
+            <div class="tab-menu-content">
+              <ul class="tabs type-3">
+                <li class="tab-link current" data-tab="gecmis-2026">
+                  2026
+                </li>
+                <li class="tab-link" data-tab="gecmis-2025">
+                  2025
+                </li>
+                <li class="tab-link" data-tab="gecmis-2024">
+                  2024
+                </li>
+              </ul>
+
+              <div id="gecmis-2026" class="tab-content current">
+                <div class="content-table-list">
+                  <ul>
+                    <li class="nb">
+                      <div class="item">
+                        <span>
+                          <strong>Şirket Adı (Borsa Kodu)</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Halka Arz Tarihi</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Halka Arz Fiyatı</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Durumu</strong>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>03 Mayıs 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>38,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özpet Plastik Global San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>06 Temmuz 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>45,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özova Tarım A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>09 Eylül 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>12,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>12 Ekim 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>19,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>15 Kasım 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>26,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>18 Aralık 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>33,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özpet Plastik Global San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>21 Şubat 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>40,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özova Tarım A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>24 Mart 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>47,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>27 Mayıs 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>14,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>05 Temmuz 2026</span>
+                      </div>
+                      <div class="item">
+                        <span>21,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <a class="more-table">
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 7H15" stroke="#0015FF" />
+                      <line x1="7.63281" y1="-2.18557e-08" x2="7.63281" y2="14" stroke="#0015FF" />
+                    </svg>
+                    Daha Fazla
+                  </a>
+                </div>
+              </div>
+
+              <div id="gecmis-2025" class="tab-content">
+                <div class="content-table-list">
+                  <ul>
+                    <li class="nb">
+                      <div class="item">
+                        <span>
+                          <strong>Şirket Adı (Borsa Kodu)</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Halka Arz Tarihi</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Halka Arz Fiyatı</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Durumu</strong>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>03 Mart 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>37,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özpet Plastik Global San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>06 Mayıs 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>44,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özova Tarım A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>09 Temmuz 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>51,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>12 Eylül 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>18,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>15 Ekim 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>25,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>18 Kasım 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>32,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özpet Plastik Global San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>21 Aralık 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>39,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özova Tarım A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>24 Şubat 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>46,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>27 Mart 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>13,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>05 Mayıs 2025</span>
+                      </div>
+                      <div class="item">
+                        <span>20,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <a class="more-table">
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 7H15" stroke="#0015FF" />
+                      <line x1="7.63281" y1="-2.18557e-08" x2="7.63281" y2="14" stroke="#0015FF" />
+                    </svg>
+                    Daha Fazla
+                  </a>
+                </div>
+              </div>
+
+              <div id="gecmis-2024" class="tab-content">
+                <div class="content-table-list">
+                  <ul>
+                    <li class="nb">
+                      <div class="item">
+                        <span>
+                          <strong>Şirket Adı (Borsa Kodu)</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Halka Arz Tarihi</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Halka Arz Fiyatı</strong>
+                        </span>
+                      </div>
+                      <div class="item">
+                        <span>
+                          <strong>Durumu</strong>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>03 Şubat 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>36,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özpet Plastik Global San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>06 Mart 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>43,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özova Tarım A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>09 Mayıs 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>50,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>12 Temmuz 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>17,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>15 Eylül 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>24,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>18 Ekim 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>31,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özpet Plastik Global San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>21 Kasım 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>38,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Özova Tarım A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>24 Aralık 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>45,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çitlekçi Mağazacılık Gıda A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>27 Şubat 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>12,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item">
+                        <span>Çimko Çimento ve Beton San. Tic. A.Ş.</span>
+                      </div>
+                      <div class="item">
+                        <span>05 Mart 2024</span>
+                      </div>
+                      <div class="item">
+                        <span>19,00 TL</span>
+                      </div>
+                      <div class="item">
+                        <span>Tamamlandı</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <a class="more-table">
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 7H15" stroke="#0015FF" />
+                      <line x1="7.63281" y1="-2.18557e-08" x2="7.63281" y2="14" stroke="#0015FF" />
+                    </svg>
+                    Daha Fazla
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="content-wrapper type-7">
-      <div class="container">
-        <div class="card-items">
-          <div class="card type-2">
-            <figure>
-              <img src="/assets/images/unluco/01.jpg" />
-            </figure>
-            <div class="caption">
-              <h2>
-                Halka Arz Nedir?
-              </h2>
-              <p>
-                Halka arz, bir şirketin sermayesini genişletmek veya mevcut ortakların paylarını satmak amacıyla
-                hisselerini yatırımcılara sunarak halka açık bir şirket haline gelmesi sürecidir.
-                <br><br>
-                Halka arz, şirketlerin sermaye yapısını güçlendirerek yeni yatırımlar için kaynak sağlamasına olanak
-                tanır. Bu süreçte şirketler, hisselerini yatırımcılara sunarak daha geniş bir sermaye tabanına ulaşır ve
-                likidite imkânını artırır.
-              </p>
-            </div>
-          </div>
+    <div class="image-card-content type-2">
+      <figure>
+        <div class="parallax-item">
+          <img src="/assets/images/index/0595.jpg">
         </div>
-      </div>
-    </div>
+        <figcaption>
+          <div class="container">
+            <div class="content-wrapper">
+              <div class="headline">
+                <h4>
+                  Şimdi yatırım yapmaya başlayın
+                </h4>
+              </div>
+              <p>
+                Finansal hedeflerinize ulaşmak için ilk adımı atın. Uzman ekibimiz, size en uygun yatırım seçeneklerini
+                sunmak ve süreç boyunca yanınızda olmak için hazır.<br><br>
 
-    <div class="content-wrapper type-8">
-      <div class="container mission-vision">
-        <div class="headline dark">
-          <h4>
-            Halka Arz Türleri
-          </h4>
-          <p>
-            Halka arz işlemi, iki farklı şekilde gerçekleşir:
-          </p>
-        </div>
-        <div class="content-special-card-items list-2 border">
-          <div class="item">
-            <div class="caption">
-              <span>
-                Sermaye artırımı
-              </span>
-              <p>
-                Bu yöntemde şirket, mevcut sermayesini artırarak yeni hisse senetleri ihraç eder ve bu hisseleri
-                yatırımcılara satar. Şirketin halka arzdan elde ettiği gelir, genellikle yeni yatırımlar, borç ödemeleri
-                veya işletme sermayesini güçlendirmek için kullanılır.
+                Hemen harekete geçin ve yatırım fırsatlarınızı bugün keşfedin.
               </p>
+              <div class="buttons">
+                <a href="https://unluco.hrpanda.co/" target="_blank" class="button primary">
+                  Hesap Aç
+                  <svg viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 10.9999H23.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.0714 20.4284L23.5 10.9999" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.0714 1.57129L23.5 10.9999" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="item">
-            <div class="caption">
-              <span>
-                Ortak satışı
-              </span>
-              <p>
-                Bu yöntemde şirketin mevcut ortakları ellerindeki hisselerin bir kısmını satar. Şirketin kasasına
-                doğrudan bir sermaye girişi olmaz, bunun yerine hisseleri satan ortaklar nakde geçer. Genellikle şirket
-                kurucularının, yatırımcıların veya stratejik ortakların bir kısmının çıkış yapma stratejisi olarak
-                görülür.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     </div>
 
     <div class="content-wrapper">

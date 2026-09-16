@@ -1807,6 +1807,11 @@ form {
         white-space: nowrap;
         border: solid rgba($dark, 0.1) 0.1rem;
 
+        @media only screen and (max-width: $tablet-h) {
+          padding: 1.6rem 1.4rem;
+          font-size: 1.6rem;
+        }
+
         &.current {
           background: $dark;
           color: $white;
@@ -1820,6 +1825,11 @@ form {
 
     &.current {
       display: inherit;
+    }
+
+    // ic ice tab yapisi (ornek: gecmis halka arzlar > yil tablari)
+    > .tab-menu-content {
+      padding-top: 4rem;
     }
   }
 }
