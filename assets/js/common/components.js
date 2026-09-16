@@ -1,36 +1,63 @@
 
 //Modalbox
 document.addEventListener('DOMContentLoaded', () => {
+  let isLocked = false
+
+  const setScrollLock = (locked) => {
+    if (locked === isLocked) return
+    isLocked = locked
+
+    document.body.classList.toggle('no-scroll', locked)
+
+    if (typeof lenis === 'undefined' || !lenis) return
+    if (locked) lenis.stop()
+    else lenis.start()
+  }
+
   const syncBodyScrollLock = () => {
-    const isAnyActive = !!document.querySelector('.modal-box.active')
-    document.body.classList.toggle('no-scroll', isAnyActive)
+    setScrollLock(!!document.querySelector('.modal-box.active'))
+  }
+
+  const openModal = (modal) => {
+    if (!modal) return
+    modal.classList.add('active')
+    syncBodyScrollLock()
+  }
+
+  const closeModal = (modal) => {
+    if (!modal) return
+    modal.classList.remove('active')
+    syncBodyScrollLock()
   }
 
   syncBodyScrollLock()
 
   document.addEventListener('click', (e) => {
-    const opener = e.target.closest('.ofdirectors-item')
+    const opener = e.target.closest('[data-modal-target]')
     if (opener) {
-      const modalId = opener.getAttribute('data-modal-target')
-      const modal = document.getElementById(modalId)
-      if (modal) modal.classList.add('active')
-      syncBodyScrollLock()
-      return
+      const modal = document.getElementById(opener.getAttribute('data-modal-target'))
+      if (modal) {
+        e.preventDefault()
+        openModal(modal)
+        return
+      }
     }
 
     const closer = e.target.closest('.close-modal-box')
     if (closer) {
-      const modal = closer.closest('.modal-box')
-      if (modal) modal.classList.remove('active')
-      syncBodyScrollLock()
+      closeModal(closer.closest('.modal-box'))
       return
     }
 
     const activeModal = document.querySelector('.modal-box.active')
     if (activeModal && !e.target.closest('.modal-content')) {
-      activeModal.classList.remove('active')
-      syncBodyScrollLock()
+      closeModal(activeModal)
     }
+  })
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return
+    closeModal(document.querySelector('.modal-box.active'))
   })
 
   const observer = new MutationObserver(() => syncBodyScrollLock())

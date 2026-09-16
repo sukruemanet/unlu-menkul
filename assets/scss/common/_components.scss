@@ -1492,6 +1492,133 @@ form {
   }
 }
 
+.modal-box {
+  &.type-warning {
+    padding: 4rem 2rem;
+
+    @media only screen and (max-width: $tablet-v) {
+      padding: 2rem;
+    }
+
+    &:before {
+      background: rgba($black, 0.6);
+    }
+
+    .modal-content {
+      max-width: 124rem;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: $dark;
+      padding: 7rem 7rem 8rem;
+
+      @media only screen and (max-width: $desktop-sm) {
+        max-width: 100rem;
+        padding: 6rem 5rem;
+      }
+
+      @media only screen and (max-width: $tablet-h) {
+        padding: 6rem 4rem;
+      }
+
+      @media only screen and (max-width: $tablet-v) {
+        padding: 6rem 2.4rem 3rem;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      .head {
+        display: block;
+        margin-bottom: 4rem;
+        padding-right: 6rem;
+
+        @media only screen and (max-width: $tablet-v) {
+          margin-bottom: 2.4rem;
+          padding-right: 3rem;
+        }
+
+        h3 {
+          font-size: 3.4rem;
+          line-height: 1.2;
+          font-weight: $font-medium;
+          color: $light-blue;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+
+          @media only screen and (max-width: $tablet-v) {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .detail {
+        padding: 0 4rem 0 0;
+        max-height: 55rem;
+        color: $white;
+        font-size: 1.8rem;
+        line-height: 1.75;
+        overscroll-behavior: contain;
+
+        @media only screen and (max-width: $tablet-h) {
+          max-height: 50vh;
+          padding-right: 2rem;
+          font-size: 1.6rem;
+        }
+
+        p + p {
+          margin-top: 2.4rem;
+        }
+
+        a {
+          color: $light-blue;
+          text-decoration: underline;
+        }
+
+        &::-webkit-scrollbar {
+          width: 0.3rem;
+          background-color: rgba($white, 0.15);
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: rgba($white, 0.15);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $light-blue;
+        }
+      }
+
+      i {
+        top: 2.4rem;
+        right: 3rem;
+        width: 4.4rem;
+        height: 4.4rem;
+        color: $light-blue;
+        @include fade-transition;
+
+        @media only screen and (max-width: $tablet-v) {
+          top: 1rem;
+          right: 1rem;
+          width: 4rem;
+          height: 4rem;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        svg {
+          width: 2.4rem;
+          fill: none;
+          stroke: currentColor;
+        }
+      }
+    }
+  }
+}
+
 .cookies-box {
   position: fixed;
   inset: auto 2rem 2rem 2rem;
