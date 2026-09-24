@@ -8835,7 +8835,7 @@ main .start-content.h-auto.daha-page .caption .left {
 }
 
 main .start-content.h-auto.daha-page .caption .left h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 main .start-content.h-auto.daha-page .caption .left .channel-kicker {
@@ -8857,7 +8857,7 @@ main .start-content.h-auto.daha-page .caption .left .buttons {
 }
 
 main .start-content.h-auto.daha-page .channel-benefits {
-  margin: 0 0 4rem;
+  margin: 0 0 6rem;
 }
 
 main .start-content.h-auto.daha-page .channel-benefits h2 {
@@ -8879,7 +8879,7 @@ main .start-content.h-auto.daha-page .channel-benefits li {
   padding: 1.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 main .start-content.h-auto.daha-page .channel-benefit-check {
@@ -8940,3 +8940,15 @@ main .start-content.h-auto.daha-page .secondary-form {
     padding-top: 19rem;
   }
 }
+
+    main .start-content.h-auto.piapiri-page .channel-benefits li:nth-last-child(-n + 2),
+    main .start-content.h-auto.daha-page .channel-benefits li:nth-last-child(-n + 2) {
+      border-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
+      main .start-content.h-auto.piapiri-page .channel-benefits li:nth-last-child(2),
+      main .start-content.h-auto.daha-page .channel-benefits li:nth-last-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+      }
+    }
