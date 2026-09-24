@@ -8671,10 +8671,6 @@
           gap: 0;
           color: #fff;
 
-          h1 {
-            margin-bottom: 3rem;
-          }
-
           .channel-kicker {
             margin-bottom: 2rem;
             color: #fff;
@@ -8714,10 +8710,6 @@
           padding: 24rem 2rem 6rem;
 
           .left {
-            h1 {
-              font-size: 4.6rem;
-              letter-spacing: -0.1rem;
-            }
 
             .channel-intro {
               font-size: 1.8rem;
@@ -8800,10 +8792,6 @@
           gap: 0;
           color: #fff;
 
-          h1 {
-            margin-bottom: 5rem;
-          }
-
           .channel-kicker {
             margin-bottom: 2rem;
             color: #fff;
@@ -8843,10 +8831,6 @@
           padding: 24rem 2rem 6rem;
 
           .left {
-            h1 {
-              font-size: 4.6rem;
-              letter-spacing: -0.1rem;
-            }
 
             .channel-intro {
               font-size: 1.8rem;
@@ -8877,6 +8861,19 @@
   &.h-auto {
     &.piapiri-page,
     &.daha-page {
+      .caption {
+        .left {
+          h1 {
+            margin-bottom: 5rem;
+
+            @media only screen and (max-width: $tablet-h) {
+              font-size: 4.6rem;
+              letter-spacing: -0.1rem;
+            }
+          }
+        }
+      }
+
       .channel-benefits {
         margin: 0 0 6rem;
 
