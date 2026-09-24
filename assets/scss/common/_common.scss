@@ -8695,42 +8695,6 @@
         }
       }
 
-      .channel-benefits {
-        margin: 0 0 4rem;
-
-        h2 {
-          margin-bottom: 2rem;
-          font-size: 2.6rem;
-          font-weight: 500;
-        }
-
-        ul {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          column-gap: 6rem;
-        }
-
-        li {
-          display: flex;
-          align-items: center;
-          gap: 2rem;
-          padding: 1.5rem 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-          color: #fff;
-          font-size: 2.2rem;
-
-          &:nth-last-child(-n + 2) {
-            border-bottom: 0;
-          }
-        }
-      }
-
-      .channel-benefit-check {
-        width: 1.6rem;
-        height: 1.3rem;
-        flex: 0 0 1.6rem;
-      }
-
       .channel-description {
         max-width: 50rem;
         color: #fff;
@@ -8767,27 +8731,9 @@
           height: 65rem;
         }
 
-        .channel-benefits {
-          ul {
-            column-gap: 2rem;
-          }
-
-          li {
-            font-size: 1.7rem;
-          }
-        }
       }
 
       @media only screen and (max-width: $phone) {
-        .channel-benefits {
-          ul {
-            grid-template-columns: 1fr;
-          }
-
-          li:nth-last-child(2) {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-          }
-        }
 
         .caption {
           padding-top: 19rem;
@@ -8878,42 +8824,6 @@
         }
       }
 
-      .channel-benefits {
-        margin: 0 0 6rem;
-
-        h2 {
-          margin-bottom: 2rem;
-          font-size: 2.6rem;
-          font-weight: 500;
-        }
-
-        ul {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          column-gap: 6rem;
-        }
-
-        li {
-          display: flex;
-          align-items: center;
-          gap: 2rem;
-          padding: 1.5rem 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-          color: #fff;
-          font-size: 2rem;
-
-          &:nth-last-child(-n + 2) {
-            border-bottom: 0;
-          }
-        }
-      }
-
-      .channel-benefit-check {
-        width: 1.6rem;
-        height: 1.3rem;
-        flex: 0 0 1.6rem;
-      }
-
       .channel-description {
         max-width: 50rem;
         color: #fff;
@@ -8950,6 +8860,60 @@
           height: 65rem;
         }
 
+      }
+
+      @media only screen and (max-width: $phone) {
+
+        .caption {
+          padding-top: 19rem;
+        }
+      }
+
+    }
+  }
+}
+
+.start-content {
+  &.h-auto {
+    &.piapiri-page,
+    &.daha-page {
+      .channel-benefits {
+        margin: 0 0 6rem;
+
+        h2 {
+          margin-bottom: 2rem;
+          font-size: 2.6rem;
+          font-weight: 500;
+        }
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          column-gap: 6rem;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          padding: 1.5rem 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          color: #fff;
+          font-size: 2rem;
+
+          &:nth-last-child(-n + 2) {
+            border-bottom: 0;
+          }
+        }
+
+        .channel-benefit-check {
+          width: 1.6rem;
+          height: 1.3rem;
+          flex: 0 0 1.6rem;
+        }
+      }
+
+      @media only screen and (max-width: $tablet-h) {
         .channel-benefits {
           ul {
             column-gap: 2rem;
@@ -8970,10 +8934,6 @@
           li:nth-last-child(2) {
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
           }
-        }
-
-        .caption {
-          padding-top: 19rem;
         }
       }
     }
