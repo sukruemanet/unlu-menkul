@@ -431,7 +431,7 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 6rem;
+      gap: 4rem;
       flex-shrink: 0;
 
       @media only screen and (max-width: $desktop-sm) {
@@ -450,7 +450,7 @@
       }
 
       h2 {
-        font-size: 3.6rem;
+        font-size: 3rem;
         font-weight: $font-regular;
         color: $dark;
 
@@ -9111,7 +9111,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem 0 0 8rem;
+    padding: 1rem 0 0 0;
 
     @media only screen and (max-width: $tablet-v) {
       padding: 0;
