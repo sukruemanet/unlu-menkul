@@ -1224,6 +1224,68 @@
           margin-left: auto;
         }
       }
+
+      .hero-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 2rem;
+          padding: 4rem 7rem;
+          background: rgba($white, 0.2);
+          backdrop-filter: blur(1rem);
+          -webkit-backdrop-filter: blur(1rem);
+          @include fade-transition;
+
+          @media only screen and (max-width: $desktop) {
+            padding: 3rem 4rem;
+          }
+
+          @media only screen and (max-width: $tablet-h) {
+            padding: 2rem;
+          }
+
+          &:hover {
+            background: rgba($white, 0.3);
+            @include fade-transition;
+          }
+
+          span {
+            max-width: none;
+            font-size: 2.8rem;
+            font-weight: $font-medium;
+            color: $white;
+
+            @media only screen and (max-width: $desktop) {
+              font-size: 2.2rem;
+            }
+
+            @media only screen and (max-width: $tablet-h) {
+              font-size: 1.8rem;
+            }
+          }
+
+          i {
+            display: flex;
+            flex-shrink: 0;
+
+            svg {
+              width: 3.6rem;
+              height: 3.6rem;
+              fill: $white;
+
+              @media only screen and (max-width: $tablet-h) {
+                width: 2rem;
+                height: 2rem;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -8710,7 +8772,6 @@
           padding: 24rem 2rem 6rem;
 
           .left {
-
             .channel-intro {
               font-size: 1.8rem;
             }
@@ -8722,11 +8783,9 @@
         &::before {
           height: 65rem;
         }
-
       }
 
       @media only screen and (max-width: $phone) {
-
         .caption {
           padding-top: 19rem;
         }
@@ -8831,7 +8890,6 @@
           padding: 24rem 2rem 6rem;
 
           .left {
-
             .channel-intro {
               font-size: 1.8rem;
             }
@@ -8843,16 +8901,13 @@
         &::before {
           height: 65rem;
         }
-
       }
 
       @media only screen and (max-width: $phone) {
-
         .caption {
           padding-top: 19rem;
         }
       }
-
     }
   }
 }

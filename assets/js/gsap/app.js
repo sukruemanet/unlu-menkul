@@ -178,7 +178,7 @@ mm.add("(min-width: 1024px)", () => {
   gsap.set(".start-content .scroll-down i svg", { y: -100 });
 
   gsap.fromTo(
-    ".start-content i svg",
+    ".start-content i svg:not(.hero-contact svg)",
     { y: -100 },
     {
       y: 100,
