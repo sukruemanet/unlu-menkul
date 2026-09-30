@@ -830,6 +830,54 @@
     }
   }
 
+  &.contact-hero {
+    @media only screen and (max-width: $tablet-h) {
+      height: auto;
+      min-height: 90dvh;
+      display: flex;
+      flex-direction: column;
+
+      figure {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .caption {
+        position: relative;
+        inset: auto;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 5rem;
+        padding: 24rem 2rem 6rem;
+
+        .left {
+          gap: 3rem;
+        }
+
+        .right {
+          .hero-contact {
+            gap: 1.2rem;
+          }
+        }
+      }
+
+      .partnership {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: $phone) {
+      .caption {
+        padding-top: 19rem;
+      }
+    }
+  }
+
   .partnership {
     width: max-content;
     display: flex;
