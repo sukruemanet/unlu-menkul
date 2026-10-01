@@ -1,5 +1,13 @@
 ﻿@use "../base/base";
 
+.daha {
+  header {
+    &.background {
+      background: #90754a;
+    }
+  }
+}
+
 .secondary {
   padding-top: 17.6rem;
 
