@@ -944,6 +944,7 @@
   .tab-menu-content {
     .tabs {
       margin-bottom: 4rem;
+      gap: 0;
 
       li {
         color: $white;
@@ -954,6 +955,7 @@
 
         &.current {
           color: $white;
+          background: $dark;
 
           &:after {
             background: $white;
