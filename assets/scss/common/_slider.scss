@@ -221,7 +221,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
     inset: auto 6rem 10rem;
     z-index: 3;
 
@@ -235,7 +235,7 @@
       width: auto;
       flex-direction: column;
       align-items: flex-start;
-      gap: 2rem;
+      gap: 3rem;
       inset: auto 4rem 10rem 2rem;
     }
 
@@ -262,12 +262,7 @@
       }
 
       @media only screen and (max-width: $tablet-h) {
-        font-size: 4.6rem;
-        letter-spacing: -1.4px;
-      }
-
-      @media only screen and (max-width: $tablet-h) {
-        font-size: 3.2rem;
+        font-size: 4rem;
         letter-spacing: -1.4px;
       }
     }
@@ -275,11 +270,11 @@
     .text-items {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 4rem;
 
       @media only screen and (max-width: $tablet-v) {
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
       }
     }
 
