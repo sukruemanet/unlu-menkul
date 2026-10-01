@@ -175,6 +175,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -192,7 +193,7 @@
     }
 
     .swiper-pagination-bullet {
-      width: 5rem;
+      width: 8rem;
       height: 0.4rem;
       border-radius: 0;
       background: #80d4ff;
@@ -235,7 +236,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 2rem;
-      inset: auto 4rem 26rem 2rem;
+      inset: auto 4rem 10rem 2rem;
     }
 
     h1 {
@@ -279,8 +280,6 @@
       @media only screen and (max-width: $tablet-v) {
         display: flex;
         gap: 2rem;
-        align-items: flex-end;
-        flex-direction: row;
       }
     }
 
@@ -323,12 +322,10 @@
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  inset: auto 6rem 10rem auto;
+  inset: auto 0 5rem 0;
+  width: fit-content;
+  margin: 0 auto;
   z-index: 3;
-
-  @media only screen and (max-width: $desktop-sm) {
-    inset: auto 2rem 10rem auto;
-  }
 
   @media only screen and (max-width: $tablet-h) {
     max-width: 100%;
