@@ -1,23 +1,3 @@
-/*
- * Custom Table: sıralama, arama ve sayfalama
- *
- * Kullanım:
- * <div class="custom-table" data-page-size="10">
- *   <div class="table-headline">
- *     <a class="button dark" data-table-reset>Filtreyi Sıfırla</a>
- *     <div class="table-search"><input data-table-search placeholder="Arayın..."></div>
- *   </div>
- *   <div class="content-custom-table-list">
- *     <ul>
- *       <li class="nb"> ...başlıklar (.item)... </li>   -> ilk li başlık satırıdır
- *       <li> ...satırlar (.item)... </li>
- *     </ul>
- *   </div>
- *   <div class="pagination"></div>
- * </div>
- *
- * Sıralanmasını istemediğiniz başlık hücresine data-sortable="false" ekleyin.
- */
 (function () {
   var MONTHS = {
     ocak: 0,
@@ -55,6 +35,15 @@
     '<path d="M13.5715 20.4284L23.0001 10.9999" stroke-linecap="round" stroke-linejoin="round" />' +
     '<path d="M13.5715 1.57129L23.0001 10.9999" stroke-linecap="round" stroke-linejoin="round" />' +
     "</svg>";
+
+  var TOGGLE_ICON =
+    '<i class="row-toggle">' +
+    '<svg viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+    '<path d="M13.25 1.25L7.25 7.25L1.25 1.25" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />' +
+    "</svg>" +
+    "</i>";
+
+  var RESPONSIVE_BREAKPOINT = 1024;
 
   function normalize(text) {
     return text.replace(/\s+/g, " ").trim().toLocaleLowerCase("tr");
@@ -131,27 +120,44 @@
     if (!this.list) return;
 
     this.pagination = root.querySelector(".pagination");
-    this.searchInput = root.querySelector("[data-table-search], .table-search input");
+    this.searchInput = root.querySelector(
+      "[data-table-search], .table-search input",
+    );
     this.resetButton = root.querySelector("[data-table-reset]");
     this.pageSize = parseInt(root.getAttribute("data-page-size"), 10) || 10;
+    this.colWidth = parseInt(root.getAttribute("data-col-width"), 10) || 100;
+    this.hiddenFrom = null;
 
     var items = Array.prototype.slice.call(this.list.children);
     this.headerRow = items.shift();
-    this.headerCells = Array.prototype.slice.call(this.headerRow.querySelectorAll(":scope > .item, :scope > span"));
+    this.headerCells = Array.prototype.slice.call(
+      this.headerRow.querySelectorAll(":scope > .item, :scope > span"),
+    );
 
     this.rows = items.map(function (li, i) {
-      var cells = Array.prototype.slice
-        .call(li.querySelectorAll(":scope > .item, :scope > span"))
-        .map(function (cell) {
-          return cell.textContent.replace(/\s+/g, " ").trim();
-        });
+      var cellEls = Array.prototype.slice.call(
+        li.querySelectorAll(":scope > .item, :scope > span"),
+      );
+      var cells = cellEls.map(function (cell) {
+        return cell.textContent.replace(/\s+/g, " ").trim();
+      });
+
+      li.setAttribute("data-row", i);
+      if (cellEls[0]) cellEls[0].insertAdjacentHTML("afterbegin", TOGGLE_ICON);
 
       return {
         el: li,
         index: i,
+        cellEls: cellEls,
         cells: cells,
         search: normalize(cells.join(" ")),
+        open: false,
+        details: null,
       };
+    });
+
+    this.headerLabels = this.headerCells.map(function (cell) {
+      return cell.textContent.replace(/\s+/g, " ").trim();
     });
 
     this.columnTypes = this.headerCells.map(
@@ -167,14 +173,103 @@
 
     this.emptyRow = document.createElement("li");
     this.emptyRow.className = "empty";
-    this.emptyRow.textContent = root.getAttribute("data-empty-text") || "Sonuç bulunamadı.";
+    this.emptyRow.textContent =
+      root.getAttribute("data-empty-text") || "Sonuç bulunamadı.";
 
     this.bindHeader();
     this.bindSearch();
     this.bindReset();
     this.bindPagination();
+    this.bindRows();
+    this.bindResize();
+    this.updateColumns();
     this.render();
   }
+
+  // Ekrana sığmayan sütunları sağdan başlayarak gizler
+  CustomTable.prototype.updateColumns = function () {
+    var total = this.headerCells.length;
+    var hiddenFrom = null;
+
+    if (window.innerWidth <= RESPONSIVE_BREAKPOINT) {
+      var fit = Math.max(1, Math.floor(this.list.clientWidth / this.colWidth));
+      if (fit < total) hiddenFrom = fit;
+    }
+
+    if (hiddenFrom === this.hiddenFrom) return false;
+    this.hiddenFrom = hiddenFrom;
+
+    this.root.classList.toggle("is-responsive", hiddenFrom !== null);
+
+    var toggleCells = function (cells) {
+      cells.forEach(function (cell, i) {
+        cell.classList.toggle(
+          "col-hidden",
+          hiddenFrom !== null && i >= hiddenFrom,
+        );
+      });
+    };
+
+    toggleCells(this.headerCells);
+    this.rows.forEach(function (row) {
+      toggleCells(row.cellEls);
+      row.details = null;
+      if (hiddenFrom === null) row.open = false;
+    });
+
+    return true;
+  };
+
+  CustomTable.prototype.bindResize = function () {
+    var self = this;
+    var frame;
+
+    window.addEventListener("resize", function () {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(function () {
+        if (self.updateColumns()) self.render();
+      });
+    });
+  };
+
+  CustomTable.prototype.bindRows = function () {
+    var self = this;
+
+    this.list.addEventListener("click", function (e) {
+      if (self.hiddenFrom === null) return;
+
+      var li = e.target.closest("li[data-row]");
+      if (!li || !self.list.contains(li)) return;
+
+      var row = self.rows[+li.getAttribute("data-row")];
+      row.open = !row.open;
+      self.render();
+    });
+  };
+
+  CustomTable.prototype.getDetails = function (row) {
+    if (row.details) return row.details;
+
+    var li = document.createElement("li");
+    li.className = "details";
+
+    var html = "";
+    for (var i = this.hiddenFrom; i < this.headerLabels.length; i++) {
+      html +=
+        '<div class="detail-item">' +
+        "<strong>" +
+        this.headerLabels[i] +
+        "</strong>" +
+        "<span>" +
+        (row.cellEls[i] ? row.cellEls[i].innerHTML : "") +
+        "</span>" +
+        "</div>";
+    }
+
+    li.innerHTML = html;
+    row.details = li;
+    return li;
+  };
 
   CustomTable.prototype.bindHeader = function () {
     var self = this;
@@ -244,7 +339,8 @@
       e.preventDefault();
 
       var page = parseInt(target.getAttribute("data-page"), 10);
-      if (!page || page === self.page || page < 1 || page > self.totalPages) return;
+      if (!page || page === self.page || page < 1 || page > self.totalPages)
+        return;
 
       self.page = page;
       self.render();
@@ -263,7 +359,10 @@
     } else if (type === "number") {
       result = parseNumber(va) - parseNumber(vb);
     } else {
-      result = va.localeCompare(vb, "tr", { numeric: true, sensitivity: "base" });
+      result = va.localeCompare(vb, "tr", {
+        numeric: true,
+        sensitivity: "base",
+      });
     }
 
     if (result === 0) result = a.index - b.index;
@@ -290,7 +389,10 @@
     var fragment = document.createDocumentFragment();
     fragment.appendChild(this.headerRow);
     visible.forEach(function (row) {
+      var isOpen = row.open && self.hiddenFrom !== null;
+      row.el.classList.toggle("open", isOpen);
       fragment.appendChild(row.el);
+      if (isOpen) fragment.appendChild(self.getDetails(row));
     });
     if (!visible.length) fragment.appendChild(this.emptyRow);
 
@@ -298,8 +400,14 @@
     this.list.appendChild(fragment);
 
     this.headerCells.forEach(function (cell, i) {
-      cell.classList.toggle("asc", self.sortIndex === i && self.sortDir === "asc");
-      cell.classList.toggle("desc", self.sortIndex === i && self.sortDir === "desc");
+      cell.classList.toggle(
+        "asc",
+        self.sortIndex === i && self.sortDir === "asc",
+      );
+      cell.classList.toggle(
+        "desc",
+        self.sortIndex === i && self.sortDir === "desc",
+      );
     });
 
     this.renderPagination();
@@ -354,21 +462,41 @@
       .map(function (p) {
         if (p === "…") return '<li class="dots"><span>…</span></li>';
         return (
-          '<li class="' + (p === current ? "active" : "") + '">' +
-          '<a data-page="' + p + '">' + p + "</a>" +
+          '<li class="' +
+          (p === current ? "active" : "") +
+          '">' +
+          '<a data-page="' +
+          p +
+          '">' +
+          p +
+          "</a>" +
           "</li>"
         );
       })
       .join("");
 
     this.pagination.innerHTML =
-      '<a class="button border small prev' + (current === 1 ? " disabled" : "") + '" data-page="' + (current - 1) + '">' +
+      '<a class="button border small prev' +
+      (current === 1 ? " disabled" : "") +
+      '" data-page="' +
+      (current - 1) +
+      '">' +
       PREV_ICON +
       "Geri" +
       "</a>" +
-      "<ul>" + numbers + "</ul>" +
-      '<span class="page-info">' + current + " / " + total + "</span>" +
-      '<a class="button border small next' + (current === total ? " disabled" : "") + '" data-page="' + (current + 1) + '">' +
+      "<ul>" +
+      numbers +
+      "</ul>" +
+      '<span class="page-info">' +
+      current +
+      " / " +
+      total +
+      "</span>" +
+      '<a class="button border small next' +
+      (current === total ? " disabled" : "") +
+      '" data-page="' +
+      (current + 1) +
+      '">' +
       "İleri" +
       NEXT_ICON +
       "</a>";
