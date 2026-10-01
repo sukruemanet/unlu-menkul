@@ -1124,7 +1124,7 @@ form {
     }
 
     &:hover {
-      box-shadow: inset 0 -100px 0 0 $dark-blue !important;
+      background: $dark-blue !important;
     }
   }
 }
