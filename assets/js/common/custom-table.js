@@ -191,15 +191,27 @@
     var total = this.headerCells.length;
     var hiddenFrom = null;
 
-    if (window.innerWidth <= RESPONSIVE_BREAKPOINT) {
+    // Gizli tab içindeyken genişlik ölçülemez; tab açılınca refresh ile hesaplanır
+    if (this.list.clientWidth === 0) return false;
+
+    var responsive = window.innerWidth <= RESPONSIVE_BREAKPOINT;
+
+    if (responsive) {
       var fit = Math.max(1, Math.floor(this.list.clientWidth / this.colWidth));
       if (fit < total) hiddenFrom = fit;
     }
 
-    if (hiddenFrom === this.hiddenFrom) return false;
+    if (
+      hiddenFrom === this.hiddenFrom &&
+      responsive === this.root.classList.contains("is-responsive")
+    ) {
+      return false;
+    }
     this.hiddenFrom = hiddenFrom;
 
-    this.root.classList.toggle("is-responsive", hiddenFrom !== null);
+    // Mobilde tüm sütunlar sığsa da mobil düzen kullanılır; açılır ok yalnızca gizli sütun varsa görünür
+    this.root.classList.toggle("is-responsive", responsive);
+    this.root.classList.toggle("has-hidden-cols", hiddenFrom !== null);
 
     var toggleCells = function (cells) {
       cells.forEach(function (cell, i) {
@@ -509,7 +521,16 @@
     });
   }
 
+  // Görünür hale gelen (ör. tab açılan) tabloların sütunlarını yeniden hesaplar
+  function refresh(scope) {
+    (scope || document).querySelectorAll(".custom-table").forEach(function (root) {
+      var table = root.customTable;
+      if (table && table.list && table.updateColumns()) table.render();
+    });
+  }
+
   window.initCustomTables = init;
+  window.refreshCustomTables = refresh;
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);

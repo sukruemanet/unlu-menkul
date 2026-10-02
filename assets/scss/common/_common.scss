@@ -9994,6 +9994,17 @@
         text-align: right;
       }
     }
+
+    // Tüm sütunlar sığıyorsa açılacak detay yok
+    &:not(.has-hidden-cols) {
+      .row-toggle {
+        display: none;
+      }
+
+      .content-custom-table-list ul li[data-row] {
+        cursor: default;
+      }
+    }
   }
 }
 

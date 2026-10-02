@@ -16,6 +16,11 @@ $(document).ready(function () {
     $tabContents.removeClass("current");
     $tabContents.filter("#" + tab_id).addClass("current");
 
+    // Gizliyken ölçülemeyen tabloların sütunlarını yeniden hesapla
+    if (window.refreshCustomTables) {
+      window.refreshCustomTables(document.getElementById(tab_id));
+    }
+
     // Animasyon
     gsap.fromTo(
       "#" + tab_id,
