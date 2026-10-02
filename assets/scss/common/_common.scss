@@ -7503,12 +7503,17 @@
   max-width: 100rem;
   width: 100%;
   padding-top: 2rem;
+  ul {
+    max-height: 60rem;
+    position: relative;
+    overflow-y: auto;
+  }
 
   li {
-    height: 6rem;
+    height: 5rem;
     display: flex;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     border-bottom: solid rgba($dark, 0.2) 0.1rem;
 
     &.bn {
