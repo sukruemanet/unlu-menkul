@@ -9318,8 +9318,6 @@
   .items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, auto);
-    grid-auto-flow: column;
     column-gap: 6rem;
 
     @media only screen and (max-width: $tablet-h) {
@@ -9359,7 +9357,7 @@
       scroll-snap-align: start;
     }
 
-    &:nth-child(5n) {
+    &:nth-last-child(2):nth-child(odd) {
       border-bottom: none;
     }
 
@@ -9596,7 +9594,7 @@
 
 .piapiri-connect {
   max-width: 70rem;
-  margin: 0 auto 4rem;
+  margin: 0 auto 8rem;
   padding: 3rem;
   display: flex;
   gap: 4rem;
