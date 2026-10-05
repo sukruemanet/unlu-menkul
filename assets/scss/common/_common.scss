@@ -7472,6 +7472,31 @@
     }
   }
 
+  &.numbers {
+    .item {
+      background: none;
+      border: solid rgba(#80d4ff, 0.2) 0.1rem;
+
+      span {
+        width: 7rem;
+        height: 7rem;
+        font-size: 2.6rem;
+        color: $light-blue;
+        border: solid rgba(#80d4ff, 0.8) 0.1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        color: $white;
+        padding-left: 7rem;
+        margin-top: 4rem;
+      }
+    }
+  }
+
   .item {
     background: #eef9ff;
     padding: 4rem;
@@ -7503,6 +7528,7 @@
       font-size: 1.6rem;
       padding-top: 2rem;
       margin-top: 8rem;
+      line-height: 1.4;
       border-top: solid rgba($dark, 0.1) 0.1rem;
       font-weight: $font-regular;
 
