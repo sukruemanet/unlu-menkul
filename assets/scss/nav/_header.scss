@@ -726,6 +726,20 @@ header {
         &:last-child {
           border-bottom: none;
         }
+
+        // Alt menüyü açmadan linkleri gruplayan başlık (Bireysel, Kurumsal)
+        &.menu-group-title {
+          padding: 3.2rem 0 0.8rem;
+          font-size: 1.4rem;
+          font-weight: $font-medium;
+          color: $light-blue-2;
+          opacity: 0.5;
+          border-bottom: none;
+
+          &:first-child {
+            padding-top: 0.8rem;
+          }
+        }
       }
 
       a {
