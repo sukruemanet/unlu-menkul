@@ -788,6 +788,33 @@
   }
 }
 
+@mixin start-content-flow-mobile {
+  @media only screen and (max-width: $tablet-h) {
+    height: auto;
+    min-height: 90dvh;
+    display: flex;
+    flex-direction: column;
+
+    figure {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .caption {
+      position: relative;
+      inset: auto;
+      flex: 1;
+      justify-content: flex-end;
+      padding: 12rem 2rem 4rem;
+    }
+  }
+}
+
 .start-content {
   width: 100%;
   height: 100vh;
@@ -800,30 +827,12 @@
 
   &.h-auto {
     height: auto;
+    @include start-content-flow-mobile;
+  }
 
-    @media only screen and (max-width: $tablet-h) {
-      min-height: 90dvh;
-      display: flex;
-      flex-direction: column;
-
-      figure {
-        position: absolute;
-        inset: 0;
-        height: 100%;
-
-        img {
-          height: 100%;
-        }
-      }
-
-      .caption {
-        position: relative;
-        inset: auto;
-        flex: 1;
-        justify-content: flex-end;
-        padding: 12rem 2rem 4rem;
-      }
-    }
+  // Formlu hero'lar mobilde 90dvh'ye sığmayıp header'ın altına taşıyor
+  &:not(.h-auto):has(.secondary-form) {
+    @include start-content-flow-mobile;
   }
 
   &.nb {
