@@ -293,14 +293,22 @@ footer {
     padding-top: 4rem;
 
     ul {
+      max-width: 80rem;
       display: flex;
-      gap: 2rem;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
 
       @media only screen and (max-width: $tablet-h) {
         flex-direction: column;
       }
 
       li {
+        white-space: nowrap;
+
+        @media only screen and (max-width: $tablet-h) {
+          white-space: normal;
+        }
+
         a {
           font-size: 1.4rem;
           color: $light-blue-2;
@@ -317,6 +325,12 @@ footer {
     span {
       color: $light-blue-2;
       opacity: 0.5;
+      flex-shrink: 0;
+      padding-left: 4rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        padding-left: 0;
+      }
     }
   }
 
