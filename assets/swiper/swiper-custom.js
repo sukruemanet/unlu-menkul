@@ -1,6 +1,7 @@
 ﻿//Hero Slider
 var heroSwiper = new Swiper(".hero-swiper", {
   allowTouchMove: false,
+  autoHeight: true,
   speed: 1000,
   effect: "fade",
   fadeEffect: {
