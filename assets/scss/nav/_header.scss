@@ -139,7 +139,7 @@ header {
       gap: 4rem;
 
       ul {
-        &:last-child {
+        & + ul {
           border-left: solid rgba($white, 0.1) 0.1rem;
           padding-left: 4rem;
         }
