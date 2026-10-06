@@ -180,13 +180,6 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-      // width: 4rem;
-      // height: 4rem;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // position: relative;
-      // border: solid $white 0.1rem;
 
       svg {
         width: 2rem;
@@ -205,7 +198,6 @@
 .hero-slider {
   position: relative;
 
-  // Genel .swiper mobilde %100 + 2rem oluyor, hero tam ekran kalmalı
   .hero-swiper {
     width: 100%;
   }
@@ -316,7 +308,6 @@
     }
   }
 
-  // Sağında form olan slide'lar (DAHA, Piapiri)
   .form-slide {
     @media only screen and (max-width: $tablet-h) {
       min-height: 100dvh;

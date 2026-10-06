@@ -132,13 +132,11 @@ $(document).ready(function () {
   const $header = $("header");
   let lastScrollY = 0;
 
-  // Mobil cihaz kontrolü
   const isMobile = () => window.innerWidth <= 768;
 
   $(window).on("scroll", function () {
     const currentScrollY = $(this).scrollTop();
 
-    // Sadece mobil OLMAYAN cihazlarda scroll'da menüyü kapat
     if (
       isMenuOpen &&
       !isMobile() &&
@@ -162,7 +160,6 @@ $(document).ready(function () {
   });
 });
 
-//Menu
 const navItems = document.querySelectorAll(".nav-item.has-mega");
 
 navItems.forEach((item) => {

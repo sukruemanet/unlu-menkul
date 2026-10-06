@@ -49,7 +49,6 @@
     return text.replace(/\s+/g, " ").trim().toLocaleLowerCase("tr");
   }
 
-  // "05.10.2026", "05/10/2026", "17 Temmuz 23", "8 Haziran 2026"
   function parseDate(text) {
     var m = text.match(/^(\d{1,2})[./-](\d{1,2})[./-](\d{2}|\d{4})$/);
     if (m) {
@@ -68,7 +67,6 @@
     return year.length === 2 ? 2000 + +year : +year;
   }
 
-  // "636.0", "44%", "%44", "0,1698", "1.005.098.683,94 TL"
   function parseNumber(text) {
     var value = text.replace(/\s+/g, "");
     if (!/^[%]?[-+]?[\d.,]+(%|TL|₺)?$/i.test(value)) return null;
@@ -79,7 +77,6 @@
     var lastDot = value.lastIndexOf(".");
 
     if (lastComma > -1 && lastDot > -1) {
-      // Hangisi sondaysa ondalık ayracı odur
       value =
         lastComma > lastDot
           ? value.replace(/\./g, "").replace(",", ".")
@@ -87,7 +84,6 @@
     } else if (lastComma > -1) {
       value = value.replace(",", ".");
     } else if ((value.match(/\./g) || []).length > 1) {
-      // Birden fazla nokta varsa binlik ayracıdır
       value = value.replace(/\./g, "");
     }
 
@@ -186,12 +182,10 @@
     this.render();
   }
 
-  // Ekrana sığmayan sütunları sağdan başlayarak gizler
   CustomTable.prototype.updateColumns = function () {
     var total = this.headerCells.length;
     var hiddenFrom = null;
 
-    // Gizli tab içindeyken genişlik ölçülemez; tab açılınca refresh ile hesaplanır
     if (this.list.clientWidth === 0) return false;
 
     var responsive = window.innerWidth <= RESPONSIVE_BREAKPOINT;
@@ -209,7 +203,6 @@
     }
     this.hiddenFrom = hiddenFrom;
 
-    // Mobilde tüm sütunlar sığsa da mobil düzen kullanılır; açılır ok yalnızca gizli sütun varsa görünür
     this.root.classList.toggle("is-responsive", responsive);
     this.root.classList.toggle("has-hidden-cols", hiddenFrom !== null);
 
@@ -425,7 +418,6 @@
     this.renderPagination();
   };
 
-  // 1 … 4 5 6 … 23
   CustomTable.prototype.getPageNumbers = function () {
     var total = this.totalPages;
     var current = this.page;
@@ -521,7 +513,6 @@
     });
   }
 
-  // Görünür hale gelen (ör. tab açılan) tabloların sütunlarını yeniden hesaplar
   function refresh(scope) {
     (scope || document).querySelectorAll(".custom-table").forEach(function (root) {
       var table = root.customTable;

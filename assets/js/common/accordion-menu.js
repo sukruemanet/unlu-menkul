@@ -1,4 +1,4 @@
-﻿// JS (tekli açılır akordeon)
+﻿
 const wrapper = document.querySelector('.accordion-wrapper');
 if (wrapper) {
   const items = [...wrapper.querySelectorAll('.accordion-item')];
@@ -7,7 +7,7 @@ if (wrapper) {
     const header = item.querySelector('.accordion-info');
     const content =
       item.querySelector('.accordion-content') ||
-      item.querySelector('.accoridon-content'); // yazım hatası desteği
+      item.querySelector('.accoridon-content');
     return { header, content };
   };
 
@@ -17,7 +17,7 @@ if (wrapper) {
       const isTarget = it === target;
       it.classList.toggle('active', isTarget);
       header?.setAttribute('aria-expanded', String(isTarget));
-      content?.classList.toggle('accordion-content', true); // normalize
+      content?.classList.toggle('accordion-content', true);
       if (!isTarget) {
         content && (content.style.maxHeight = null);
       } else {
@@ -53,7 +53,6 @@ if (wrapper) {
     });
   });
 
-  // Sayfa yüklenince already-active varsa yüksekliğini ayarla
   const initiallyActive = wrapper.querySelector('.accordion-item.active');
   if (initiallyActive) openItem(initiallyActive);
 }

@@ -158,7 +158,6 @@ footer {
           gap: 2rem;
 
           @media only screen and (max-width: $tablet-h) {
-            // flex-direction: column;
             align-items: flex-end;
             gap: 1rem;
           }

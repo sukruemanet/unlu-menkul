@@ -672,22 +672,16 @@ form {
     margin-top: 3rem;
 
     .form-items {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
 
-      @media only screen and (max-width: $tablet-v) {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
       .item {
-        // Tek sayıda alan varsa son alan tam genişlik, çiftse 2x2 kalsın
-        &:last-child:nth-child(odd) {
-          grid-column: span 2;
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 0;
 
-          @media only screen and (max-width: $tablet-v) {
-            grid-column: span 1;
-          }
+        @media only screen and (max-width: $tablet-v) {
+          flex-basis: 100%;
         }
       }
 
@@ -930,7 +924,6 @@ form {
     background: transparent;
     border: none;
 
-    /*hide default down arrow in webkit */
     -webkit-appearance: none;
   }
 
@@ -1785,12 +1778,10 @@ form {
     input {
       &:checked + .switch-slider {
         background-color: $blue;
-        // box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2);
       }
 
       &:checked + .switch-slider::before {
         transform: translateX(26px);
-        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       }
 
       &:focus + .switch-slider {
@@ -1993,7 +1984,6 @@ form {
       display: inherit;
     }
 
-    // ic ice tab yapisi (ornek: gecmis halka arzlar > yil tablari)
     > .tab-menu-content {
       padding-top: 4rem;
     }

@@ -159,7 +159,6 @@ header {
     .sub-menu {
       position: absolute;
       top: 100%;
-      // left: 0;
       left: 50%;
       transform: translateX(-50%);
       min-width: 25rem;
@@ -172,21 +171,7 @@ header {
         visibility 0.3s ease;
       overflow: hidden;
 
-      // @media only screen and (max-width: $desktop-sm) {
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      // }
 
-      // &:before {
-      //   content: "";
-      //   position: absolute;
-      //   width: 100%;
-      //   height: 100%;
-      //   background: url(/assets/images/main/unlu-logo-icon.svg) no-repeat bottom
-      //     right;
-      //   background-size: 50rem;
-      //   opacity: 0.1;
-      // }
 
       &.active {
         opacity: 1;
@@ -405,7 +390,6 @@ header {
       cursor: pointer;
       padding: 0;
       margin: 0 1rem;
-      // border-left: solid rgba($white, 0.2) 0.1rem;
 
       @media only screen and (max-width: $tablet-h) {
         width: 2rem;
@@ -422,7 +406,6 @@ header {
   position: fixed;
   width: 100%;
   height: 100%;
-  // top: 0;
   left: 0;
   background: $dark-blue;
   z-index: 9;
@@ -433,7 +416,6 @@ header {
   height: 90vh;
   position: relative;
   padding: 18rem 4rem 4rem;
-  // overflow-y: auto;
 
   @media only screen and (max-width: $desktop) {
     padding: 18rem 2rem 4rem;
@@ -727,7 +709,6 @@ header {
           border-bottom: none;
         }
 
-        // Alt menüyü açmadan linkleri gruplayan başlık (Bireysel, Kurumsal)
         &.menu-group-title {
           padding: 3.2rem 0 0.8rem;
           font-size: 1.4rem;
@@ -752,7 +733,6 @@ header {
         transition: all 0.2s ease;
 
         &:hover {
-          // padding-left: 25px;
         }
 
         .icon {
@@ -782,7 +762,6 @@ header {
       text-align: center;
     }
 
-    /* Fade animasyonu */
 
     .menu-level {
       animation: fadeIn 0.3s ease;
@@ -1088,13 +1067,11 @@ header {
     gap: 2rem;
     opacity: 1;
 
-    // YÜKSEKLİK KIRPMAYI ÖNLEYEN ANA FIX
     overflow-y: visible !important;
 
     ul {
       margin-left: 1em;
 
-      // BÜTÜN UL’LERİN AUTO YÜKSEKLİĞE İZİN VERMESİ
       overflow: visible !important;
       max-height: none !important;
     }
@@ -1108,7 +1085,6 @@ header {
       display: block;
     }
 
-    /* AÇILIR MENU NODE */
     .navmobilemenu-node {
       .accordion {
         display: flex;
@@ -1124,7 +1100,6 @@ header {
         }
       }
 
-      /* LEVEL 1 ve LEVEL 2 */
       .navmobilemenu-level-1,
       .navmobilemenu-level-2 {
         li {
@@ -1145,7 +1120,6 @@ header {
         }
       }
 
-      /* AÇIK MENÜ */
       &.navmobilemenu-open {
         background: #031d58;
         border: solid #031d58 0.1rem;
@@ -1156,7 +1130,6 @@ header {
         }
       }
 
-      /* KAPALI MENÜ */
       &.navmobilemenu-closed {
         .accordion::after {
           transform: rotate(0deg);
@@ -1181,8 +1154,6 @@ header {
 
 .main-menu-content {
   background: $dark-blue;
-  // display: none;
-  // transform: translateY(-100%);
   position: absolute;
   width: 100%;
   top: 0;
@@ -1198,8 +1169,6 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     margin: auto;
-    // opacity: 0;
-    // visibility: hidden;
 
     .menu-items {
       display: flex;
@@ -1283,7 +1252,6 @@ header {
   }
 }
 
-//Menu
 .nav-item {
   position: relative;
   padding: 24px 16px;

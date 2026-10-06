@@ -201,7 +201,6 @@ button,
   display: flex;
   align-items: center;
   border-bottom: solid rgba($black, 0.1) 0.1rem;
-  // Sığmadığında öğeler sıkışıp alt satıra kırılmasın, yana kaysın
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;

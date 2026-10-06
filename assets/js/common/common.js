@@ -1,4 +1,4 @@
-﻿//Video Hover Play
+﻿
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".video-card").forEach((card) => {
     const video = card.querySelector("video");
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  //Table List
   document.querySelectorAll(".content-table-list").forEach((list) => {
     const button = [...list.querySelectorAll(".more-table")].find(
       (el) => el.closest(".content-table-list") === list,
@@ -59,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//Office Info Box
 document.addEventListener("DOMContentLoaded", () => {
   const officeItems = document.querySelectorAll(".offices-menu li");
 
@@ -131,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//Drawer Menu
 document.addEventListener("DOMContentLoaded", function () {
   const openDrawerBtns = document.querySelectorAll(".open-drawwer");
 
@@ -196,7 +193,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//
 document.addEventListener("DOMContentLoaded", function () {
   const stickyEl = document.querySelector(".right-sticky");
   const footerEl = document.querySelector("footer");

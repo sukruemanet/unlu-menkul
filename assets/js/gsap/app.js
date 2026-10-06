@@ -170,7 +170,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia();
 
-//Star Codes
 
 mm.add("(min-width: 1024px)", () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -191,9 +190,6 @@ mm.add("(min-width: 1024px)", () => {
     },
   );
 
-  //Image Parallax
-  // Görsel kapsayıcıdan %30 daha yüksek (CSS), scroll boyunca kapsayıcı içinde
-  // yukarı/aşağı kayar. Yükseklik değişse de oran sabit kaldığı için boşluk oluşmaz.
   gsap.utils.toArray(".parallax-item").forEach((item) => {
     const img = item.querySelector("img");
     if (!img) return;
@@ -231,13 +227,12 @@ mm.add("(min-width: 1024px)", () => {
     });
   });
 
-  //Scroll Mask Image Animation
   gsap.set(".mask", { rotation: 0.1 });
 
   gsap.utils.toArray(".mask").forEach((maskEl) => {
     const cardImage = maskEl.querySelector(".card-image");
 
-    if (!cardImage) return; // güvenlik kontrolü
+    if (!cardImage) return;
 
     const tl = gsap
       .timeline({
@@ -279,7 +274,6 @@ mm.add("(min-width: 1024px)", () => {
     },
   });
 
-  //Start Sticky Pin
   document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("start-content");
     const overlay = document.getElementById("overlay");
@@ -325,7 +319,6 @@ mm.add("(min-width: 1024px)", () => {
       trigger: slideItems,
       start: "top center",
       animation: tl,
-      // markers: true, // Debug için aktif edilebilir
     });
   });
 
@@ -398,7 +391,6 @@ mm.add("(min-width: 1024px)", () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  //Image Scale
   const imageScale = gsap.utils.toArray(".image-scale img");
   imageScale.forEach((box, i) => {
     const anim = gsap.fromTo(box, { scale: 1.6 }, { duration: 1.2, scale: 1 });

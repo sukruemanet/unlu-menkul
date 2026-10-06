@@ -1,5 +1,4 @@
 
-//Modalbox
 document.addEventListener('DOMContentLoaded', () => {
   let isLocked = false
 
@@ -66,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
   )
 })
 
-//Checked
 document.addEventListener('DOMContentLoaded', () => {
   const toggles = document.querySelectorAll('.permissions .item input[type="checkbox"]');
 
@@ -87,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//Close Cookies Modal
 document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.close-cookies-box');
   const cookiesBox = document.querySelector('.cookies-box');
