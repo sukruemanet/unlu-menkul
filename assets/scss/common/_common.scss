@@ -788,7 +788,6 @@
   }
 }
 
-// .start-content ve hero slider formlarındaki onay kutuları
 @mixin start-content-checkboxes {
   .checkbox-items {
     display: flex;
@@ -947,7 +946,7 @@
       inset: auto;
       flex: 1;
       justify-content: flex-end;
-      padding: 12rem 2rem 4rem;
+      padding: 16rem 2rem 4rem;
     }
   }
 }
@@ -967,7 +966,6 @@
     @include start-content-flow-mobile;
   }
 
-  // Formlu hero'lar mobilde 90dvh'ye sığmayıp header'ın altına taşıyor
   &:not(.h-auto):has(.secondary-form) {
     @include start-content-flow-mobile;
   }
@@ -1202,8 +1200,26 @@
         max-width: 60rem;
       }
 
+      @media only screen and (max-width: $desktop-sm) {
+        gap: 3rem;
+      }
+
       @media only screen and (max-width: $tablet-h) {
         gap: 3rem;
+      }
+
+      .logo {
+        img {
+          max-width: 25rem;
+
+          @media only screen and (max-width: $desktop) {
+            max-width: 20rem;
+          }
+
+          @media only screen and (max-width: $desktop-sm) {
+            max-width: 17rem;
+          }
+        }
       }
 
       h1,
@@ -10157,5 +10173,60 @@
     gap: 1rem;
     margin-top: 2rem;
     cursor: pointer;
+  }
+}
+
+.content-snall-captions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media only screen and (max-width: $tablet-v) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .caption-item {
+    padding: 3rem;
+    display: flex;
+    gap: 4rem;
+    background: rgba($blue, 0.05);
+
+    @media only screen and (max-width: $tablet-v) {
+      padding: 2.4rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    figure {
+      width: 8rem;
+      flex-shrink: 0;
+      opacity: 0.1;
+
+      @media only screen and (max-width: $tablet-v) {
+        width: 6rem;
+      }
+    }
+
+    .caption {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border-left: solid rgba($dark, 0.1) 0.1rem;
+      padding-left: 4rem;
+
+      @media only screen and (max-width: $tablet-v) {
+        align-items: center;
+        border-left: none;
+        padding-left: 0;
+      }
+
+      span {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        color: #072846;
+      }
+    }
   }
 }

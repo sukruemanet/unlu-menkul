@@ -681,7 +681,8 @@ form {
       }
 
       .item {
-        &:last-child {
+        // Tek sayıda alan varsa son alan tam genişlik, çiftse 2x2 kalsın
+        &:last-child:nth-child(odd) {
           grid-column: span 2;
 
           @media only screen and (max-width: $tablet-v) {
