@@ -7641,8 +7641,11 @@ main > .content-wrapper > .content-list-items:first-child {
   }
 
   .item {
+    display: flex;
     flex-direction: column;
     padding: 4rem;
+    text-decoration: none;
+    cursor: pointer;
 
     @media only screen and (max-width: $tablet-h) {
       padding: 3rem 2rem;
@@ -7671,11 +7674,18 @@ main > .content-wrapper > .content-list-items:first-child {
       }
     }
 
-    a {
+    .more {
       font-size: 1.6rem;
       color: #80d4ff;
       text-decoration: underline;
       margin-top: auto;
+      @include fade-transition;
+    }
+
+    &:hover {
+      .more {
+        color: $white;
+      }
     }
   }
 }
@@ -8431,10 +8441,10 @@ main > .content-wrapper > .content-list-items:first-child {
 }
 
 .content-card-items {
-  padding: 0 0 6rem;
+  padding: 6rem 0;
 
   @media only screen and (max-width: $tablet-h) {
-    padding: 0 0 3rem;
+    padding: 3rem 0;
   }
 
   .items {
