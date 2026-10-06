@@ -201,9 +201,19 @@ button,
   display: flex;
   align-items: center;
   border-bottom: solid rgba($black, 0.1) 0.1rem;
+  // Sığmadığında öğeler sıkışıp alt satıra kırılmasın, yana kaysın
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   svg {
     width: 0.8rem;
+    flex-shrink: 0;
     margin: 0 1rem;
   }
 
@@ -213,8 +223,16 @@ button,
     color: rgba($black, 0.5);
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    @media only screen and (max-width: $tablet-h) {
+      font-size: 1.4rem;
+    }
 
     a {
+      display: flex;
+      align-items: center;
       color: $blue;
     }
   }
