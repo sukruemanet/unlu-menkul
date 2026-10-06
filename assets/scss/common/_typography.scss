@@ -32,6 +32,20 @@
 
   &.type-3 {
     margin-top: 6rem;
+
+    // Bölümün ilk elemanıysa üst boşluğu wrapper zaten veriyor
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  // Bölümün son elemanıysa alt boşluk wrapper'dan gelsin, üst üste binmesin
+  &:last-child {
+    margin-bottom: 0;
+
+    .right {
+      padding-bottom: 0;
+    }
   }
 
   &.dark {
