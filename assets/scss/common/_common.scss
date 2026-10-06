@@ -183,12 +183,20 @@ $section-with-bottom-space: ":not(.type-1, .type-2, .type-3, .type-4, .type-5)";
 main
   > :is(
     .content-wrapper#{$section-with-bottom-space},
-    :is(.container, [class="custom-content"]):has(> .content-wrapper:last-child#{$section-with-bottom-space}),
-    [class="custom-content"]:has(> .container:last-child > .content-wrapper:last-child#{$section-with-bottom-space})
+    :is(.container, [class="custom-content"]):has(
+      > .content-wrapper:last-child#{$section-with-bottom-space}
+    ),
+    [class="custom-content"]:has(
+      > .container:last-child
+        > .content-wrapper:last-child#{$section-with-bottom-space}
+    )
   ) {
   & + .content-wrapper,
   & + :is(.container, [class="custom-content"]) > .content-wrapper:first-child,
-  & + [class="custom-content"] > .container:first-child > .content-wrapper:first-child {
+  &
+    + [class="custom-content"]
+    > .container:first-child
+    > .content-wrapper:first-child {
     padding-top: 0;
   }
 }
@@ -2019,6 +2027,7 @@ main > .content-wrapper > .content-list-items:first-child {
 .image-card-content {
   width: 100%;
   // height: 100vh;
+  min-height: 60rem;
   position: relative;
   overflow: hidden;
 
@@ -2037,33 +2046,11 @@ main > .content-wrapper > .content-list-items:first-child {
   }
 
   &.type-2 {
-    height: 70vh;
     position: relative;
     overflow: hidden;
 
-    figure {
-      height: 70vh;
-
-      figcaption {
-        height: 100%;
-        align-items: center;
-      }
-
-      img {
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-        object-position: center;
-        position: relative;
-      }
-    }
-
     .container {
       margin: 0 auto;
-
-      .content-wrapper {
-        height: 100%;
-      }
     }
   }
 
@@ -2082,29 +2069,59 @@ main > .content-wrapper > .content-list-items:first-child {
     z-index: 1;
   }
 
-  @media only screen and (max-width: $tablet-h) {
-    height: auto;
-  }
-
   figure {
     position: relative;
-
-    img {
-      height: 100vh;
-      object-fit: cover;
-
-      @media only screen and (max-width: $tablet-h) {
-        height: 100vh;
-      }
-    }
+    min-height: 60rem;
 
     figcaption {
       width: 100%;
-      height: 100vh;
-      position: absolute;
-      top: 0;
+      min-height: 60rem;
+      position: relative;
       z-index: 1;
       display: flex;
+      align-items: center;
+
+      .container {
+        align-self: stretch;
+      }
+
+      // metin solda, buton sağ altta
+      .content-wrapper {
+        align-self: stretch;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr auto auto 1fr;
+        column-gap: 4rem;
+        padding-bottom: 6rem;
+
+        @media only screen and (max-width: $tablet-h) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 4rem 0;
+        }
+
+        .headline {
+          grid-column: 1;
+          grid-row: 2;
+        }
+
+        > p {
+          grid-column: 1;
+          grid-row: 3;
+          margin: 3rem 0 0;
+
+          @media only screen and (max-width: $tablet-h) {
+            margin: 2rem 0;
+          }
+        }
+
+        .buttons {
+          grid-column: 2;
+          grid-row: 1 / -1;
+          align-self: end;
+        }
+      }
 
       .headline {
         h4 {
@@ -2176,7 +2193,6 @@ main > .content-wrapper > .content-list-items:first-child {
       .buttons {
         display: flex;
         gap: 2rem;
-        margin-top: 10rem;
 
         @media only screen and (max-width: $tablet-h) {
           flex-direction: column;
@@ -2186,9 +2202,27 @@ main > .content-wrapper > .content-list-items:first-child {
       }
     }
   }
+
+  .buttons {
+    width: 100%;
+  }
 }
 
 .parallax-item {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: -15%;
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    will-change: transform;
+  }
+
   .container {
     margin: 0 auto;
   }
@@ -8572,7 +8606,11 @@ main > .content-wrapper > .content-list-items:first-child {
       background: $brown;
 
       .image:after {
-        background: linear-gradient(to bottom, rgba($brown, 0) 40%, $brown 100%);
+        background: linear-gradient(
+          to bottom,
+          rgba($brown, 0) 40%,
+          $brown 100%
+        );
       }
     }
 

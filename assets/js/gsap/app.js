@@ -192,40 +192,27 @@ mm.add("(min-width: 1024px)", () => {
   );
 
   //Image Parallax
-  var winScrollTop = 0;
-  $.fn.is_on_screen = function () {
-    var win = $(window);
-    var viewport = {
-      top: win.scrollTop(),
-      left: win.scrollLeft(),
-    };
-    viewport.bottom = viewport.top + win.height();
+  // Görsel kapsayıcıdan %30 daha yüksek (CSS), scroll boyunca kapsayıcı içinde
+  // yukarı/aşağı kayar. Yükseklik değişse de oran sabit kaldığı için boşluk oluşmaz.
+  gsap.utils.toArray(".parallax-item").forEach((item) => {
+    const img = item.querySelector("img");
+    if (!img) return;
 
-    var bounds = this.offset();
-    bounds.bottom = bounds.top + this.outerHeight();
-
-    return !(viewport.bottom < bounds.top || viewport.top > bounds.bottom);
-  };
-
-  function parallax() {
-    var scrolled = $(window).scrollTop();
-    $(".parallax-item ").each(function () {
-      if ($(this).is_on_screen()) {
-        var firstTop = $(this).offset().top;
-        var $span = $(this).find("img");
-        var moveTop = (firstTop - winScrollTop) * 0.3; // speed
-        $span.css("transform", "translate3d(0, " + -moveTop + "px, 0)");
-        $span.css("will-change", "transform");
-      }
-    });
-  }
-
-  $(window).scroll(function (e) {
-    winScrollTop = $(this).scrollTop();
-    parallax();
+    gsap.fromTo(
+      img,
+      { yPercent: -11.5 },
+      {
+        yPercent: 11.5,
+        ease: "none",
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      },
+    );
   });
-
-  gsap.registerPlugin(ScrollTrigger);
 
   document.querySelectorAll(".fade-up-items").forEach((section) => {
     gsap.from(section.querySelectorAll(".item"), {
