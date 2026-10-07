@@ -9450,6 +9450,14 @@ main > .content-wrapper > .content-list-items:first-child {
       grid-template-columns: 1fr;
     }
 
+    .item:last-child:nth-child(odd) {
+      grid-column: span 2;
+
+      @media only screen and (max-width: $tablet-v) {
+        grid-column: auto;
+      }
+    }
+
     .image {
       width: 100%;
       aspect-ratio: 16/9;
