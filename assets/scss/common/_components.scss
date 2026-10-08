@@ -638,6 +638,16 @@ form {
 }
 
 .secondary-form {
+  // Use the plugin's measured country-code padding and the full form column.
+  .iti {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .iti input.iti__tel-input[type="tel"] {
+    padding-right: 1rem;
+  }
+
   width: 60rem;
   padding: 4rem;
   margin-left: auto;
