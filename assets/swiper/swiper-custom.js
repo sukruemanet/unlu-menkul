@@ -1,12 +1,18 @@
-﻿//Hero Slider
+﻿// Hero Slider
 var heroSwiper = new Swiper(".hero-swiper", {
-  allowTouchMove: false,
+  allowTouchMove: true,
+  simulateTouch: true,
+  grabCursor: true,
+  touchEventsTarget: "container",
+  noSwipingSelector: "input, textarea, select, button",
+
   autoHeight: true,
   speed: 1000,
   effect: "fade",
   fadeEffect: {
     crossFade: true,
   },
+
   navigation: {
     nextEl: ".hero-next",
     prevEl: ".hero-prev",
@@ -15,6 +21,7 @@ var heroSwiper = new Swiper(".hero-swiper", {
     el: ".hero-pagination",
     clickable: true,
   },
+
   // autoplay: {
   //   delay: 5000,
   //   disableOnInteraction: false,
