@@ -8829,6 +8829,14 @@ main > .content-wrapper > .content-list-items:first-child {
 
 .start-content {
   &.h-auto {
+    .logo {
+      margin-bottom: 4rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        margin-bottom: 3rem;
+      }
+    }
+
     &.piapiri-page {
       position: relative;
       min-height: 65rem;
@@ -9074,6 +9082,7 @@ main > .content-wrapper > .content-list-items:first-child {
             @media only screen and (max-width: $tablet-h) {
               font-size: 4.6rem;
               letter-spacing: -0.1rem;
+              margin-bottom: 3rem;
             }
           }
         }
