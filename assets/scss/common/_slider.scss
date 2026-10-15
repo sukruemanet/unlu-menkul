@@ -360,9 +360,9 @@
       @media only screen and (max-width: $tablet-h) {
         display: block;
         width: 100%;
-        margin-top: calc(20px - var(--hero-text-gap));
-        padding-top: 20px;
-        border-top: 1px solid rgba($white, 0.2);
+        margin-bottom: calc(20px - var(--hero-text-gap));
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba($white, 0.2);
       }
     }
 

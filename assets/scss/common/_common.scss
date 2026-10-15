@@ -9088,6 +9088,23 @@ main > .content-wrapper > .content-list-items:first-child {
         }
       }
 
+      .channel-account-mobile {
+        display: none;
+      }
+
+      @media only screen and (max-width: $tablet-h) {
+        .channel-account-mobile {
+          display: flex;
+          width: 100%;
+          margin-bottom: 4rem;
+        }
+
+        .channel-account-desktop,
+        .channel-form-desktop {
+          display: none;
+        }
+      }
+
       .channel-benefits {
         margin: 0 0 6rem;
 

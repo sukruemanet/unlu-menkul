@@ -1028,6 +1028,19 @@
     </div>
   </div>
 
+  <div class="drawwer-menu-content hero-form-drawer" id="daha-channel-menu">
+    <div class="drawwer-menu" role="dialog" aria-modal="true" aria-labelledby="daha-channel-form-title"
+      data-lenis-prevent-wheel data-lenis-prevent-touch>
+      <button type="button" class="drawwer-menu-close" aria-label="Kapat">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="hero-drawer-form-slot" data-hero-form="daha-channel-form"></div>
+    </div>
+  </div>
+
   <main>
     <div class="start-content h-auto daha-page">
       <figure>
@@ -1045,6 +1058,15 @@
           <p class="channel-intro">Risk profilinizi, finansal hedeflerinizi ve yatırım ihtiyaçlarınızı birlikte
             değerlendirerek size özel yatırım stratejileri oluşturuyoruz.</p>
 
+          <button type="button" class="button light channel-account-mobile open-drawwer"
+            data-drawer="daha-channel-menu" aria-controls="daha-channel-menu" aria-haspopup="dialog">
+            Hesap Aç
+            <svg viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1.5 10.9999H23.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M14.0714 20.4284L23.5 10.9999" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M14.0714 1.57129L23.5 10.9999" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
           <div class="channel-benefits">
             <h2>Avantajlar</h2>
             <ul>
@@ -1081,7 +1103,7 @@
             </ul>
           </div>
           <div class="buttons">
-            <a href="#" class="button light">
+            <a href="#" class="button light channel-account-desktop">
               Hesap Aç
               <svg viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 10.9999H23.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1101,9 +1123,9 @@
           <p class="channel-description">Yatırım kararlarınızı deneyimli uzmanlarımızla birlikte alın. Portföyünüz,
             hedefleriniz ve piyasa koşulları doğrultusunda size özel bir yol haritası oluşturun.</p>
         </div>
-        <div class="right">
-          <div class="secondary-form">
-            <span>
+        <div class="right channel-form-desktop">
+          <div class="secondary-form" id="daha-channel-form">
+            <span class="hero-form-title" id="daha-channel-form-title">
               Hesap Aç, DAHA Yatırım Danışmanlığı Hizmetinden Yararlan!
             </span>
             <form>
@@ -1453,6 +1475,7 @@
   <script src="assets/intl/intlTelInput.js"></script>
 
   <script src="assets/js/common/phone-input.js"></script>
+  <script src="assets/js/common/hero-forms.js"></script>
 </body>
 
 </html>
