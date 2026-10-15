@@ -443,16 +443,14 @@
   }
 }
 
-.hero-slider .hero-brand-logo {
-  width: 22rem;
-  max-width: 100%;
+.hero-slider .hero-brand-logo,
+.start-content.h-auto.piapiri-page .caption .left .logo img,
+.start-content.h-auto.daha-page .caption .left .logo img {
+  width: 100%;
+  max-width: 18rem;
   height: auto;
   align-self: flex-start;
   object-fit: contain;
-
-  @media only screen and (max-width: $tablet-h) {
-    width: 16rem;
-  }
 }
 
 .hero-slider .form-slide .caption .secondary-form,
