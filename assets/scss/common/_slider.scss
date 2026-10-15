@@ -220,6 +220,25 @@
       }
     }
 
+    .swiper-pagination.has-moving-line {
+      position: relative;
+
+      .swiper-pagination-bullet {
+        opacity: 0.2;
+      }
+
+      .hero-pagination-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        max-width: none;
+        background: #80d4ff;
+        pointer-events: none;
+        will-change: transform;
+      }
+    }
+
     .swiper-pagination-bullet {
       display: block;
       width: 8rem;

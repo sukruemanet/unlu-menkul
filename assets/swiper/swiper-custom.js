@@ -31,6 +31,61 @@ var heroSwiper = new Swiper(".hero-swiper", {
   // },
 });
 
+// Animate one shared line between the hero pagination bullets.
+function initHeroPaginationLine(swiper) {
+  const pagination = swiper?.pagination?.el;
+  if (!pagination || typeof gsap === "undefined") return;
+
+  const line = document.createElement("span");
+  line.className = "hero-pagination-line";
+  line.setAttribute("aria-hidden", "true");
+  pagination.appendChild(line);
+  pagination.classList.add("has-moving-line");
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function placeLine(animate = false) {
+    const active = pagination.querySelector(".swiper-pagination-bullet-active");
+    if (!active) return;
+
+    const target = { x: active.offsetLeft, width: active.offsetWidth };
+    gsap.killTweensOf(line);
+    if (animate && !reducedMotion.matches) {
+      gsap.to(line, { ...target, duration: 0.32, ease: "power3.inOut" });
+    } else {
+      gsap.set(line, target);
+    }
+  }
+
+  const onPaginationUpdate = () => {
+    // Swiper may rebuild its bullets when pagination is updated.
+    if (line.parentElement !== pagination) pagination.appendChild(line);
+    placeLine(true);
+  };
+  const onResize = () => placeLine();
+  const observer = typeof ResizeObserver !== "undefined"
+    ? new ResizeObserver(onResize)
+    : null;
+
+  placeLine();
+  swiper.on("paginationUpdate", onPaginationUpdate);
+  swiper.on("resize", onResize);
+  observer?.observe(pagination);
+  reducedMotion.addEventListener("change", onResize);
+
+  swiper.once("destroy", () => {
+    observer?.disconnect();
+    reducedMotion.removeEventListener("change", onResize);
+    swiper.off("paginationUpdate", onPaginationUpdate);
+    swiper.off("resize", onResize);
+    gsap.killTweensOf(line);
+    pagination.classList.remove("has-moving-line");
+    line.remove();
+  });
+}
+
+initHeroPaginationLine(heroSwiper);
+
 //Widget Slider
 var widgetSwiper = new Swiper(".widget-swiper", {
   slidesPerView: 1,
