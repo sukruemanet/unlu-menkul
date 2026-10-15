@@ -6,7 +6,10 @@ var heroSwiper = new Swiper(".hero-swiper", {
   touchEventsTarget: "container",
   noSwipingSelector: "input, textarea, select, button",
 
-  autoHeight: true,
+  autoHeight: false,
+  breakpoints: {
+    1025: { autoHeight: true },
+  },
   speed: 1000,
   effect: "fade",
   fadeEffect: {
