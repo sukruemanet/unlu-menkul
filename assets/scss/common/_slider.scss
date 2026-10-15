@@ -180,15 +180,41 @@
 
     .swiper-button-prev,
     .swiper-button-next {
+      position: static;
+      inset: auto;
+      margin: 0;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       svg {
+        display: block;
         width: 2rem;
+        height: auto;
       }
     }
 
+    .slide-pagination {
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-pagination {
+      position: static;
+      inset: auto;
+      transform: none;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      line-height: 0;
+    }
+
     .swiper-pagination-bullet {
+      display: block;
       width: 8rem;
       height: 0.4rem;
+      margin: 0 !important;
       border-radius: 0;
       background: #80d4ff;
     }
@@ -361,7 +387,7 @@
 
       .right {
         width: 100%;
-        max-width: 60rem;
+        max-width: 50rem;
         flex-shrink: 0;
 
         @media only screen and (max-width: $desktop-sm) {
@@ -386,6 +412,16 @@
 
           @media only screen and (max-width: $tablet-v) {
             font-size: 2rem;
+          }
+        }
+
+        p {
+          font-size: 1.8rem;
+          color: $white;
+          margin-top: 1.4rem;
+
+          @media only screen and (max-width: $desktop-sm) {
+            font-size: 1.6rem;
           }
         }
 

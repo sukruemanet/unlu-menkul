@@ -638,7 +638,6 @@ form {
 }
 
 .secondary-form {
-  // Use the plugin's measured country-code padding and the full form column.
   .iti {
     width: 100%;
     min-width: 0;
@@ -649,7 +648,7 @@ form {
   }
 
   width: 60rem;
-  padding: 4rem;
+  padding: 3rem;
   margin-left: auto;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(30px) saturate(180%);
