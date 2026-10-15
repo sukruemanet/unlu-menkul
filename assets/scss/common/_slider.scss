@@ -396,6 +396,12 @@
   }
 
   .form-slide {
+    > figure > img {
+      @media only screen and (max-width: $tablet-h) {
+        transform: scaleX(-1);
+      }
+    }
+
     .caption {
       max-width: none;
       flex-direction: row;
