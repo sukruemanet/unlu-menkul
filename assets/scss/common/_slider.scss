@@ -1200,7 +1200,7 @@
 
   .tab-menu-content {
     .tabs {
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
       gap: 0;
 
       li {
@@ -1286,7 +1286,7 @@
           margin-bottom: 2rem;
 
           @media only screen and (max-width: $tablet-h) {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-bottom: 0;
           }
         }
@@ -1522,5 +1522,71 @@
 
   .slider-control {
     margin-top: 4rem;
+  }
+}
+
+.awards-slider {
+  .awards-swiper {
+    width: 100%;
+
+    @media only screen and (max-width: $tablet-h) {
+      width: calc(100% + 2rem);
+    }
+  }
+
+  .content-item-cards.awards-items {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+    overflow: visible;
+
+    .item {
+      height: auto;
+      min-width: 0;
+      flex-shrink: 0;
+      transition: background 0.4s;
+    }
+  }
+
+  .slider-control {
+    display: flex;
+    margin-top: 4rem;
+    padding-right: 0;
+    gap: 2rem;
+
+    .swiper-pagination {
+      inset: auto;
+      width: auto;
+      flex: 1;
+    }
+
+    .buttons {
+      gap: 1.6rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      inset: auto;
+      margin: 0;
+      padding: 0;
+      border: 1px solid rgba($blue, 0.2);
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        width: 2.6rem;
+        stroke: $blue;
+        stroke-width: 1.5;
+      }
+
+      @media only screen and (max-width: $tablet-h) {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
   }
 }

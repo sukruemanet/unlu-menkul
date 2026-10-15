@@ -197,6 +197,27 @@ var swiper = new Swiper(".research-swiper", {
   },
 });
 
+// About page awards: independent controls, with the next card visible.
+document.querySelectorAll(".awards-slider").forEach((section) => {
+  new Swiper(section.querySelector(".awards-swiper"), {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    watchOverflow: true,
+    pagination: {
+      el: section.querySelector(".awards-pagination"),
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: section.querySelector(".awards-next"),
+      prevEl: section.querySelector(".awards-prev"),
+    },
+    breakpoints: {
+      768: { slidesPerView: 2.2, spaceBetween: 20 },
+      1025: { slidesPerView: 3.2, spaceBetween: 30 },
+    },
+  });
+});
+
 //News Slider
 var swiper = new Swiper(".news-swiper", {
   slidesPerView: 1.2,

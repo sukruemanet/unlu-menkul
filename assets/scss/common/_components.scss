@@ -1826,7 +1826,7 @@ form {
 
 .tab-menu-content {
   @media only screen and (max-width: $tablet-h) {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   .custom-table {
@@ -1843,19 +1843,9 @@ form {
 
     @media only screen and (max-width: $tablet-h) {
       max-width: 100%;
-      overflow-x: auto;
-      overflow-y: hidden;
+      flex-wrap: wrap;
+      overflow: visible;
       justify-content: flex-start;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
-      li {
-        flex: 0 0 auto;
-      }
     }
 
     li {
@@ -1867,6 +1857,14 @@ form {
       position: relative;
       text-align: center;
       transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
 
       &::after {
         transition: all 0.3s ease;
@@ -1986,6 +1984,19 @@ form {
           background: $dark;
           color: $white;
         }
+      }
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      li,
+      &.type-1 li,
+      &.type-2 li,
+      &.type-3 li {
+        flex: 1 1 12rem;
+        min-width: 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        padding: 1.6rem 1rem;
       }
     }
   }
