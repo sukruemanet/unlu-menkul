@@ -1825,6 +1825,10 @@ form {
 }
 
 .tab-menu-content {
+  @media only screen and (max-width: $tablet-h) {
+    margin-top: 2rem;
+  }
+
   .custom-table {
     margin-top: 4rem;
   }
