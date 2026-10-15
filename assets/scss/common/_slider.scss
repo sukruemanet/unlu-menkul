@@ -142,7 +142,8 @@
 
   @media only screen and (max-width: $tablet-h) {
     height: auto;
-    min-height: 100dvh;
+    // Let the active slide determine the height, including the controls area.
+    min-height: 0;
   }
 
   video,
@@ -244,7 +245,9 @@
 
   .swiper-slide {
     @media only screen and (max-width: $tablet-h) {
-      min-height: 100dvh;
+      // Keep the hero stable while mobile browser toolbars expand or collapse.
+      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
     }
