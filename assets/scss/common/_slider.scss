@@ -1546,6 +1546,10 @@
       min-width: 0;
       flex-shrink: 0;
       transition: background 0.4s;
+
+      @media only screen and (max-width: $tablet-h) {
+        margin-top: 2rem;
+      }
     }
   }
 

@@ -1028,6 +1028,14 @@ main > .content-wrapper > .content-list-items:first-child {
         img {
           height: 100%;
         }
+
+        &.left img {
+          object-position: 28% center;
+        }
+
+        &.right img {
+          object-position: 85% center;
+        }
       }
 
       .caption {
@@ -9720,6 +9728,18 @@ main > .content-wrapper > .content-list-items:first-child {
 }
 
 .content-list-caption-items {
+  &.image-hidden {
+    .items {
+      .item {
+        .image {
+          @media only screen and (max-width: $tablet-h) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
   .items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -10563,5 +10583,4 @@ main > .content-wrapper > .content-list-items:first-child {
       }
     }
   }
-
 }
