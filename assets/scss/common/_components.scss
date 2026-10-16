@@ -1883,6 +1883,32 @@ form {
     margin-top: 4rem;
   }
 
+  &.type-2 {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    .custom-table {
+      margin-top: 0;
+    }
+
+    ul.tabs.type-3 {
+      width: 100%;
+
+      li {
+        flex: 1 1 0;
+        min-width: 0;
+        white-space: normal;
+        text-align: center;
+        font-size: 1.5rem;
+
+        @media only screen and (max-width: $tablet-h) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
   ul.tabs {
     margin: 0;
     padding: 0;
