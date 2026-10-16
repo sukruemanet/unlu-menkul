@@ -9490,10 +9490,6 @@ main > .content-wrapper > .content-list-items:first-child {
 }
 
 .content-list-text {
-  @media only screen and (max-width: $tablet-h) {
-    padding: 0 2rem;
-  }
-
   .item {
     display: flex;
     flex-direction: column;
