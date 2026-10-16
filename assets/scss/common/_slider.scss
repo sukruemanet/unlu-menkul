@@ -488,6 +488,10 @@
   height: auto;
   align-self: flex-start;
   object-fit: contain;
+
+  @media only screen and (max-width: $tablet-v) {
+    max-width: 14rem;
+  }
 }
 
 .hero-slider .form-slide .caption .secondary-form,
