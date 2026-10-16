@@ -547,13 +547,9 @@
 .hero-form-drawer .drawwer-menu {
   background: #25282f;
   color: $white;
-  padding: 6rem 3rem 3rem;
   overflow-y: auto;
   overscroll-behavior: contain;
-
-  @media only screen and (max-width: $tablet-h) {
-    padding: 6rem 2rem calc(3rem + env(safe-area-inset-bottom, 0px));
-  }
+  padding: 6rem 3rem calc(3rem + env(safe-area-inset-bottom, 0px));
 
   .drawwer-menu-close {
     color: $white;
