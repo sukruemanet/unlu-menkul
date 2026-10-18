@@ -7,6 +7,31 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .start-content.brand-hero {
+    height: auto;
+    min-height: 90dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .start-content.brand-hero > figure {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .start-content.brand-hero > figure img {
+    height: 100%;
+  }
+
+  .start-content.brand-hero > .caption {
+    position: relative;
+    inset: auto;
+    flex: 1;
+    justify-content: flex-end;
+    padding: 14rem 2rem 4rem;
+  }
+
   .start-content .caption .left .buttons {
     width: 100%;
     flex-direction: column;
