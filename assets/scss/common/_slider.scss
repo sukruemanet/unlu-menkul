@@ -481,6 +481,7 @@
 }
 
 .hero-slider .hero-brand-logo,
+.daha .start-content.brand-hero .caption .left .logo img,
 .start-content.h-auto.piapiri-page .caption .left .logo img,
 .start-content.h-auto.daha-page .caption .left .logo img {
   width: 100%;
@@ -499,28 +500,6 @@
   width: 100%;
 
   @include start-content-checkboxes;
-
-  .hero-form-title {
-    max-width: none;
-    color: $white;
-    font-size: 2.4rem;
-    line-height: 1.3;
-    font-weight: $font-bold;
-
-    @media only screen and (max-width: $tablet-v) {
-      font-size: 2rem;
-    }
-  }
-
-  p {
-    font-size: 1.8rem;
-    color: $white;
-    margin-top: 1.4rem;
-
-    @media only screen and (max-width: $desktop-sm) {
-      font-size: 1.6rem;
-    }
-  }
 
   form {
     @media only screen and (max-width: $tablet-v) {

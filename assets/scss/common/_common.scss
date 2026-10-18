@@ -91,18 +91,14 @@
   }
 }
 
-.hero-form-drawer .daha-hero-form > span {
-  font-weight: 700;
+.secondary-form .hero-form-status {
+  margin: 0;
+  color: $white;
+  font-size: 1.4rem;
+  line-height: 1.4;
 
-  @media only screen and (max-width: $tablet-v) {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: $tablet-v) {
-  .hero-form-drawer .daha-hero-form .form-items .item:nth-child(3),
-  .hero-form-drawer .daha-hero-form .form-items .item:nth-child(4) {
-    flex-basis: calc(50% - 0.5rem);
+  &[hidden] {
+    display: none;
   }
 }
 
@@ -1063,6 +1059,21 @@ main > .content-wrapper > .content-list-items:first-child {
   &.brand-hero {
     @include start-content-flow-mobile;
 
+    .caption .right {
+      .daha-hero-form,
+      .piapiri-hero-form {
+        width: 100%;
+        max-width: 50rem;
+        background: rgba($white, 0.12);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+
+      .piapiri-hero-form {
+        padding: 3rem;
+      }
+    }
+
     .caption .left .buttons .hero-form-mobile-trigger {
       display: none;
     }
@@ -1092,6 +1103,13 @@ main > .content-wrapper > .content-list-items:first-child {
         .right {
           display: none;
         }
+      }
+    }
+
+    @media only screen and (max-width: $tablet-v) {
+      .caption .right .piapiri-hero-form {
+        max-width: 100%;
+        padding: 2rem;
       }
     }
   }
@@ -8943,6 +8961,10 @@ main > .content-wrapper > .content-list-items:first-child {
       min-height: 65rem;
       height: auto;
       overflow: visible;
+
+      .secondary-form > h3.hero-form-title {
+        font-weight: $font-medium;
+      }
 
       &::before {
         display: none;
