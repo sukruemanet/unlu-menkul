@@ -91,6 +91,21 @@
   }
 }
 
+.hero-form-drawer .daha-hero-form > span {
+  font-weight: 700;
+
+  @media only screen and (max-width: $tablet-v) {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: $tablet-v) {
+  .hero-form-drawer .daha-hero-form .form-items .item:nth-child(3),
+  .hero-form-drawer .daha-hero-form .form-items .item:nth-child(4) {
+    flex-basis: calc(50% - 0.5rem);
+  }
+}
+
 .content-wrapper {
   position: relative;
   padding: 6rem 0;
@@ -1041,8 +1056,44 @@ main > .content-wrapper > .content-list-items:first-child {
     @include start-content-flow-mobile;
   }
 
-  &:not(.h-auto):has(.secondary-form) {
+  &:not(.h-auto):not(.brand-hero):has(.secondary-form) {
     @include start-content-flow-mobile;
+  }
+
+  &.brand-hero {
+    @include start-content-flow-mobile;
+
+    .caption .left .buttons .hero-form-mobile-trigger {
+      display: none;
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+      .caption {
+        padding-top: 14rem;
+
+        .left .buttons {
+          width: 100%;
+          flex-direction: column;
+
+          > .button {
+            width: 100%;
+            justify-content: center;
+          }
+
+          .hero-form-desktop-link {
+            display: none;
+          }
+
+          .hero-form-mobile-trigger {
+            display: flex;
+          }
+        }
+
+        .right {
+          display: none;
+        }
+      }
+    }
   }
 
   &.nb {
