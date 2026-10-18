@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getError(field) {
     const kind = getKind(field);
+    if (kind === "checkbox" && field.dataset.optional === "true") return "";
     if (kind === "select") return field.selectedIndex > 0 ? "" : messages.select;
     if (kind === "checkbox") return field.checked ? "" : messages.checkbox;
 

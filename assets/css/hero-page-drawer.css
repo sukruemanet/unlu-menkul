@@ -1,0 +1,39 @@
+.start-content .caption .left .buttons .hero-form-mobile-trigger {
+  display: none;
+}
+
+.hero-form-drawer .daha-hero-form > span {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1024px) {
+  .start-content .caption .left .buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .start-content .caption .left .buttons > .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .start-content .caption .right,
+  .start-content .caption .left .buttons .hero-form-desktop-link {
+    display: none;
+  }
+
+  .start-content .caption .left .buttons .hero-form-mobile-trigger {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-form-drawer .daha-hero-form > span {
+    font-size: 2rem;
+  }
+
+  .hero-form-drawer .daha-hero-form .form-items .item:nth-child(3),
+  .hero-form-drawer .daha-hero-form .form-items .item:nth-child(4) {
+    flex-basis: calc(50% - 0.5rem);
+  }
+}
