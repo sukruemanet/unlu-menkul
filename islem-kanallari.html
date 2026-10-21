@@ -1129,7 +1129,41 @@
             <h3 class="hero-form-title" id="piapiri-channel-form-title">
               Piapiri’de Hesap Aç Piyasanın Piri Sen Ol!
             </h3>
-            <form></form>
+            <form data-lead-brand="piapiri">
+              <div class="form-items">
+                <div class="item">
+                  <input type="text" name="full_name" autocomplete="name" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="item">
+                  <input type="email" name="email" autocomplete="email" placeholder="E-posta Adresiniz" required>
+                </div>
+                <div class="item">
+                  <input type="tel" name="phone" autocomplete="tel-national" placeholder="Telefon Numaranız" required>
+                </div>
+              </div>
+              <div class="item">
+                <div class="form-item full column">
+                  <div class="checkbox-items">
+                    <div class="checkbox-check-item">
+                      <div class="checkbox-item">
+                        <input type="checkbox" name="marketing_consent" id="piapiri-channel-form-marketing-consent" data-optional="true">
+                        <label for="piapiri-channel-form-marketing-consent">ÜNLÜ&amp;Co tarafından elektronik iletişim adreslerime ticari elektronik ileti gönderilmesine izin veriyorum.</label>
+                      </div>
+                    </div>
+                    <div class="checkbox-check-item">
+                      <div class="checkbox-item">
+                        <input type="checkbox" name="kvkk_consent" id="piapiri-channel-form-kvkk-consent" checked required>
+                        <label for="piapiri-channel-form-kvkk-consent"><a href="kvkk.html" target="_blank" rel="noopener noreferrer">KVKK Aydınlatma Metni</a>’ni okudum, bilgilendirildim, ileti almak ve aramak istiyorum.</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <button type="submit" class="button dark">Bilgi Alın</button>
+              </div>
+              <p class="hero-form-status" role="alert" hidden></p>
+            </form>
           </div>
         </div>
       </div>

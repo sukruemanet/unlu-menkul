@@ -2223,7 +2223,7 @@ form {
 
 .newsletter-message {
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   background: $white;
   display: none;
   align-items: center;
@@ -2242,6 +2242,7 @@ form {
   span {
     font-size: 1.2rem;
     color: $dark-blue;
+    font-weight: $font-medium;
   }
 }
 

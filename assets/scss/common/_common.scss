@@ -1206,14 +1206,6 @@ main > .content-wrapper > .content-list-items:first-child {
     }
   }
 
-  &:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba($black, 0.4);
-    z-index: 3;
-  }
-
   video,
   figure {
     position: absolute;
@@ -1540,7 +1532,7 @@ main > .content-wrapper > .content-list-items:first-child {
         }
       }
 
-      span {
+      > span {
         max-width: 40rem;
         font-size: 2.2rem;
         line-height: 1.4;
@@ -1618,6 +1610,7 @@ main > .content-wrapper > .content-list-items:first-child {
           span {
             max-width: none;
             font-size: 2.8rem;
+            line-height: 1.4;
             font-weight: $font-medium;
             color: $white;
 
