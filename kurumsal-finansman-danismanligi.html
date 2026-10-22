@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
+<html lang="tr">
 
 <head>
 
   <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -35,7 +35,23 @@
   <script src="assets/js/common/form-validation.js"></script>
   <script src="assets/js/common/components.js"></script>
   <script src="assets/js/common/tabmenu.js"></script>
-  <script src="assets/js/common/tabmenu.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ÜNLÜ Menkul",
+      "url": "https://www.unlumenkul.com/",
+      "logo": "https://www.unlumenkul.com/assets/images/main/logo-dark.svg",
+      "sameAs": [
+        "https://www.facebook.com/unluco/",
+        "https://x.com/unluco",
+        "https://www.linkedin.com/company/unluco",
+        "https://www.youtube.com/c/%C3%9CNL%C3%9CTHECLUB",
+        "https://www.instagram.com/unlu_co/"
+      ]
+    }
+  </script>
 
 </head>
 
@@ -49,9 +65,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </i>
-      <h3>
+      <div class="drawwer-menu-title">
         Hesap Aç veya Bilgi Al
-      </h3>
+      </div>
       <div class="tab-menu-content">
         <ul class="tabs">
           <li class="tab-link current" data-tab="open-account">
@@ -151,7 +167,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
               </button>
-              <h2 id="menuTitle">Menu</h2>
+              <div class="menu-title" id="menuTitle">Menu</div>
             </div>
 
             <div class="drilldown-menu" id="drilldownMenu">
@@ -727,7 +743,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/hakkimizda.jpg">
+                <img src="/assets/images/menu/hakkimizda.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -866,7 +882,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/arastirmalar.jpg">
+                <img src="/assets/images/menu/arastirmalar.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -894,7 +910,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/kariyer.jpg">
+                <img src="/assets/images/menu/kariyer.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -924,7 +940,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/surdurulebilirlik.jpg">
+                <img src="/assets/images/menu/surdurulebilirlik.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -959,7 +975,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/yatirimci-iliskileri.jpg">
+                <img src="/assets/images/menu/yatirimci-iliskileri.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -987,7 +1003,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/basin.jpg">
+                <img src="/assets/images/menu/basin.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -1033,7 +1049,7 @@
   <main>
     <div class="custom-headline image">
       <figure>
-        <img src="/assets/images/hakkimizda/cover.jpg">
+        <img src="/assets/images/hakkimizda/cover.jpg" fetchpriority="high">
       </figure>
       <div class="info-content">
         <h1>
@@ -1066,7 +1082,7 @@
           <div class="card-items">
             <div class="card type-2">
               <figure>
-                <img src="/assets/images/hakkimizda/01.jpg" />
+                <img src="/assets/images/hakkimizda/01.jpg" loading="lazy" />
               </figure>
               <div class="caption">
                 <h2>
@@ -1112,7 +1128,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1134,7 +1150,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1156,7 +1172,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1178,7 +1194,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1200,7 +1216,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1222,7 +1238,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1244,7 +1260,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1266,7 +1282,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1322,7 +1338,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1344,7 +1360,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1366,7 +1382,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1388,7 +1404,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1410,7 +1426,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1432,7 +1448,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1454,7 +1470,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1476,7 +1492,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1532,7 +1548,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1554,7 +1570,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1576,7 +1592,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1598,7 +1614,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1620,7 +1636,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1642,7 +1658,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1664,7 +1680,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1686,7 +1702,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1742,7 +1758,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1764,7 +1780,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1786,7 +1802,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1808,7 +1824,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1830,7 +1846,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/01.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1852,7 +1868,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/02.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1874,7 +1890,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/03.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1896,7 +1912,7 @@
                 </div>
                 <div class="swiper-slide">
                   <figure>
-                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg">
+                    <img src="/assets/images/kurumsal-finansman/slider/04.jpg" loading="lazy">
                   </figure>
                   <div class="slide-caption">
                     <span>
@@ -1963,11 +1979,11 @@
               <div class="image">
                 <img
                   src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="">
+                  alt="" loading="lazy">
               </div>
-              <h5>
+              <h3>
                 Kurumsal Finansman Danışmanlığı Nedir?
-              </h5>
+              </h3>
               <p>
                 Değişken fonlar her yatırımcıya açıkken, serbest fonlar yalnızca SPK'nın belirlediği "nitelikli
                 yatırımcı"
@@ -1987,11 +2003,11 @@
               <div class="image">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?q=80&w=1855&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="">
+                  alt="" loading="lazy">
               </div>
-              <h5>
+              <h3>
                 Kurumsal Finansman Danışmanlığı Nedir?
-              </h5>
+              </h3>
               <p>
                 Değişken fonlar her yatırımcıya açıkken, serbest fonlar yalnızca SPK'nın belirlediği "nitelikli
                 yatırımcı"
@@ -2003,12 +2019,12 @@
               <div class="image">
                 <img
                   src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="">
+                  alt="" loading="lazy">
               </div>
               <div class="caption">
-                <h5>
+                <h3>
                   Kurumsal Finansman Danışmanlığı Nedir?
-                </h5>
+                </h3>
                 <p>
                   Değişken fonlar her yatırımcıya açıkken, serbest fonlar yalnızca SPK'nın belirlediği "nitelikli
                   yatırımcı"
@@ -2037,12 +2053,12 @@
           <div class="image">
             <img
               src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="">
+              alt="" loading="lazy">
           </div>
           <div class="caption">
-            <h5>
+            <h3>
               Kurumsal Finansman Danışmanlığı Nedir?
-            </h5>
+            </h3>
             <p>
               Değişken fonlar her yatırımcıya açıkken, serbest fonlar yalnızca SPK'nın belirlediği "nitelikli
               yatırımcı" kriterlerini karşılayan kişi ve kurumlara satılabilir. Serbest fonlar daha geniş bir yatırım
@@ -2074,9 +2090,9 @@
             <div class="item">
               <span class="number">01</span>
               <div class="text">
-                <h5>
+                <h3>
                   Yatırım stratejisi
-                </h5>
+                </h3>
                 <p>
                   Fonun yatırım stratejisinin finansal hedeflerinizle uyumunu değerlendirin.
                 </p>
@@ -2085,9 +2101,9 @@
             <div class="item">
               <span class="number">02</span>
               <div class="text">
-                <h5>
+                <h3>
                   Risk seviyesi
-                </h5>
+                </h3>
                 <p>
                   Fonun risk değerini inceleyerek üstlenebileceğiniz risk düzeyine uygun seçim yapın.
                 </p>
@@ -2096,9 +2112,9 @@
             <div class="item">
               <span class="number">03</span>
               <div class="text">
-                <h5>
+                <h3>
                   Yatırım süresi
-                </h5>
+                </h3>
                 <p>
                   Fonun kısa, orta veya uzun vadeli yapısının yatırım sürenizle uyumlu olduğundan emin olun.
                 </p>
@@ -2107,9 +2123,9 @@
             <div class="item">
               <span class="number">04</span>
               <div class="text">
-                <h5>
+                <h3>
                   Varlık dağılımı
-                </h5>
+                </h3>
                 <p>
                   Fonun hangi varlıklara, sektörlere ve piyasalara yatırım yaptığını inceleyin.
                 </p>
@@ -2118,9 +2134,9 @@
             <div class="item">
               <span class="number">05</span>
               <div class="text">
-                <h5>
+                <h3>
                   Geçmiş performans
-                </h5>
+                </h3>
                 <p>
                   Geçmiş getirileri değerlendirin; ancak gelecekteki getiriyi garanti etmediğini unutmayın.
                 </p>
@@ -2129,9 +2145,9 @@
             <div class="item">
               <span class="number">06</span>
               <div class="text">
-                <h5>
+                <h3>
                   Portföy çeşitliliği
-                </h5>
+                </h3>
                 <p>
                   Fonun mevcut yatırım portföyünüze nasıl katkı sağlayacağını değerlendirin.
                 </p>
@@ -2140,9 +2156,9 @@
             <div class="item">
               <span class="number">07</span>
               <div class="text">
-                <h5>
+                <h3>
                   Ücret ve giderler
-                </h5>
+                </h3>
                 <p>
                   Yönetim ücreti, toplam gider oranı ve diğer maliyetleri dikkate alın.
                 </p>
@@ -2151,9 +2167,9 @@
             <div class="item">
               <span class="number">08</span>
               <div class="text">
-                <h5>
+                <h3>
                   Alım-satım koşulları
-                </h5>
+                </h3>
                 <p>
                   Emir saatlerini, valörleri ve nakde dönüş süresini kontrol edin.
                 </p>
@@ -2162,9 +2178,9 @@
             <div class="item">
               <span class="number">09</span>
               <div class="text">
-                <h5>
+                <h3>
                   Vergilendirme
-                </h5>
+                </h3>
                 <p>
                   Fon türüne ve işlem tarihine göre uygulanabilecek stopaj oranlarını kontrol edin.
                 </p>
@@ -2173,9 +2189,9 @@
             <div class="item">
               <span class="number">10</span>
               <div class="text">
-                <h5>
+                <h3>
                   Fon yöneticisi
-                </h5>
+                </h3>
                 <p>
                   Portföy yönetim şirketinin deneyimini ve yatırım yaklaşımını inceleyin.
                 </p>
@@ -2199,13 +2215,13 @@
               <div class="image">
                 <img
                   src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="">
+                  alt="" loading="lazy">
               </div>
               <div class="caption">
                 <span class="number">01</span>
-                <h5>
+                <h3>
                   Birleşme ve Satın Alma Danışmanlığı
-                </h5>
+                </h3>
                 <p>
                   Şirket satın alma ve birleşme süreçlerinde stratejiden işlem kapanışına kadar uçtan uca danışmanlık.
                 </p>
@@ -2215,13 +2231,13 @@
               <div class="image">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?q=80&w=1855&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="">
+                  alt="" loading="lazy">
               </div>
               <div class="caption">
                 <span class="number">02</span>
-                <h5>
+                <h3>
                   Alım Tarafı İşlemleri
-                </h5>
+                </h3>
                 <p>
                   Yatırım fırsatlarının belirlenmesi, değerlendirilmesi ve işlem sürecinin yönetimi.
                 </p>
@@ -2231,13 +2247,13 @@
               <div class="image">
                 <img
                   src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="">
+                  alt="" loading="lazy">
               </div>
               <div class="caption">
                 <span class="number">03</span>
-                <h5>
+                <h3>
                   Halka Arz ve Çağrı İşlemleri
-                </h5>
+                </h3>
                 <p>
                   Şirketlerin sermaye piyasalarına erişim süreçlerinde kapsamlı danışmanlık.
                 </p>
@@ -2247,13 +2263,13 @@
               <div class="image">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?q=80&w=1855&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="">
+                  alt="" loading="lazy">
               </div>
               <div class="caption">
                 <span class="number">04</span>
-                <h5>
+                <h3>
                   Sermaye Piyasası İşlemleri
-                </h5>
+                </h3>
                 <p>
                   Sermaye artırımı, borçlanma aracı ihraçları ve diğer sermaye piyasası çözümleri.
                 </p>
@@ -2268,9 +2284,9 @@
       <div class="content-wrapper type-9">
         <div class="container">
           <div class="headline">
-            <h4>
+            <h2>
               Neden ÜNLÜ & Co?
-            </h4>
+            </h2>
           </div>
           <div class="items">
             <div class="item">
@@ -2324,9 +2340,9 @@
     <div class="content-wrapper type-7">
       <div class="container">
         <div class="headline blue">
-          <h4>
+          <h2>
             Sıkça Sorulan Sorular
-          </h4>
+          </h2>
         </div>
         <div class="faq">
           <div class="accordion-wrapper">
@@ -2423,7 +2439,7 @@
   <footer>
     <div class="container">
       <div class="left">
-        <img class="logo" src="/assets/images/main/logo.svg">
+        <img class="logo" src="/assets/images/main/logo.svg" loading="lazy">
         <div class="scroll-top mobile">
           <a href="#top">
             <svg viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">

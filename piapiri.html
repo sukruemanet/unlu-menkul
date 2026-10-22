@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
+<html lang="tr">
 
 <head>
 
   <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -35,7 +35,23 @@
   <script src="assets/js/common/form-validation.js"></script>
   <script src="assets/js/common/components.js"></script>
   <script src="assets/js/common/tabmenu.js"></script>
-  <script src="assets/js/common/tabmenu.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ÜNLÜ Menkul",
+      "url": "https://www.unlumenkul.com/",
+      "logo": "https://www.unlumenkul.com/assets/images/main/logo-dark.svg",
+      "sameAs": [
+        "https://www.facebook.com/unluco/",
+        "https://x.com/unluco",
+        "https://www.linkedin.com/company/unluco",
+        "https://www.youtube.com/c/%C3%9CNL%C3%9CTHECLUB",
+        "https://www.instagram.com/unlu_co/"
+      ]
+    }
+  </script>
 
 </head>
 
@@ -49,9 +65,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </i>
-      <h3>
+      <div class="drawwer-menu-title">
         Hesap Aç veya Bilgi Al
-      </h3>
+      </div>
       <div class="tab-menu-content">
         <ul class="tabs">
           <li class="tab-link current" data-tab="open-account">
@@ -164,7 +180,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
               </button>
-              <h2 id="menuTitle">Menu</h2>
+              <div class="menu-title" id="menuTitle">Menu</div>
             </div>
 
             <div class="drilldown-menu" id="drilldownMenu">
@@ -740,7 +756,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/hakkimizda.jpg">
+                <img src="/assets/images/menu/hakkimizda.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -879,7 +895,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/arastirmalar.jpg">
+                <img src="/assets/images/menu/arastirmalar.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -907,7 +923,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/kariyer.jpg">
+                <img src="/assets/images/menu/kariyer.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -937,7 +953,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/surdurulebilirlik.jpg">
+                <img src="/assets/images/menu/surdurulebilirlik.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -972,7 +988,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/yatirimci-iliskileri.jpg">
+                <img src="/assets/images/menu/yatirimci-iliskileri.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -1000,7 +1016,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/basin.jpg">
+                <img src="/assets/images/menu/basin.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -1046,7 +1062,7 @@
   <main>
     <div class="start-content brand-hero brand-piapiri">
       <figure>
-        <img src="assets/images/piapiri/cover.jpg">
+        <img src="assets/images/piapiri/cover.jpg" fetchpriority="high">
       </figure>
       <div class="caption">
         <div class="left">
@@ -1090,9 +1106,9 @@
         </div>
         <div class="right">
           <div class="secondary-form piapiri-hero-form" data-hero-brand="piapiri" id="piapiri-channel-form">
-            <h3 class="hero-form-title" id="piapiri-channel-form-title">
+            <h2 class="hero-form-title" id="piapiri-channel-form-title">
               Piapiri’de Hesap Aç Piyasanın Piri Sen Ol!
-            </h3>
+            </h2>
             <form data-lead-brand="piapiri">
               <div class="form-items">
                 <div class="item">
@@ -1156,7 +1172,7 @@
         <div class="card-items">
           <div class="card type-2">
             <figure>
-              <img src="/assets/images/piapiri/01.jpg" />
+              <img src="/assets/images/piapiri/01.jpg" loading="lazy" />
             </figure>
             <div class="caption">
               <h2>
@@ -1187,7 +1203,7 @@
           <div class="card-items">
             <div class="card">
               <figure>
-                <img src="/assets/images/piapiri/02.jpg" />
+                <img src="/assets/images/piapiri/02.jpg" loading="lazy" />
               </figure>
               <div class="caption">
                 <h2>
@@ -1218,9 +1234,9 @@
     <div class="content-wrapper">
       <div class="container mission-vision">
         <div class="headline dark">
-          <h4>
+          <h2>
             Piapiri’de Nelere Yatırım Yapabilirsiniz?
-          </h4>
+          </h2>
         </div>
         <div class="content-special-card-items border">
           <div class="item">
@@ -1296,9 +1312,9 @@
       <div class="container type-2">
         <div class="content-wrapper">
           <div class="headline light">
-            <h4>
+            <h2>
               Yatırım Fonunun Avantajları
-            </h4>
+            </h2>
             <p>
               VİOP yüksek getiri potansiyeli sunarken aynı zamanda önemli riskler barındırır. Doğru stratejilerle bu
               riskleri kontrol altına alabilirsiniz.
@@ -1368,9 +1384,9 @@
       <div class="container">
         <div class="content-list-text">
           <div class="item">
-            <h5>
+            <h3>
               Halka arz yöntemleri nelerdir?
-            </h5>
+            </h3>
             <p>
               Halka arzlar, sermaye artırımı ve ortak satışı olmak üzere iki ana kategoriye ayrılır. Sermaye artırımı
               yoluyla halka arzda şirket, yeni hisse senetleri ihraç ederek sermayesini artırır ve elde edilen geliri
@@ -1380,9 +1396,9 @@
             </p>
           </div>
           <div class="item">
-            <h5>
+            <h3>
               Halka arzda oransal dağıtım nedir?
-            </h5>
+            </h3>
             <p>
               Halka arzlar, sermaye artırımı ve ortak satışı olmak üzere iki ana kategoriye ayrılır. Sermaye artırımı
               yoluyla halka arzda şirket, yeni hisse senetleri ihraç ederek sermayesini artırır ve elde edilen geliri
@@ -1392,9 +1408,9 @@
             </p>
           </div>
           <div class="item">
-            <h5>
+            <h3>
               Halka arzdan hisse senedi nasıl alırım?
-            </h5>
+            </h3>
             <p>
               Halka arzlar, sermaye artırımı ve ortak satışı olmak üzere iki ana kategoriye ayrılır. Sermaye artırımı
               yoluyla halka arzda şirket, yeni hisse senetleri ihraç ederek sermayesini artırır ve elde edilen geliri
@@ -1404,9 +1420,9 @@
             </p>
           </div>
           <div class="item">
-            <h5>
+            <h3>
               Halka arzda eşit dağıtım nedir?
-            </h5>
+            </h3>
             <p>
               Halka arzlar, sermaye artırımı ve ortak satışı olmak üzere iki ana kategoriye ayrılır. Sermaye artırımı
               yoluyla halka arzda şirket, yeni hisse senetleri ihraç ederek sermayesini artırır ve elde edilen geliri
@@ -1422,9 +1438,9 @@
     <div class="container type-2">
       <div class="content-wrapper">
         <div class="headline dark">
-          <h4>
+          <h2>
             Çağrı Merkezine Kolay Erişim
-          </h4>
+          </h2>
           <p>
             Piapiri Çözüm Merkezi, kullanıcılarına hızlı ve kapsamlı destek sunar. Soru, talep ve ihtiyaçlarınız için
             bize hafta içi belirtilen saatlerde telefon üzerinden, 7/24 ise e-posta kanalımız aracılığıyla
@@ -1466,9 +1482,9 @@
     <div class="content-wrapper type-7">
       <div class="container">
         <div class="headline blue">
-          <h4>
+          <h2>
             Sıkça Sorulan Sorular
-          </h4>
+          </h2>
         </div>
         <div class="faq">
           <div class="accordion-wrapper">
@@ -1547,9 +1563,9 @@
     <div class="container">
       <div class="content-wrapper">
         <div class="headline dark">
-          <h4>
+          <h2>
             İlginizi Çekebilecek İçerikler
-          </h4>
+          </h2>
           <a href="#" target="_blank" class="button dark">
             Tüm İçerikler
             <svg viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1567,10 +1583,10 @@
                   <small>
                     Temel Analiz
                   </small>
-                  <h4>
+                  <h3>
                     Hisse Senedi Analizi Nasıl Yapılır?
                     Adım Adım Rehber
-                  </h4>
+                  </h3>
                   <p>
                     F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
                   </p>
@@ -1584,9 +1600,9 @@
                   <small>
                     Teknik Analiz
                   </small>
-                  <h4>
+                  <h3>
                     Destek ve Direnç Seviyeleri: Pratik Kullanım Kılavuzu
-                  </h4>
+                  </h3>
                   <p>
                     Grafiklerden karar alma sanatını öğrenin. Temel göstergeler ve örnek analizler.
                   </p>
@@ -1600,9 +1616,9 @@
                   <small>
                     Yatırım Sözlüğü
                   </small>
-                  <h4>
+                  <h3>
                     Borsa Terimler Sözlüğü: Yatırımcının Olmazsa Olmazı
-                  </h4>
+                  </h3>
                   <p>
                     Stop-loss’tan margin’e halka arzdan ETF’e temel borsa terimlerini öğrenin.
                   </p>
@@ -1616,10 +1632,10 @@
                   <small>
                     Temel Analiz
                   </small>
-                  <h4>
+                  <h3>
                     Hisse Senedi Analizi Nasıl Yapılır?
                     Adım Adım Rehber
-                  </h4>
+                  </h3>
                   <p>
                     F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
                   </p>
@@ -1633,10 +1649,10 @@
                   <small>
                     Temel Analiz
                   </small>
-                  <h4>
+                  <h3>
                     Hisse Senedi Analizi Nasıl Yapılır?
                     Adım Adım Rehber
-                  </h4>
+                  </h3>
                   <p>
                     F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
                   </p>
@@ -1650,9 +1666,9 @@
                   <small>
                     Teknik Analiz
                   </small>
-                  <h4>
+                  <h3>
                     Destek ve Direnç Seviyeleri: Pratik Kullanım Kılavuzu
-                  </h4>
+                  </h3>
                   <p>
                     Grafiklerden karar alma sanatını öğrenin. Temel göstergeler ve örnek analizler.
                   </p>
@@ -1666,9 +1682,9 @@
                   <small>
                     Yatırım Sözlüğü
                   </small>
-                  <h4>
+                  <h3>
                     Borsa Terimler Sözlüğü: Yatırımcının Olmazsa Olmazı
-                  </h4>
+                  </h3>
                   <p>
                     Stop-loss’tan margin’e halka arzdan ETF’e temel borsa terimlerini öğrenin.
                   </p>
@@ -1682,10 +1698,10 @@
                   <small>
                     Temel Analiz
                   </small>
-                  <h4>
+                  <h3>
                     Hisse Senedi Analizi Nasıl Yapılır?
                     Adım Adım Rehber
-                  </h4>
+                  </h3>
                   <p>
                     F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
                   </p>
@@ -1726,7 +1742,7 @@
         <div class="content-snall-captions">
           <div class="caption-item">
             <figure>
-              <img src="assets/images/main/piapiri-logo.webp">
+              <img src="assets/images/main/piapiri-logo.webp" loading="lazy">
             </figure>
             <div class="caption">
               <span>
@@ -1746,7 +1762,7 @@
           </div>
           <div class="caption-item">
             <figure>
-              <img src="assets/images/main/piapiri-logo.webp">
+              <img src="assets/images/main/piapiri-logo.webp" loading="lazy">
             </figure>
             <div class="caption">
               <span>
@@ -1770,7 +1786,7 @@
 
     <div class="piapiri-connect">
       <figure>
-        <img src="assets/images/main/piapiri-logo.webp">
+        <img src="assets/images/main/piapiri-logo.webp" loading="lazy">
       </figure>
       <div class="caption">
         <span>
@@ -1792,7 +1808,7 @@
       <div class="app-container">
         <div class="app-screen">
           <figure>
-            <img src="assets/images/main/ios-andoird-app-screen.webp">
+            <img src="assets/images/main/ios-andoird-app-screen.webp" loading="lazy">
           </figure>
         </div>
         <div class="app-content">
@@ -1846,7 +1862,7 @@
   <footer>
     <div class="container">
       <div class="left">
-        <img class="logo" src="/assets/images/main/logo.svg">
+        <img class="logo" src="/assets/images/main/logo.svg" loading="lazy">
         <div class="scroll-top mobile">
           <a href="#top">
             <svg viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">

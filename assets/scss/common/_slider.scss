@@ -325,7 +325,8 @@
       padding: 12rem 2rem calc(10rem + env(safe-area-inset-bottom, 0px));
     }
 
-    h1 {
+    h1,
+    h2:not(.hero-form-title) {
       color: $white;
       font-size: 10rem;
       font-weight: $font-regular;
@@ -873,7 +874,7 @@
         gap: 2rem;
         @include fade-transition;
 
-        h4 {
+        h3 {
           max-width: 70%;
           font-size: 1.8rem;
           color: $dark;
@@ -934,7 +935,7 @@
       @include fade-transition;
 
       .caption {
-        h4 {
+        h3 {
           color: $blue;
           @include fade-transition;
         }
@@ -998,7 +999,7 @@
         }
       }
 
-      h4 {
+      h3 {
         font-size: 2rem;
         color: $dark;
         font-weight: $font-medium;
@@ -1158,7 +1159,7 @@
   background: #142f58;
 
   .headline {
-    h4 {
+    h2 {
       color: $white;
 
       &:after {
@@ -1242,7 +1243,7 @@
           opacity: 0.3;
         }
 
-        h4 {
+        h3 {
           font-size: 1.6rem;
           font-weight: $font-regular;
           color: $light-blue;

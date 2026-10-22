@@ -529,7 +529,7 @@ main > .content-wrapper > .content-list-items:first-child {
       .headline {
         margin-bottom: 0;
 
-        h4 {
+        h2 {
           margin-bottom: 2rem;
         }
 
@@ -1938,7 +1938,7 @@ main > .content-wrapper > .content-list-items:first-child {
   .headline {
     position: relative;
 
-    h4 {
+    h2 {
       color: $light-blue-2;
       margin-bottom: 0;
 
@@ -2322,7 +2322,7 @@ main > .content-wrapper > .content-list-items:first-child {
       }
 
       .headline {
-        h4 {
+        h2 {
           color: $light-blue-2;
           margin-bottom: 0;
 
@@ -2465,7 +2465,7 @@ main > .content-wrapper > .content-list-items:first-child {
     .headline {
       width: 50%;
 
-      h4 {
+      h2 {
         width: 100%;
         color: $light-blue-2;
 
@@ -2705,7 +2705,7 @@ main > .content-wrapper > .content-list-items:first-child {
   }
 
   .headline {
-    h4 {
+    h2 {
       margin-bottom: 0;
     }
   }
@@ -3024,7 +3024,7 @@ main > .content-wrapper > .content-list-items:first-child {
   overflow: hidden;
 
   .headline {
-    h4 {
+    h2 {
       color: $light-blue-2;
 
       &:after {
@@ -3277,7 +3277,7 @@ main > .content-wrapper > .content-list-items:first-child {
   }
 
   .headline {
-    h4 {
+    h2 {
       color: $light-blue-2;
 
       &:after {
@@ -3543,7 +3543,7 @@ main > .content-wrapper > .content-list-items:first-child {
   .headline {
     position: relative;
 
-    h4 {
+    h2 {
       color: $light-blue-2;
       margin-bottom: 0;
 
@@ -3885,7 +3885,8 @@ main > .content-wrapper > .content-list-items:first-child {
       }
 
       .caption {
-        h4 {
+        h2,
+        h3 {
           color: $blue;
         }
 
@@ -3923,7 +3924,8 @@ main > .content-wrapper > .content-list-items:first-child {
       @include fade-transition;
 
       .caption {
-        h4 {
+        h2,
+        h3 {
           color: $blue;
           @include fade-transition;
         }
@@ -3993,7 +3995,8 @@ main > .content-wrapper > .content-list-items:first-child {
         font-weight: $font-medium;
       }
 
-      h4 {
+      h2,
+      h3 {
         font-size: 1.8rem;
         color: $dark;
         font-weight: $font-medium;
@@ -4569,7 +4572,7 @@ main > .content-wrapper > .content-list-items:first-child {
   }
 
   .headline {
-    h4 {
+    h2 {
       color: $light-blue-2;
 
       &:after {
@@ -6368,7 +6371,7 @@ main > .content-wrapper > .content-list-items:first-child {
         flex-direction: column;
         gap: 1rem;
 
-        h2 {
+        h1 {
           font-size: 2.8rem;
           font-family: $font-ibm;
           font-weight: $font-medium;
@@ -6482,7 +6485,7 @@ main > .content-wrapper > .content-list-items:first-child {
   }
 
   .headline {
-    h4 {
+    h2 {
       color: $light-blue-2;
 
       &:after {
@@ -7068,7 +7071,7 @@ main > .content-wrapper > .content-list-items:first-child {
     }
   }
 
-  h3 {
+  h2 {
     max-width: 80rem;
     font-size: 2rem;
     font-weight: $font-bold;
@@ -7076,7 +7079,7 @@ main > .content-wrapper > .content-list-items:first-child {
     margin-bottom: 1rem;
   }
 
-  h4 {
+  h3 {
     font-size: 1.8rem;
     font-weight: $font-medium;
     color: $dark;
@@ -7115,7 +7118,7 @@ main > .content-wrapper > .content-list-items:first-child {
     padding-bottom: 1rem;
     margin-top: 0.5rem;
 
-    h4 {
+    h3 {
       padding: 2rem 2rem 0;
     }
 
@@ -7531,7 +7534,7 @@ main > .content-wrapper > .content-list-items:first-child {
     &:hover {
       .caption {
         .top {
-          h4 {
+          h3 {
             color: $white;
             @include fade-transition;
           }
@@ -7579,7 +7582,7 @@ main > .content-wrapper > .content-list-items:first-child {
           align-items: flex-start;
         }
 
-        h4 {
+        h3 {
           max-width: 20rem;
           font-size: 2.2rem;
           font-weight: $font-medium;
@@ -7870,7 +7873,8 @@ main > .content-wrapper > .content-list-items:first-child {
         color: $white;
       }
 
-      h4 {
+      h2,
+      h3 {
         font-size: 2rem;
         color: $white;
         font-family: $font-ibm;
@@ -8496,7 +8500,7 @@ main > .content-wrapper > .content-list-items:first-child {
         padding: 2rem;
       }
 
-      h6 {
+      h2 {
         color: $blue-2;
         font-size: 3rem;
         font-weight: $font-medium;
@@ -8892,7 +8896,7 @@ main > .content-wrapper > .content-list-items:first-child {
   }
 
   .headline {
-    h4 {
+    h2 {
       color: $white;
 
       &:after {
@@ -8973,7 +8977,7 @@ main > .content-wrapper > .content-list-items:first-child {
             margin-bottom: 2rem;
           }
 
-          h5 {
+          h3 {
             font-size: 2.6rem;
             font-weight: $font-bold;
             color: $white;
@@ -9053,7 +9057,7 @@ main > .content-wrapper > .content-list-items:first-child {
       height: auto;
       overflow: visible;
 
-      .secondary-form > h3.hero-form-title {
+      .secondary-form > .hero-form-title {
         font-weight: $font-medium;
       }
 
@@ -9630,7 +9634,7 @@ main > .content-wrapper > .content-list-items:first-child {
       padding: 2rem;
     }
 
-    h5 {
+    h3 {
       font-size: 2rem;
 
       @media only screen and (max-width: $tablet-h) {
@@ -9764,7 +9768,7 @@ main > .content-wrapper > .content-list-items:first-child {
     align-items: flex-start;
     gap: 1rem;
 
-    h5 {
+    h3 {
       font-size: 2rem;
 
       @media only screen and (max-width: $tablet-h) {
@@ -9880,7 +9884,7 @@ main > .content-wrapper > .content-list-items:first-child {
       gap: 1rem;
     }
 
-    h5 {
+    h3 {
       font-size: 2.2rem;
       font-weight: $font-medium;
       color: #001727;
@@ -9973,7 +9977,7 @@ main > .content-wrapper > .content-list-items:first-child {
       }
     }
 
-    h5 {
+    h3 {
       font-size: 2.4rem;
       font-weight: $font-medium;
       color: #001727;

@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
+<html lang="tr">
 
 <head>
 
   <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -35,6 +35,23 @@
   <script src="assets/js/common/form-validation.js"></script>
   <script src="assets/js/common/components.js"></script>
   <script src="assets/js/common/tabmenu.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ÜNLÜ Menkul",
+      "url": "https://www.unlumenkul.com/",
+      "logo": "https://www.unlumenkul.com/assets/images/main/logo-dark.svg",
+      "sameAs": [
+        "https://www.facebook.com/unluco/",
+        "https://x.com/unluco",
+        "https://www.linkedin.com/company/unluco",
+        "https://www.youtube.com/c/%C3%9CNL%C3%9CTHECLUB",
+        "https://www.instagram.com/unlu_co/"
+      ]
+    }
+  </script>
+
 </head>
 
 <body id="top">
@@ -47,9 +64,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </i>
-      <h3>
+      <div class="drawwer-menu-title">
         Hesap Aç veya Bilgi Al
-      </h3>
+      </div>
       <div class="tab-menu-content">
         <ul class="tabs">
           <li class="tab-link current" data-tab="open-account">
@@ -149,7 +166,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
               </button>
-              <h2 id="menuTitle">Menu</h2>
+              <div class="menu-title" id="menuTitle">Menu</div>
             </div>
 
             <div class="drilldown-menu" id="drilldownMenu">
@@ -696,7 +713,7 @@
   <main>
     <div class="custom-headline image">
       <figure>
-        <img src="/assets/images/hakkimizda/cover.jpg">
+        <img src="/assets/images/hakkimizda/cover.jpg" fetchpriority="high">
       </figure>
       <div class="info-content">
         <h1>
@@ -724,7 +741,7 @@
         </div>
 
         <div class="item">
-          <h3>1. Çerez Nedir?</h3>
+          <h2>1. Çerez Nedir?</h2>
           <p>
             Çerezler, bir internet sitesini ziyaret ettiğinizde bilgisayarınızda (veya akıllı telefonlar ve tabletler
             gibi
@@ -740,10 +757,10 @@
         </div>
 
         <div class="item">
-          <h3>2. Çerez Türleri Nelerdir?</h3>
+          <h2>2. Çerez Türleri Nelerdir?</h2>
 
           <div class="table">
-            <h4>Çerez yönetimi bakımından:</h4>
+            <h3>Çerez yönetimi bakımından:</h3>
             <ol>
               <li>
                 Birinci Taraf Çerezleri: Tarafımızca oluşturularak internet sitesine konulan ve bizim kontrolümüzde olan
@@ -757,7 +774,7 @@
           </div>
 
           <div class="table">
-            <h4>Saklama süresi bakımından:</h4>
+            <h3>Saklama süresi bakımından:</h3>
             <ol>
               <li>
                 Oturum Çerezleri: Sadece tarayıcınız açıkken mevcut olan ve tarayıcınız kapanınca silinen çerez tipidir.
@@ -773,7 +790,7 @@
           </div>
 
           <div class="table">
-            <h4>Kullanım amacı bakımından:</h4>
+            <h3>Kullanım amacı bakımından:</h3>
             <ol>
               <li>
                 Zorunlu Çerezler: İnternet sitesinin etkin çalışmasını sağlamak, sizin için çeşitli hizmetleri sağlamak
@@ -809,7 +826,7 @@
         </div>
 
         <div class="item">
-          <h3>3. Çerezler Yoluyla İşlenen Kişisel Verileriniz, İşleme Amaçlarımız ve Dayandığımız Hukuki Sebepler</h3>
+          <h2>3. Çerezler Yoluyla İşlenen Kişisel Verileriniz, İşleme Amaçlarımız ve Dayandığımız Hukuki Sebepler</h2>
           <p>
             Çerezler, türlerine bağlı olmak üzere, internet sitemize eriştiğiniz cihazda tarama ve kullanım
             tercihlerinize ve
@@ -855,8 +872,8 @@
         </div>
 
         <div class="item">
-          <h3>4. Çerezler Yoluyla İşlenen Kişisel Verilerinizi Aktarım Amaçlarımız ve Dayandığımız Hukuki Sebepler</h3>
-          <h4>Çerezler vasıtasıyla topladığımız kişisel verileriniz,</h4>
+          <h2>4. Çerezler Yoluyla İşlenen Kişisel Verilerinizi Aktarım Amaçlarımız ve Dayandığımız Hukuki Sebepler</h2>
+          <h3>Çerezler vasıtasıyla topladığımız kişisel verileriniz,</h3>
           <ol>
             <li>
               İnternet sitemiz için barındırma (hosting), hızlandırma ve güvenliğin sağlanması amacıyla aldığımız üçüncü
@@ -881,7 +898,7 @@
         </div>
 
         <div class="item">
-          <h3>5. Çerezleri nasıl kontrol edebilirsiniz?</h3>
+          <h2>5. Çerezleri nasıl kontrol edebilirsiniz?</h2>
           <p>
             Çerez tercihlerinizi her zaman internet sitemizin ana sayfasının en altında yer alan “Çerez Yönetim Paneli”
             butonu üzerinden
@@ -894,8 +911,8 @@
         </div>
 
         <div class="item">
-          <h3>6. Kişisel Verileriniz ile İlgili Olarak Kullanabileceğiniz Haklarınız</h3>
-          <h4>Kişisel verilerinize ilişkin olarak;</h4>
+          <h2>6. Kişisel Verileriniz ile İlgili Olarak Kullanabileceğiniz Haklarınız</h2>
+          <h3>Kişisel verilerinize ilişkin olarak;</h3>
           <ol>
             <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
             <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme,</li>
@@ -913,9 +930,9 @@
         </div>
 
         <div class="item">
-          <h3>7. Haklarınızı Nasıl Kullanabilirsiniz?</h3>
-          <h4>Kişisel verileriniz ile ilgili başvuru ve taleplerinizi dilerseniz Veri Sahibi Başvuru Formu aracılığıyla;
-          </h4>
+          <h2>7. Haklarınızı Nasıl Kullanabilirsiniz?</h2>
+          <h3>Kişisel verileriniz ile ilgili başvuru ve taleplerinizi dilerseniz Veri Sahibi Başvuru Formu aracılığıyla;
+          </h3>
           <ol>
             <li>
               Geçerli bir kimlik belgesi ile birlikte Ünlü &amp; Co’ya bizzat başvurarak
@@ -956,7 +973,7 @@
         </div>
 
         <div class="item">
-          <h3>8. Kişisel Verilerinizin İşlenmesine İlişkin Taleplerinizin Cevaplanması</h3>
+          <h2>8. Kişisel Verilerinizin İşlenmesine İlişkin Taleplerinizin Cevaplanması</h2>
           <p>
             Kişisel verilerinize ilişkin hak talepleriniz değerlendirilerek, bize ulaştığı tarihten itibaren en geç 30
             gün içerisinde cevaplanır. Başvurunuzun olumsuz değerlendirilmesi halinde gerekçeli ret sebepleri başvuruda
@@ -971,7 +988,7 @@
   <footer>
     <div class="container">
       <div class="left">
-        <img class="logo" src="/assets/images/main/logo.svg">
+        <img class="logo" src="/assets/images/main/logo.svg" loading="lazy">
         <div class="scroll-top mobile">
           <a href="#top">
             <svg viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1161,7 +1178,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/common/menu.js"></script>
   <script src="assets/js/common/menu.js"></script>
   <script src="assets/lenis/lenis.min.js"></script>
   <script src="assets/js/gsap/gsap.min.js"></script>

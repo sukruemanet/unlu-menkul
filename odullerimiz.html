@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
+<html lang="tr">
 
 <head>
 
   <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -34,6 +34,23 @@
   <script src="assets/js/common/common.js"></script>
   <script src="assets/js/common/form-validation.js"></script>
 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ÜNLÜ Menkul",
+      "url": "https://www.unlumenkul.com/",
+      "logo": "https://www.unlumenkul.com/assets/images/main/logo-dark.svg",
+      "sameAs": [
+        "https://www.facebook.com/unluco/",
+        "https://x.com/unluco",
+        "https://www.linkedin.com/company/unluco",
+        "https://www.youtube.com/c/%C3%9CNL%C3%9CTHECLUB",
+        "https://www.instagram.com/unlu_co/"
+      ]
+    }
+  </script>
+
 </head>
 
 <body id="top">
@@ -46,9 +63,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </i>
-      <h3>
+      <div class="drawwer-menu-title">
         Hesap Aç veya Bilgi Al
-      </h3>
+      </div>
       <div class="tab-menu-content">
         <ul class="tabs">
           <li class="tab-link current" data-tab="open-account">
@@ -148,7 +165,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
               </button>
-              <h2 id="menuTitle">Menu</h2>
+              <div class="menu-title" id="menuTitle">Menu</div>
             </div>
 
             <div class="drilldown-menu" id="drilldownMenu">
@@ -685,7 +702,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/hakkimizda.jpg">
+                <img src="/assets/images/menu/hakkimizda.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -824,7 +841,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/arastirmalar.jpg">
+                <img src="/assets/images/menu/arastirmalar.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -852,7 +869,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/kariyer.jpg">
+                <img src="/assets/images/menu/kariyer.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -882,7 +899,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/surdurulebilirlik.jpg">
+                <img src="/assets/images/menu/surdurulebilirlik.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -917,7 +934,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/yatirimci-iliskileri.jpg">
+                <img src="/assets/images/menu/yatirimci-iliskileri.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -945,7 +962,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/basin.jpg">
+                <img src="/assets/images/menu/basin.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -1043,9 +1060,9 @@
           <div id="newsNoFound" style="display:none">
             <div class="page-head" style="text-align:center">
               <div class="text">
-                <h1>
+                <div class="no-result">
                   Sonuç bulunamadı.
-                </h1>
+                </div>
               </div>
             </div>
           </div>
@@ -1054,12 +1071,12 @@
             <a href="/hakkimizda/odullerimiz/euromoney-awards-for-excellence-2026/" class="item">
               <figure>
                 <img title="Euromoney Awards for Excellence 2026" src="assets/images/odullerimiz/euromoney-2026.jpg"
-                  alt="">
+                  alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>Euromoney Awards for Excellence 2026</h4>
+                  <h2>Euromoney Awards for Excellence 2026</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1085,12 +1102,12 @@
             <a href="/hakkimizda/odullerimiz/emea-finance-achievement-2025/" class="item">
               <figure>
                 <img title="EMEA Finance Achievement 2025" src="assets/images/odullerimiz/euromoney-2026.jpg"
-                  alt="">
+                  alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>EMEA Finance Achievement 2025</h4>
+                  <h2>EMEA Finance Achievement 2025</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1119,12 +1136,12 @@
             <a href="/hakkimizda/odullerimiz/emea-finance-europe-banking-awards-2025/" class="item">
               <figure>
                 <img title="EMEA Finance Europe Banking Awards 2025 "
-                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="">
+                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>EMEA Finance Europe Banking Awards 2025 </h4>
+                  <h2>EMEA Finance Europe Banking Awards 2025 </h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1152,12 +1169,12 @@
             <a href="/hakkimizda/odullerimiz/euromoney-awards-for-excellence-2025/" class="item">
               <figure>
                 <img title="Euromoney Awards for Excellence 2025" src="assets/images/odullerimiz/euromoney-2026.jpg"
-                  alt="">
+                  alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>Euromoney Awards for Excellence 2025</h4>
+                  <h2>Euromoney Awards for Excellence 2025</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1181,12 +1198,12 @@
 
             <a href="/hakkimizda/odullerimiz/stevie-awards-yilin-isvereni-finansal-hizmetler/" class="item">
               <figure>
-                <img title="Stevie Awards 2025" src="assets/images/odullerimiz/euromoney-2026.jpg" alt="">
+                <img title="Stevie Awards 2025" src="assets/images/odullerimiz/euromoney-2026.jpg" alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>Stevie Awards 2025</h4>
+                  <h2>Stevie Awards 2025</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1212,12 +1229,12 @@
             <a href="/hakkimizda/odullerimiz/emea-finance-achievement-awards-2024/" class="item">
               <figure>
                 <img title="EMEA Finance Achievement Awards 2024"
-                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="">
+                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>EMEA Finance Achievement Awards 2024</h4>
+                  <h2>EMEA Finance Achievement Awards 2024</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1243,12 +1260,12 @@
             <a href="/hakkimizda/odullerimiz/mergermarket-european-ma-awards-2024/" class="item">
               <figure>
                 <img title="Mergermarket European M&amp;A Awards 2024"
-                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="">
+                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>Mergermarket European M&amp;A Awards 2024</h4>
+                  <h2>Mergermarket European M&amp;A Awards 2024</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1274,12 +1291,12 @@
             <a href="/hakkimizda/odullerimiz/euromoney-best-securities-houses-awards-2024/" class="item">
               <figure>
                 <img title="Euromoney Best Securities Houses Awards 2024"
-                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="">
+                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>Euromoney Best Securities Houses Awards 2024</h4>
+                  <h2>Euromoney Best Securities Houses Awards 2024</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1305,12 +1322,12 @@
             <a href="/hakkimizda/odullerimiz/emea-finance-achievement-awards-2023/" class="item">
               <figure>
                 <img title="EMEA Finance Achievement Awards 2023"
-                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="">
+                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>EMEA Finance Achievement Awards 2023</h4>
+                  <h2>EMEA Finance Achievement Awards 2023</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1336,12 +1353,12 @@
             <a href="/hakkimizda/odullerimiz/emea-finance-europe-banking-awards/" class="item">
               <figure>
                 <img title="EMEA Finance Europe Banking Awards 2023"
-                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="">
+                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>EMEA Finance Europe Banking Awards 2023</h4>
+                  <h2>EMEA Finance Europe Banking Awards 2023</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1367,12 +1384,12 @@
             <a href="/hakkimizda/odullerimiz/euromoney-market-leaders-2023/" class="item">
               <figure>
                 <img title="Euromoney Market Leaders 2023" src="assets/images/odullerimiz/euromoney-2026.jpg"
-                  alt="">
+                  alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>Euromoney Market Leaders 2023</h4>
+                  <h2>Euromoney Market Leaders 2023</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1399,12 +1416,12 @@
               class="item">
               <figure>
                 <img title="Yüzde 30 Kulübü Türkiye 10. Türkiye Kadın Direktörler Konferansı"
-                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="">
+                  src="assets/images/odullerimiz/euromoney-2026.jpg" alt="" loading="lazy">
               </figure>
               <div class="caption">
 
                 <div class="info">
-                  <h4>Yüzde 30 Kulübü Türkiye 10. Türkiye Kadın Direktörler Konferansı</h4>
+                  <h2>Yüzde 30 Kulübü Türkiye 10. Türkiye Kadın Direktörler Konferansı</h2>
                   <i>
                     <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 10.4286H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1469,7 +1486,7 @@
   <footer>
     <div class="container">
       <div class="left">
-        <img class="logo" src="/assets/images/main/logo.svg">
+        <img class="logo" src="/assets/images/main/logo.svg" loading="lazy">
         <div class="scroll-top mobile">
           <a href="#top">
             <svg viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">

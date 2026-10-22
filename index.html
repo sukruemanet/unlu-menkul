@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
+<html lang="tr">
 
 <head>
 
   <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -42,8 +42,23 @@
   <script src="assets/js/common/form-validation.js"></script>
   <script src="assets/js/common/components.js"></script>
   <script src="assets/js/common/tabmenu.js"></script>
-  <script src="assets/js/common/components.js"></script>
-  <script src="assets/js/common/tabmenu.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ÜNLÜ Menkul",
+      "url": "https://www.unlumenkul.com/",
+      "logo": "https://www.unlumenkul.com/assets/images/main/logo-dark.svg",
+      "sameAs": [
+        "https://www.facebook.com/unluco/",
+        "https://x.com/unluco",
+        "https://www.linkedin.com/company/unluco",
+        "https://www.youtube.com/c/%C3%9CNL%C3%9CTHECLUB",
+        "https://www.instagram.com/unlu_co/"
+      ]
+    }
+  </script>
 
 </head>
 
@@ -57,9 +72,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </i>
-      <h3>
+      <div class="drawwer-menu-title">
         Hesap Aç veya Bilgi Al
-      </h3>
+      </div>
       <div class="tab-menu-content">
         <div id="open-account" class="tab-content current">
           <div class="drawer-form">
@@ -176,7 +191,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
               </button>
-              <h2 id="menuTitle">Menu</h2>
+              <div class="menu-title" id="menuTitle">Menu</div>
             </div>
 
             <div class="drilldown-menu" id="drilldownMenu">
@@ -730,7 +745,7 @@
                 <picture>
                   <source media="(max-width: 767px)"
                     srcset="assets/images/index/slider/imgi_2_anasayfa-banner-is-insanlari-merdiven-mobile.webp">
-                  <img src="assets/images/index/slider/imgi_2_anasayfa-banner-is-insanlari-merdiven.webp">
+                  <img src="assets/images/index/slider/imgi_2_anasayfa-banner-is-insanlari-merdiven.webp" fetchpriority="high">
                 </picture>
               </figure>
               <div class="caption">
@@ -763,9 +778,9 @@
               <div class="caption">
                 <div class="left">
                   <img class="hero-brand-logo" src="assets/images/daha/daha-logo.png" alt="DAHA ÜNLÜ &amp; Co">
-                  <h1>
+                  <h2>
                     Yatırımın DAHA’sıyla Tanışın
-                  </h1>
+                  </h2>
                   <div class="text-items">
                     <span>
                       ÜNLÜ & Co deneyimi ve DAHA uzmanlığı ile kişiye özel yatırım danışmanlığı hizmetimizden
@@ -794,9 +809,9 @@
                 </div>
                 <div class="right">
                   <div class="secondary-form" data-hero-brand="daha" id="daha-hero-form">
-                    <h3 class="hero-form-title" id="daha-form-title">
+                    <h2 class="hero-form-title" id="daha-form-title">
                       Hesap Aç, DAHA Yatırım Danışmanlığı Hizmetinden Yararlan!
-                    </h3>
+                    </h2>
                     <p>İletişim bilgilerinizi bırakın, ekibimiz sizinle birebir görüşme için iletişime
                       geçsin.</p>
                     <form data-lead-brand="daha">
@@ -954,9 +969,9 @@
               <div class="caption">
                 <div class="left">
                   <img class="hero-brand-logo" src="assets/images/piapiri/piapiri-logo.png" alt="Piapiri">
-                  <h1>
+                  <h2>
                     Tek Platform Çok Seçenek
-                  </h1>
+                  </h2>
                   <div class="text-items">
                     <span>
                       Türkiye ve ABD Borsaları, Tüm TEFAS Fonları, VİOP, Varant, Eurobond ve Tüm Halka Arzlar
@@ -985,9 +1000,9 @@
                 </div>
                 <div class="right">
                   <div class="secondary-form" data-hero-brand="piapiri" id="piapiri-hero-form">
-                    <h3 class="hero-form-title" id="piapiri-form-title">
+                    <h2 class="hero-form-title" id="piapiri-form-title">
                       Piapiri’de Hesap Aç Piyasanın Piri Sen Ol!
-                    </h3>
+                    </h2>
                     <form data-lead-brand="piapiri">
                       <div class="form-items">
                         <div class="item">
@@ -1065,9 +1080,9 @@
     <div class="content-wrapper type-9">
       <div class="container">
         <div class="headline dark type-2">
-          <h4>
+          <h2>
             Hizmetlerimiz
-          </h4>
+          </h2>
           <p>
             Müşterilerimizin karmaşık piyasalarda yol almalarını ve bilinçli yatırım kararları vermelerini sağlamak için
             stratejik finansal danışmanlık hizmetleri sunuyoruz.
@@ -1088,15 +1103,15 @@
             <div class="item-cards">
               <a href="#" class="item-card brown" style="background: #90754A;">
                 <figure>
-                  <img src="assets/images/index/bireysel-hizmetlerimiz/01.jpg">
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/01.jpg" loading="lazy">
                 </figure>
                 <div class="caption">
                   <div class="top">
-                    <h4>
+                    <h3>
                       DAHA Yatırım
                       Danışmanlığı
-                    </h4>
-                    <img src="assets/images/index/bireysel-hizmetlerimiz/daha-icon.svg">
+                    </h3>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/daha-icon.svg" loading="lazy">
                   </div>
                   <div class="bottom">
                     <p>
@@ -1119,15 +1134,15 @@
               </a>
               <a href="#" class="item-card dark" style="background: #001727;">
                 <figure>
-                  <img src="assets/images/index/bireysel-hizmetlerimiz/02.jpg">
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/02.jpg" loading="lazy">
                 </figure>
                 <div class="caption">
                   <div class="top">
-                    <h4>
+                    <h3>
                       Piapiri Yatırım
                       Uygulaması
-                    </h4>
-                    <img src="assets/images/index/bireysel-hizmetlerimiz/piapiri-logo.png">
+                    </h3>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/piapiri-logo.png" loading="lazy">
                   </div>
                   <div class="bottom">
                     <p>
@@ -1150,15 +1165,15 @@
               </a>
               <a href="#" class="item-card blue" style="background: #0015FF;">
                 <figure>
-                  <img src="assets/images/index/bireysel-hizmetlerimiz/02.jpg">
+                  <img src="assets/images/index/bireysel-hizmetlerimiz/02.jpg" loading="lazy">
                 </figure>
                 <div class="caption">
                   <div class="top">
-                    <h4>
+                    <h3>
                       Araştırma
                       Hizmetleri
-                    </h4>
-                    <img src="assets/images/index/bireysel-hizmetlerimiz/arastirma-icon.svg">
+                    </h3>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/arastirma-icon.svg" loading="lazy">
                   </div>
                   <div class="bottom">
                     <p>
@@ -1186,15 +1201,15 @@
             <div class="item-cards">
               <a href="#" class="item-card dark" style="background: #04142D;">
                 <figure>
-                  <img src="assets/images/index/kurumsal-hizmetlerimiz/01.jpg">
+                  <img src="assets/images/index/kurumsal-hizmetlerimiz/01.jpg" loading="lazy">
                 </figure>
                 <div class="caption">
                   <div class="top">
-                    <h4>
+                    <h3>
                       Kurumsal Finansman
                       Danışmanlığı
-                    </h4>
-                    <img src="assets/images/index/bireysel-hizmetlerimiz/daha-icon.svg">
+                    </h3>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/daha-icon.svg" loading="lazy">
                   </div>
                   <div class="bottom">
                     <p>
@@ -1216,15 +1231,15 @@
               </a>
               <a href="#" class="item-card dark-blue" style="background: #031EA5;">
                 <figure>
-                  <img src="assets/images/index/kurumsal-hizmetlerimiz/02.jpg">
+                  <img src="assets/images/index/kurumsal-hizmetlerimiz/02.jpg" loading="lazy">
                 </figure>
                 <div class="caption">
                   <div class="top">
-                    <h4>
+                    <h3>
                       Borç Sermaye Piyasaları
                       ve Danışmanlık
-                    </h4>
-                    <img src="assets/images/index/bireysel-hizmetlerimiz/piapiri-logo.png">
+                    </h3>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/piapiri-logo.png" loading="lazy">
                   </div>
                   <div class="bottom">
                     <p>
@@ -1246,15 +1261,15 @@
               </a>
               <a href="#" class="item-card blue" style="background: #0015FF;">
                 <figure>
-                  <img src="assets/images/index/kurumsal-hizmetlerimiz/03.jpg">
+                  <img src="assets/images/index/kurumsal-hizmetlerimiz/03.jpg" loading="lazy">
                 </figure>
                 <div class="caption">
                   <div class="top">
-                    <h4>
+                    <h3>
                       Uluslararası Kurumsal
                       Satış
-                    </h4>
-                    <img src="assets/images/index/bireysel-hizmetlerimiz/arastirma-icon.svg">
+                    </h3>
+                    <img src="assets/images/index/bireysel-hizmetlerimiz/arastirma-icon.svg" loading="lazy">
                   </div>
                   <div class="bottom">
                     <p>
@@ -1284,9 +1299,9 @@
       <div class="container">
         <div class="content-wrapper">
           <div class="headline">
-            <h4>
+            <h2>
               Ürünlerimiz
-            </h4>
+            </h2>
             <p>
               BİST'ten London Metal Exchange'e, varanttan VİOP'a geniş ürün yelpazesiyle yatırım fırsatları.
             </p>
@@ -1309,11 +1324,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/01.svg">
+                          <img src="assets/images/index/urunlerimiz/01.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Hisse
-                        </h4>
+                        </h3>
                         <p>
                           BİST Hisse Senedi
                         </p>
@@ -1332,11 +1347,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/02.svg">
+                          <img src="assets/images/index/urunlerimiz/02.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Fon
-                        </h4>
+                        </h3>
                         <p>
                           Yatırım Fonları
                         </p>
@@ -1355,11 +1370,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/03.svg">
+                          <img src="assets/images/index/urunlerimiz/03.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Halka Arz
-                        </h4>
+                        </h3>
                         <p>
                           Halka Arzlar
                         </p>
@@ -1378,11 +1393,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/04.svg">
+                          <img src="assets/images/index/urunlerimiz/04.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Kaldıraçlı
-                        </h4>
+                        </h3>
                         <p>
                           Varant
                         </p>
@@ -1401,11 +1416,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/01.svg">
+                          <img src="assets/images/index/urunlerimiz/01.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Hisse
-                        </h4>
+                        </h3>
                         <p>
                           BİST Hisse Senedi
                         </p>
@@ -1424,11 +1439,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/02.svg">
+                          <img src="assets/images/index/urunlerimiz/02.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Fon
-                        </h4>
+                        </h3>
                         <p>
                           Yatırım Fonları
                         </p>
@@ -1447,11 +1462,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/03.svg">
+                          <img src="assets/images/index/urunlerimiz/03.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Halka Arz
-                        </h4>
+                        </h3>
                         <p>
                           Halka Arzlar
                         </p>
@@ -1470,11 +1485,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/04.svg">
+                          <img src="assets/images/index/urunlerimiz/04.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Kaldıraçlı
-                        </h4>
+                        </h3>
                         <p>
                           Varant
                         </p>
@@ -1525,11 +1540,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/01.svg">
+                          <img src="assets/images/index/urunlerimiz/01.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Hisse
-                        </h4>
+                        </h3>
                         <p>
                           BİST Hisse Senedi
                         </p>
@@ -1548,11 +1563,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/02.svg">
+                          <img src="assets/images/index/urunlerimiz/02.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Fon
-                        </h4>
+                        </h3>
                         <p>
                           Yatırım Fonları
                         </p>
@@ -1571,11 +1586,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/03.svg">
+                          <img src="assets/images/index/urunlerimiz/03.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Halka Arz
-                        </h4>
+                        </h3>
                         <p>
                           Halka Arzlar
                         </p>
@@ -1594,11 +1609,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/04.svg">
+                          <img src="assets/images/index/urunlerimiz/04.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Kaldıraçlı
-                        </h4>
+                        </h3>
                         <p>
                           Varant
                         </p>
@@ -1617,11 +1632,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/01.svg">
+                          <img src="assets/images/index/urunlerimiz/01.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Hisse
-                        </h4>
+                        </h3>
                         <p>
                           BİST Hisse Senedi
                         </p>
@@ -1640,11 +1655,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/02.svg">
+                          <img src="assets/images/index/urunlerimiz/02.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Fon
-                        </h4>
+                        </h3>
                         <p>
                           Yatırım Fonları
                         </p>
@@ -1663,11 +1678,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/03.svg">
+                          <img src="assets/images/index/urunlerimiz/03.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Halka Arz
-                        </h4>
+                        </h3>
                         <p>
                           Halka Arzlar
                         </p>
@@ -1686,11 +1701,11 @@
                     <a href="#" class="swiper-slide item">
                       <div class="caption">
                         <i>
-                          <img src="assets/images/index/urunlerimiz/04.svg">
+                          <img src="assets/images/index/urunlerimiz/04.svg" loading="lazy">
                         </i>
-                        <h4>
+                        <h3>
                           Kaldıraçlı
-                        </h4>
+                        </h3>
                         <p>
                           Varant
                         </p>
@@ -1743,9 +1758,9 @@
       <div class="container">
         <div class="content-wrapper">
           <div class="headline blue">
-            <h4>
+            <h2>
               Araştırma Raporlarımız
-            </h4>
+            </h2>
             <a href="#" target="_blank" class="button primary">
               Tüm Raporlar
               <svg viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1761,7 +1776,7 @@
                 <div class="swiper-wrapper">
                   <a href="#" class="swiper-slide">
                     <figure>
-                      <img src="assets/images/index/arastirma/01.jpg">
+                      <img src="assets/images/index/arastirma/01.jpg" loading="lazy">
                     </figure>
                     <div class="slide-caption">
                       <div class="date">
@@ -1771,9 +1786,9 @@
                         Araştırma
                       </small>
                       <div class="info">
-                        <h4>
+                        <h3>
                           Küresel Yatırımcılar, Piyasa Dalgalanmaları Ortasında Danışmanlık Şirketlerine Yöneliyor
-                        </h4>
+                        </h3>
                         <i>
                           <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 10.4287H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1789,7 +1804,7 @@
                   </a>
                   <a href="#" class="swiper-slide">
                     <figure>
-                      <img src="assets/images/index/arastirma/02.jpg">
+                      <img src="assets/images/index/arastirma/02.jpg" loading="lazy">
                     </figure>
                     <div class="slide-caption">
                       <div class="date">
@@ -1799,10 +1814,10 @@
                         Araştırma
                       </small>
                       <div class="info">
-                        <h4>
+                        <h3>
                           2025 Strateji
                           Raporu
-                        </h4>
+                        </h3>
                         <i>
                           <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 10.4287H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1818,7 +1833,7 @@
                   </a>
                   <a href="#" class="swiper-slide">
                     <figure>
-                      <img src="assets/images/index/arastirma/03.jpg">
+                      <img src="assets/images/index/arastirma/03.jpg" loading="lazy">
                     </figure>
                     <div class="slide-caption">
                       <div class="date">
@@ -1828,10 +1843,10 @@
                         Araştırma
                       </small>
                       <div class="info">
-                        <h4>
+                        <h3>
                           Aylık Piyasa
                           Bülteni
-                        </h4>
+                        </h3>
                         <i>
                           <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 10.4287H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1847,7 +1862,7 @@
                   </a>
                   <a href="#" class="swiper-slide">
                     <figure>
-                      <img src="assets/images/index/arastirma/04.jpg">
+                      <img src="assets/images/index/arastirma/04.jpg" loading="lazy">
                     </figure>
                     <div class="slide-caption">
                       <div class="date">
@@ -1857,10 +1872,10 @@
                         Araştırma
                       </small>
                       <div class="info">
-                        <h4>
+                        <h3>
                           Enerji Sektörüne
                           Bakış
-                        </h4>
+                        </h3>
                         <i>
                           <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 10.4287H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1876,7 +1891,7 @@
                   </a>
                   <a href="#" class="swiper-slide">
                     <figure>
-                      <img src="assets/images/index/arastirma/01.jpg">
+                      <img src="assets/images/index/arastirma/01.jpg" loading="lazy">
                     </figure>
                     <div class="slide-caption">
                       <div class="date">
@@ -1886,9 +1901,9 @@
                         Araştırma
                       </small>
                       <div class="info">
-                        <h4>
+                        <h3>
                           Küresel Yatırımcılar, Piyasa Dalgalanmaları Ortasında Danışmanlık Şirketlerine Yöneliyor
-                        </h4>
+                        </h3>
                         <i>
                           <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 10.4287H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1904,7 +1919,7 @@
                   </a>
                   <a href="#" class="swiper-slide">
                     <figure>
-                      <img src="assets/images/index/arastirma/02.jpg">
+                      <img src="assets/images/index/arastirma/02.jpg" loading="lazy">
                     </figure>
                     <div class="slide-caption">
                       <div class="date">
@@ -1914,10 +1929,10 @@
                         Araştırma
                       </small>
                       <div class="info">
-                        <h4>
+                        <h3>
                           2025 Strateji
                           Raporu
-                        </h4>
+                        </h3>
                         <i>
                           <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 10.4287H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1933,7 +1948,7 @@
                   </a>
                   <a href="#" class="swiper-slide">
                     <figure>
-                      <img src="assets/images/index/arastirma/03.jpg">
+                      <img src="assets/images/index/arastirma/03.jpg" loading="lazy">
                     </figure>
                     <div class="slide-caption">
                       <div class="date">
@@ -1943,10 +1958,10 @@
                         Araştırma
                       </small>
                       <div class="info">
-                        <h4>
+                        <h3>
                           Aylık Piyasa
                           Bülteni
-                        </h4>
+                        </h3>
                         <i>
                           <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 10.4287H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -1962,7 +1977,7 @@
                   </a>
                   <a href="#" class="swiper-slide">
                     <figure>
-                      <img src="assets/images/index/arastirma/04.jpg">
+                      <img src="assets/images/index/arastirma/04.jpg" loading="lazy">
                     </figure>
                     <div class="slide-caption">
                       <div class="date">
@@ -1972,10 +1987,10 @@
                         Araştırma
                       </small>
                       <div class="info">
-                        <h4>
+                        <h3>
                           Enerji Sektörüne
                           Bakış
-                        </h4>
+                        </h3>
                         <i>
                           <svg viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 10.4287H23" stroke="#004BF9" stroke-width="2" stroke-linecap="round"
@@ -2070,9 +2085,9 @@
     <div class="container">
       <div class="content-wrapper">
         <div class="headline dark">
-          <h4>
+          <h2>
             ÜNLÜ Kılavuz / Blog
-          </h4>
+          </h2>
           <div class="right">
             <p>
               ÜNLÜ Menkul’ün deneyimli araştırma ekibi tarafından oluşturulan model portföyü inceleyebilir ve
@@ -2097,10 +2112,10 @@
                     <small>
                       Temel Analiz
                     </small>
-                    <h4>
+                    <h3>
                       Hisse Senedi Analizi Nasıl Yapılır?
                       Adım Adım Rehber
-                    </h4>
+                    </h3>
                     <p>
                       F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
                     </p>
@@ -2114,9 +2129,9 @@
                     <small>
                       Teknik Analiz
                     </small>
-                    <h4>
+                    <h3>
                       Destek ve Direnç Seviyeleri: Pratik Kullanım Kılavuzu
-                    </h4>
+                    </h3>
                     <p>
                       Grafiklerden karar alma sanatını öğrenin. Temel göstergeler ve örnek analizler.
                     </p>
@@ -2130,9 +2145,9 @@
                     <small>
                       Yatırım Sözlüğü
                     </small>
-                    <h4>
+                    <h3>
                       Borsa Terimler Sözlüğü: Yatırımcının Olmazsa Olmazı
-                    </h4>
+                    </h3>
                     <p>
                       Stop-loss’tan margin’e halka arzdan ETF’e temel borsa terimlerini öğrenin.
                     </p>
@@ -2146,10 +2161,10 @@
                     <small>
                       Temel Analiz
                     </small>
-                    <h4>
+                    <h3>
                       Hisse Senedi Analizi Nasıl Yapılır?
                       Adım Adım Rehber
-                    </h4>
+                    </h3>
                     <p>
                       F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
                     </p>
@@ -2163,10 +2178,10 @@
                     <small>
                       Temel Analiz
                     </small>
-                    <h4>
+                    <h3>
                       Hisse Senedi Analizi Nasıl Yapılır?
                       Adım Adım Rehber
-                    </h4>
+                    </h3>
                     <p>
                       F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
                     </p>
@@ -2180,9 +2195,9 @@
                     <small>
                       Teknik Analiz
                     </small>
-                    <h4>
+                    <h3>
                       Destek ve Direnç Seviyeleri: Pratik Kullanım Kılavuzu
-                    </h4>
+                    </h3>
                     <p>
                       Grafiklerden karar alma sanatını öğrenin. Temel göstergeler ve örnek analizler.
                     </p>
@@ -2196,9 +2211,9 @@
                     <small>
                       Yatırım Sözlüğü
                     </small>
-                    <h4>
+                    <h3>
                       Borsa Terimler Sözlüğü: Yatırımcının Olmazsa Olmazı
-                    </h4>
+                    </h3>
                     <p>
                       Stop-loss’tan margin’e halka arzdan ETF’e temel borsa terimlerini öğrenin.
                     </p>
@@ -2212,10 +2227,10 @@
                     <small>
                       Temel Analiz
                     </small>
-                    <h4>
+                    <h3>
                       Hisse Senedi Analizi Nasıl Yapılır?
                       Adım Adım Rehber
-                    </h4>
+                    </h3>
                     <p>
                       F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
                     </p>
@@ -2257,15 +2272,15 @@
     <div class="image-card-content">
       <figure>
         <div class="parallax-item">
-          <img src="/assets/images/index/0595.jpg">
+          <img src="/assets/images/index/0595.jpg" loading="lazy">
         </div>
         <figcaption>
           <div class="container">
             <div class="content-wrapper">
               <div class="headline">
-                <h4>
+                <h2>
                   Şimdi yatırım yapmaya başlayın
-                </h4>
+                </h2>
               </div>
               <p>
                 Finansal hedeflerinize ulaşmak için ilk adımı atın. Uzman ekibimiz, size en uygun yatırım seçeneklerini
@@ -2294,7 +2309,7 @@
   <footer>
     <div class="container">
       <div class="left">
-        <img class="logo" src="/assets/images/main/logo.svg">
+        <img class="logo" src="/assets/images/main/logo.svg" loading="lazy">
         <div class="scroll-top mobile">
           <a href="#top">
             <svg viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2559,7 +2574,6 @@
 
   <script src="assets/js/common/hero-forms.js"></script>
   <script src="assets/js/common/phone-input.js"></script>
-  <script src="assets/js/common/jquery.mask.min.js"></script>
 
   <script>
     $(document).ready(function () {

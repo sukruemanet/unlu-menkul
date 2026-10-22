@@ -51,7 +51,7 @@
   }
 
   &.dark {
-    h4 {
+    h2 {
       color: $dark;
 
       &:after {
@@ -65,7 +65,7 @@
   }
 
   &.light {
-    h4 {
+    h2 {
       color: $white;
 
       &:after {
@@ -79,7 +79,7 @@
   }
 
   &.blue {
-    h4 {
+    h2 {
       color: $blue;
 
       &:after {
@@ -93,7 +93,7 @@
   }
 
   &.brown {
-    h4 {
+    h2 {
       color: $brown-2;
 
       &:after {
@@ -103,7 +103,7 @@
   }
 
   &.brown-2 {
-    h4 {
+    h2 {
       color: $brown;
 
       &:after {
@@ -179,7 +179,7 @@
     }
   }
 
-  h4 {
+  h2 {
     font-size: 3rem;
     font-weight: $font-bold;
     color: $dark-blue;
@@ -301,6 +301,11 @@
   a {
     font-size: 2.4rem;
     color: $blue;
+  }
+
+  .no-result {
+    font-size: 2em;
+    font-weight: bold;
   }
 }
 

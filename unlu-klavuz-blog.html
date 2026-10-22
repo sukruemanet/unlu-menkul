@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
+<html lang="tr">
 
 <head>
 
   <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -35,6 +35,23 @@
   <script src="assets/js/common/form-validation.js"></script>
   <script src="assets/js/common/components.js"></script>
   <script src="assets/js/common/tabmenu.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ÜNLÜ Menkul",
+      "url": "https://www.unlumenkul.com/",
+      "logo": "https://www.unlumenkul.com/assets/images/main/logo-dark.svg",
+      "sameAs": [
+        "https://www.facebook.com/unluco/",
+        "https://x.com/unluco",
+        "https://www.linkedin.com/company/unluco",
+        "https://www.youtube.com/c/%C3%9CNL%C3%9CTHECLUB",
+        "https://www.instagram.com/unlu_co/"
+      ]
+    }
+  </script>
+
 </head>
 
 <body id="top">
@@ -47,9 +64,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </i>
-      <h3>
+      <div class="drawwer-menu-title">
         Hesap Aç veya Bilgi Al
-      </h3>
+      </div>
       <div class="tab-menu-content">
         <ul class="tabs">
           <li class="tab-link current" data-tab="open-account">
@@ -149,7 +166,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
               </button>
-              <h2 id="menuTitle">Menu</h2>
+              <div class="menu-title" id="menuTitle">Menu</div>
             </div>
 
             <div class="drilldown-menu" id="drilldownMenu">
@@ -725,7 +742,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/hakkimizda.jpg">
+                <img src="/assets/images/menu/hakkimizda.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -864,7 +881,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/arastirmalar.jpg">
+                <img src="/assets/images/menu/arastirmalar.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -892,7 +909,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/kariyer.jpg">
+                <img src="/assets/images/menu/kariyer.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -922,7 +939,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/surdurulebilirlik.jpg">
+                <img src="/assets/images/menu/surdurulebilirlik.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -957,7 +974,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/yatirimci-iliskileri.jpg">
+                <img src="/assets/images/menu/yatirimci-iliskileri.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -985,7 +1002,7 @@
             </div>
             <div class="menu-image">
               <figure>
-                <img src="/assets/images/menu/basin.jpg">
+                <img src="/assets/images/menu/basin.jpg" loading="lazy">
               </figure>
             </div>
           </div>
@@ -1031,7 +1048,7 @@
   <main>
     <div class="custom-headline image">
       <figure>
-        <img src="/assets/images/hakkimizda/cover.jpg">
+        <img src="/assets/images/hakkimizda/cover.jpg" fetchpriority="high">
       </figure>
       <div class="info-content">
         <h1>
@@ -1103,10 +1120,10 @@
               <small>
                 Temel Analiz
               </small>
-              <h4>
+              <h2>
                 Hisse Senedi Analizi Nasıl Yapılır?
                 Adım Adım Rehber
-              </h4>
+              </h2>
               <p>
                 F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
               </p>
@@ -1120,9 +1137,9 @@
               <small>
                 Teknik Analiz
               </small>
-              <h4>
+              <h2>
                 Destek ve Direnç Seviyeleri: Pratik Kullanım Kılavuzu
-              </h4>
+              </h2>
               <p>
                 Grafiklerden karar alma sanatını öğrenin. Temel göstergeler ve örnek analizler.
               </p>
@@ -1136,9 +1153,9 @@
               <small>
                 Yatırım Sözlüğü
               </small>
-              <h4>
+              <h2>
                 Borsa Terimler Sözlüğü: Yatırımcının Olmazsa Olmazı
-              </h4>
+              </h2>
               <p>
                 Stop-loss’tan margin’e halka arzdan ETF’e temel borsa terimlerini öğrenin.
               </p>
@@ -1152,10 +1169,10 @@
               <small>
                 Temel Analiz
               </small>
-              <h4>
+              <h2>
                 Hisse Senedi Analizi Nasıl Yapılır?
                 Adım Adım Rehber
-              </h4>
+              </h2>
               <p>
                 F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
               </p>
@@ -1169,10 +1186,10 @@
               <small>
                 Temel Analiz
               </small>
-              <h4>
+              <h2>
                 Hisse Senedi Analizi Nasıl Yapılır?
                 Adım Adım Rehber
-              </h4>
+              </h2>
               <p>
                 F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
               </p>
@@ -1186,9 +1203,9 @@
               <small>
                 Teknik Analiz
               </small>
-              <h4>
+              <h2>
                 Destek ve Direnç Seviyeleri: Pratik Kullanım Kılavuzu
-              </h4>
+              </h2>
               <p>
                 Grafiklerden karar alma sanatını öğrenin. Temel göstergeler ve örnek analizler.
               </p>
@@ -1202,9 +1219,9 @@
               <small>
                 Yatırım Sözlüğü
               </small>
-              <h4>
+              <h2>
                 Borsa Terimler Sözlüğü: Yatırımcının Olmazsa Olmazı
-              </h4>
+              </h2>
               <p>
                 Stop-loss’tan margin’e halka arzdan ETF’e temel borsa terimlerini öğrenin.
               </p>
@@ -1218,10 +1235,10 @@
               <small>
                 Temel Analiz
               </small>
-              <h4>
+              <h2>
                 Hisse Senedi Analizi Nasıl Yapılır?
                 Adım Adım Rehber
-              </h4>
+              </h2>
               <p>
                 F/K oranından bilanço okumasına, temel analiz yöntemlerini ve pratik ipuçlarını öğrenin.
               </p>
@@ -1274,7 +1291,7 @@
   <footer>
     <div class="container">
       <div class="left">
-        <img class="logo" src="/assets/images/main/logo.svg">
+        <img class="logo" src="/assets/images/main/logo.svg" loading="lazy">
         <div class="scroll-top mobile">
           <a href="#top">
             <svg viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
