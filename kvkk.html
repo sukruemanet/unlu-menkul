@@ -713,7 +713,10 @@
   <main>
     <div class="custom-headline image">
       <figure>
-        <img src="/assets/images/hakkimizda/cover.jpg" fetchpriority="high">
+        <picture>
+          <source media="(max-width: 767px)" srcset="/assets/images/hakkimizda/cover.jpg">
+          <img src="/assets/images/hakkimizda/cover.jpg" fetchpriority="high">
+        </picture>
       </figure>
       <div class="info-content">
         <h1>
