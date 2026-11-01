@@ -171,8 +171,6 @@ header {
         visibility 0.3s ease;
       overflow: hidden;
 
-
-
       &.active {
         opacity: 1;
         visibility: visible;
@@ -283,10 +281,25 @@ header {
             height: 5rem;
             justify-content: center;
             align-items: center;
-            padding-left: 2rem;
+            padding: 0 2rem;
 
-            &.underline {
-              text-decoration: underline;
+            svg {
+              width: 1rem;
+            }
+
+            &.br {
+              border-right: solid rgba($white, 0.1) 0.1rem;
+              margin-right: 1rem;
+
+              @media only screen and (max-width: $tablet-h) {
+                display: none;
+              }
+
+              svg {
+                width: 1.4rem;
+                stroke: $white;
+                margin-left: 1.4rem;
+              }
             }
 
             @media only screen and (max-width: $tablet-h) {
@@ -304,13 +317,23 @@ header {
 
             &.button {
               background: $blue;
-              margin: 0 1rem 0 3rem;
+              margin: 0 1rem 0 1rem;
 
               &:hover {
                 opacity: 1;
               }
             }
           }
+        }
+
+        .lang {
+          @media only screen and (max-width: $tablet-h) {
+            display: none;
+          }
+        }
+
+        .search {
+          width: 5rem;
         }
       }
 
@@ -741,6 +764,12 @@ header {
           margin-right: 12px;
         }
 
+        svg {
+          width: 1.4rem;
+          stroke: $white;
+          margin-left: 1.4rem;
+        }
+
         .label {
           flex: 1;
           font-size: 16px;
@@ -761,7 +790,6 @@ header {
       font-size: 14px;
       text-align: center;
     }
-
 
     .menu-level {
       animation: fadeIn 0.3s ease;
@@ -1150,6 +1178,51 @@ header {
 .mobile-menu .menu .navmobilemenu.menu ul {
   max-height: 18rem !important;
   overflow: auto !important;
+}
+
+@media only screen and (max-width: $tablet-h) {
+  body:has(#hamburger-menu.open) header .top-menu li:last-child {
+    visibility: hidden;
+  }
+
+  #hamburger-menu .mobile-menu-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    padding: 1.8rem 2rem calc(2.4rem + env(safe-area-inset-bottom));
+    border-top: 1px solid rgba($white, 0.16);
+
+    .button {
+      width: 100%;
+      height: 4.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #2e60f7;
+      color: $white;
+      font-size: 1.6rem;
+    }
+
+    .mobile-menu-language {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 1.8rem;
+
+      a {
+        color: $white;
+        font-size: 1.4rem;
+        font-weight: $font-medium;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  #hamburger-menu .mobile-menu-footer {
+    display: none;
+  }
 }
 
 .main-menu-content {

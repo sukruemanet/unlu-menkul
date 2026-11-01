@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  const $menu = $("#hamburger-menu");
+  const $menuItems = $menu.find(".menu-items-content");
+  if ($menu.length && $menuItems.length) {
+    const $footer = $('<div class="mobile-menu-footer"></div>');
+    const $account = $menuItems.children(".open-drawwer");
+    const $language = $("header .top-menu li:last-child a").first().clone();
+    $footer.append($account, $('<div class="mobile-menu-language"></div>').append($language));
+    $menu.find(".menu-content").append($footer);
+  }
+
   const $backBtn = $("#backBtn");
   const $menuTitle = $("#menuTitle");
   const navigationHistory = [];
